@@ -1,0 +1,593 @@
+:root {
+    --bg: #f7f1e8;
+    --sidebar: #55bfd6;
+    --card: #ffffff;
+    --pink: #ffd6e6;
+    --green: #e7efb7;
+    --yellow: #fde9b6;
+    --yellow-text: #e6b53b;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --radius: 22px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, Arial;
+    background: var(--sidebar);
+    color: var(--text);
+    overflow-x: hidden;
+    user-select: none;
+}
+
+img {
+    user-select: none;
+}
+
+/* layout geral */
+.app {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 33px;
+    padding-right: 32px;
+    padding-bottom: 1px;
+}
+
+.topMain {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 200px;
+    height: 70px;
+    border-radius: 8px;
+    margin-left: -340px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+.home {
+    width: 100px;
+    height: 70px;
+    border-radius: 8px;
+    margin-right: -340px;
+}
+
+/* hover home */
+.home {
+    transition: transform 0.18s ease;
+    cursor: pointer;
+    transform-origin: -1px center;
+}
+
+.home:hover {
+    transform: scale(1.05);
+}
+
+.home img {
+    margin-bottom: -40px;
+}
+
+.sidebar {
+    background: var(--sidebar);
+    border-radius: 28px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+    width: 5710px;
+    user-select: none;
+    padding-left: 30px;
+    padding-right: -10;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 18px
+}
+
+.menu .item1 {
+    width: 56px;
+    height: 56px;
+    border-radius: 18px;
+    margin-bottom: 100px;
+    margin-top: 30px;
+    margin-left: -40px;
+}
+
+.menu .item1 img {
+    margin-left: 36px;
+    margin-top: 33px;
+}
+
+
+.menu .item1 h2 {
+    font-weight: 700;
+    color: #BCE9F5;
+    margin-left: 16px;
+}
+
+.menu .item2 {
+    width: 56px;
+    height: 56px;
+    border-radius: 18px;
+    margin-bottom: 100px;
+    margin-left: -40px;
+}
+
+.menu .item2 img {
+    margin-left: 46px;
+    margin-top: 33px;
+}
+
+.menu .item2 h2 {
+    font-weight: 700;
+    color: #BCE9F5;
+    margin-left: -8.5px;
+}
+
+.menu .item3 {
+    width: 56px;
+    height: 56px;
+    border-radius: 18px;
+    margin-left: -40px;
+}
+
+.menu .item3 img {
+    margin-left: 46px;
+    margin-top: 33px;
+}
+
+.menu .item3 h2 {
+    font-weight: 700;
+    color: #BCE9F5;
+    margin-left: -2px;
+}
+
+.menu .item.active {
+    background: #fff;
+    width: 120px;
+    height: 170px;
+    border-radius: 65px;
+    margin-left: -40px;
+}
+
+.menu .item.active h2 {
+    font-weight: 700;
+    color: var(--sidebar);
+}
+
+.group1 {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.group1 img {
+    margin-top: 14px;
+    margin-left: 13.5px;
+}
+
+.group1 h2 {
+    margin-top: 10px;
+}
+
+.profile {
+    margin-top: 190px;
+    width: 100px;
+    height: 140px;
+    margin-bottom: -50px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    background: #f5c542;
+    margin-left: -50px;
+}
+
+.profile img {
+    margin-top: 40px;
+    margin-left: 31px;
+}
+
+/* hover sidebar */
+.menu>.item.active {
+    transition: transform 0.18s ease;
+    cursor: pointer;
+}
+
+.menu>.item.active:hover {
+    transform: scale(1.1);
+}
+
+.menu>.item1 {
+    transition: transform 0.18s ease;
+    cursor: pointer;
+    transform-origin: 55px center;
+}
+
+.menu>.item1:hover {
+    transform: scale(1.1);
+}
+
+.menu>.item2 {
+    transition: transform 0.18s ease;
+    cursor: pointer;
+    transform-origin: 55px center;
+}
+
+.menu>.item2:hover {
+    transform: scale(1.1);
+}
+
+.menu>.item3 {
+    transition: transform 0.18s ease;
+    cursor: pointer;
+    transform-origin: 60px center;
+}
+
+.menu>.item3:hover {
+    transform: scale(1.1);
+}
+
+.profile {
+    transition: transform 0.18s ease;
+    cursor: pointer;
+    transform-origin: center center;
+}
+
+.profile:hover {
+    transform: scale(1.2);
+}
+
+/* main */
+
+.main {
+    padding-left: 32px;
+    background-color: var(--bg);
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    margin-top: -32px;
+    margin-right: -32px;
+    width: 34000px;
+    margin-left: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 28px
+}
+
+/* cards */
+.card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 22px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .05);
+}
+
+/* boas vindas */
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--pink);
+    margin-bottom: 20px;
+    height: 280px;
+    padding-left: 30px;
+}
+
+.welcome h1 {
+    margin: 0;
+    font-size: 40px
+}
+
+.welcome p {
+    margin: 6px 0 10px;
+    color: #7a4b5a;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.welcome h2 {
+    color: #d45a8c;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+/* welcome hover */
+.welcome h2 {
+    transition: transform 0.18s ease;
+    cursor: pointer;
+    transform-origin: left center;
+}
+
+.welcome h2:hover {
+    transform: scale(1.05);
+}
+
+.monster {
+    width: 140px;
+    height: 120px;
+    margin-top: -230px;
+    margin-right: 150px;
+    border-radius: 16px
+}
+
+/* clicar no monstro */
+.monster img {
+    cursor: pointer;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-4px);
+    }
+
+    40% {
+        transform: translateX(4px);
+    }
+
+    60% {
+        transform: translateX(-4px);
+    }
+
+    80% {
+        transform: translateX(4px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.monster img.shake {
+    animation: shake 0.4s;
+}
+
+/* atalhos */
+.shortcuts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 20px;
+    height: 200px;
+}
+
+.shortcut {
+    background: var(--green);
+    border-radius: 18px;
+    padding: 22px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    color: #5b6b2a;
+}
+
+.image-short {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* hover shortcut*/
+.card.shortcut>* {
+    transition: transform 0.18s ease;
+    cursor: pointer;
+}
+
+.card.shortcut:hover>* {
+    transform: scale(1.05);
+}
+
+/* calculadora */
+.calc {
+    background: var(--yellow);
+    height: 280px;
+    margin-bottom: 60px;
+    padding-left: 30px;
+}
+
+.calc-title {
+    font-weight: 700;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: var(--yellow-text);
+}
+
+.calc-row {
+    display: flex;
+    gap: 12px;
+    height: 150px;
+}
+
+.calc-box-N {
+    background: #fbdf9f;
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    color: #9a7a2f;
+    width: 150px;
+    height: 125px;
+}
+
+.calc-box-N hr {
+    margin-top: 40px;
+    width: 80px;
+    border-color: #e8c677;
+}
+
+.calc-box-plus {
+    border-radius: 14px;
+    padding: 22px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 220;
+    margin-top: 12px;
+    color: #9a7a2f;
+    user-select: none;
+}
+
+.calc-box-need {
+    background: #fbdf9f;
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+    font-weight: 700;
+    color: #9a7a2f;
+    margin-top: -30px;
+    width: 250px;
+    height: 180px;
+    margin-left: 25px;
+    font-size: 20px;
+}
+
+/* coluna direita */
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 420px;
+    margin-left: -100px;
+}
+
+.left {
+    width: 750px;
+}
+
+/* calendário */
+.calendar-all {
+    width: 500px;
+    height: 200px;
+    padding-right: 80px;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    font-size: 23px;
+}
+
+.calendar-header button {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin-left: -10px;
+    height: 300px;
+}
+
+.day {
+    font-size: 17px;
+    text-align: center;
+    padding: 7px;
+    border-radius: 10px
+}
+
+.day.head {
+    color: var(--muted);
+    font-weight: 700
+}
+
+.day.today {
+    background: #c8f3da;
+    height: 40px;
+}
+
+#month,
+.day.head {
+    user-select: none;
+}
+
+#month,
+.day {
+    user-select: none;
+}
+
+.calendar-header button {
+    user-select: none;
+}
+
+.day.selected {
+    background: #55bfd6;
+    color: white;
+    font-weight: 700;
+}
+
+/* professores */
+.card-teachers {
+    margin-top: 200px;
+    height: 380px;
+}
+
+.teachers h3 {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.teacher {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 14px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.t1 {
+    background: #e6f7ff
+}
+
+.t2 {
+    background: #ffe6ef
+}
+
+.t3 {
+    background: #fff4da
+}
+
+.t4 {
+    background: #eaffea
+}
+
+.t5 {
+    background: #eef1ff
+}
+
+/* hover teacher */
+.teacher {
+    transition: transform 0.18s ease;
+    cursor: pointer;
+    transform-origin: center center;
+}
+
+.teacher:hover {
+    transform: scale(1.03);
+}
+

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Kori – Dashboard</title>
+    <link rel="stylesheet" href="CSS/home-screen.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="menu">
+                <div class="item active">
+                    <div class="group1"><img src="Assets/Home (1).svg" alt="">
+                        <h2>Início</h2>
+                    </div>
+                </div>
+                <div class="item1"><img src="Assets/Greeting.svg" alt="">
+                    <h2>Boletim</h2>
+                </div>
+                <div class="item2"><img src="Assets/Notes.svg" alt="">
+                    <h2>Observações</h2>
+                </div>
+                <div class="item3"><img src="Assets/Info circle.svg" alt="">
+                    <h2>Professores</h2>
+                </div>
+            </div>
+            <div class="profile"><img src="Assets/User circle.svg" alt="" width="38px"></div>
+        </aside>
+
+        <main class="main">
+            <div class="topMain">
+                <div class="logo"><img src="Assets/logo - kori.svg" alt="" width="190px" onclick="location.reload()">
+                </div>
+                <div class="home"><img src="Assets/Home.svg" alt="" width="40x" onclick="location.reload()"></div>
+            </div>
+
+            <div class="grid">
+                <!-- esquerda -->
+                <section class="left">
+                    <div class="card welcome">
+                        <div>
+                            <h1>Olá, Gabriela!</h1>
+                            <p>Não se esqueça <br>
+                                de checar as <br>
+                                observações dos <br>
+                                professores para você.</p>
+                            <h2>Ver observações</h2>
+                        </div>
+                        <div class="monster"><img src="Assets/pink-monster.svg" alt=""></div>
+                    </div>
+
+                    <div class="shortcuts">
+                        <div class="card shortcut">
+                            <img src="Assets/Group 1.svg" alt="" class="image-short">
+                            <div>Ver regulamento escolar</div>
+                        </div>
+                        <div class="card shortcut">
+                            <img src="Assets/doc - icon.svg" alt="" class="image-short">
+                            <div>Suporte Kori</div>
+                        </div>
+                    </div>
+
+                    <div class="card calc">
+                        <div class="calc-title">Calculadora Quanto Preciso</div>
+                        <div class="calc-row">
+                            <div class="calc-box-N">N1
+                                <hr>
+                            </div>
+                            <div class="calc-box-plus">+</div>
+                            <div class="calc-box-N">N2
+                                <hr>
+                            </div>
+                            <div class="calc-box-need">Você precisa de:</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- direita -->
+                <aside class="right">
+                    <div class="calendar-all">
+                        <div class="card">
+                            <div class="calendar-header">
+                                <button id="prev">‹</button>
+                                <strong id="month">Janeiro 2026</strong>
+                                <button id="next">›</button>
+                            </div>
+                            <div class="calendar-grid" id="calendar"></div>
+                        </div>
+                    </div>
+
+                    <div class="card teachers card-teachers">
+                        <h3>Professores</h3>
+                        <div class="teacher t1">Ana Souza | MAT <span><img src="Assets/Email closed.svg" alt=""
+                                    style="margin-right: 7px; margin-top: 4px;"></span></div>
+                        <div class="teacher t2">Carlos Lima | PORT <span><img src="Assets/Email closed.svg" alt=""
+                                    style="margin-right: 7px; margin-top: 4px;"></span></div>
+                        <div class="teacher t3">Juliana Rocha | HIST <span><img src="Assets/Email closed.svg" alt=""
+                                    style="margin-right: 7px; margin-top: 4px;"></span></div>
+                        <div class="teacher t4">Marcos Pereira | CIÊN <span><img src="Assets/Email closed.svg" alt=""
+                                    style="margin-right: 7px; margin-top: 4px;"></span></div>
+                        <div class="teacher t5">Diogo Nascimento | INFO <span><img src="Assets/Email closed.svg" alt=""
+                                    style="margin-right: 7px; margin-top: 4px;"></span></div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+
+    <script src="JS/home-screen.js"></script>
+</body>
+
+</html>
