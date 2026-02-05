@@ -1,14 +1,14 @@
 :root {
-    --bg: #f7f1e8;
-    --sidebar: #55bfd6;
-    --card: #ffffff;
-    --pink: #ffd6e6;
-    --green: #e7efb7;
-    --yellow: #fde9b6;
-    --yellow-text: #e6b53b;
-    --text: #1f2937;
-    --muted: #6b7280;
-    --radius: 22px;
+    --background: #f7f1e8;
+    --sidebar-color: #55bfd6;
+    --card-color: #ffffff;
+    --pink-color: #ffd6e6;
+    --green-color: #e7efb7;
+    --yellow-color: #fde9b6;
+    --yellow-text-color: #e6b53b;
+    --text-color: #1f2937;
+    --muted-color: #6b7280;
+    --border-radius: 22px;
 }
 
 * {
@@ -18,8 +18,8 @@
 body {
     margin: 0;
     font-family: Inter, system-ui, Arial;
-    background: var(--sidebar);
-    color: var(--text);
+    background: var(--sidebar-color);
+    color: var(--text-color);
     overflow-x: hidden;
     user-select: none;
 }
@@ -28,7 +28,7 @@ img {
     user-select: none;
 }
 
-/* layout geral */
+/* Main layout */
 .app {
     display: flex;
     min-height: 100vh;
@@ -37,14 +37,14 @@ img {
     padding-bottom: 1px;
 }
 
-.topMain {
+.top-main {
     display: flex;
     justify-content: space-around;
     margin-top: 60px;
     margin-bottom: 40px;
 }
 
-.logo {
+.logo-container {
     width: 200px;
     height: 70px;
     border-radius: 8px;
@@ -53,30 +53,30 @@ img {
     cursor: pointer;
 }
 
-.home {
+.home-button {
     width: 100px;
     height: 70px;
     border-radius: 8px;
     margin-right: -340px;
 }
 
-/* hover home */
-.home {
+/* Home button hover effect */
+.home-button {
     transition: transform 0.18s ease;
     cursor: pointer;
     transform-origin: -1px center;
 }
 
-.home:hover {
+.home-button:hover {
     transform: scale(1.05);
 }
 
-.home img {
+.home-button img {
     margin-bottom: -40px;
 }
 
 .sidebar {
-    background: var(--sidebar);
+    background: var(--sidebar-color);
     border-radius: 28px;
     padding: 20px 0;
     display: flex;
@@ -95,7 +95,7 @@ img {
     gap: 18px
 }
 
-.menu .item1 {
+.menu .bulletin {
     width: 56px;
     height: 56px;
     border-radius: 18px;
@@ -104,19 +104,19 @@ img {
     margin-left: -40px;
 }
 
-.menu .item1 img {
+.menu .bulletin img {
     margin-left: 36px;
     margin-top: 33px;
 }
 
 
-.menu .item1 h2 {
+.menu .bulletin h2 {
     font-weight: 700;
     color: #BCE9F5;
     margin-left: 16px;
 }
 
-.menu .item2 {
+.menu .observations {
     width: 56px;
     height: 56px;
     border-radius: 18px;
@@ -124,36 +124,36 @@ img {
     margin-left: -40px;
 }
 
-.menu .item2 img {
+.menu .observations img {
     margin-left: 46px;
     margin-top: 33px;
 }
 
-.menu .item2 h2 {
+.menu .observations h2 {
     font-weight: 700;
     color: #BCE9F5;
     margin-left: -8.5px;
 }
 
-.menu .item3 {
+.menu .teachers {
     width: 56px;
     height: 56px;
     border-radius: 18px;
     margin-left: -40px;
 }
 
-.menu .item3 img {
+.menu .teachers img {
     margin-left: 46px;
     margin-top: 33px;
 }
 
-.menu .item3 h2 {
+.menu .teachers h2 {
     font-weight: 700;
     color: #BCE9F5;
     margin-left: -2px;
 }
 
-.menu .item.active {
+.menu .menu-item.active {
     background: #fff;
     width: 120px;
     height: 170px;
@@ -161,22 +161,22 @@ img {
     margin-left: -40px;
 }
 
-.menu .item.active h2 {
+.menu .menu-item.active h2 {
     font-weight: 700;
-    color: var(--sidebar);
+    color: var(--sidebar-color);
 }
 
-.group1 {
+.menu-group {
     margin-top: 30px;
     margin-left: 30px;
 }
 
-.group1 img {
+.menu-group img {
     margin-top: 14px;
     margin-left: 13.5px;
 }
 
-.group1 h2 {
+.menu-group h2 {
     margin-top: 10px;
 }
 
@@ -196,43 +196,43 @@ img {
     margin-left: 31px;
 }
 
-/* hover sidebar */
-.menu>.item.active {
+/* Sidebar hover effects */
+.menu>.menu-item.active {
     transition: transform 0.18s ease;
     cursor: pointer;
 }
 
-.menu>.item.active:hover {
+.menu>.menu-item.active:hover {
     transform: scale(1.1);
 }
 
-.menu>.item1 {
-    transition: transform 0.18s ease;
-    cursor: pointer;
-    transform-origin: 55px center;
-}
-
-.menu>.item1:hover {
-    transform: scale(1.1);
-}
-
-.menu>.item2 {
+.menu>.bulletin {
     transition: transform 0.18s ease;
     cursor: pointer;
     transform-origin: 55px center;
 }
 
-.menu>.item2:hover {
+.menu>.bulletin:hover {
     transform: scale(1.1);
 }
 
-.menu>.item3 {
+.menu>.observations {
+    transition: transform 0.18s ease;
+    cursor: pointer;
+    transform-origin: 55px center;
+}
+
+.menu>.observations:hover {
+    transform: scale(1.1);
+}
+
+.menu>.teachers {
     transition: transform 0.18s ease;
     cursor: pointer;
     transform-origin: 60px center;
 }
 
-.menu>.item3:hover {
+.menu>.teachers:hover {
     transform: scale(1.1);
 }
 
@@ -246,11 +246,10 @@ img {
     transform: scale(1.2);
 }
 
-/* main */
-
+/* Main content */
 .main {
     padding-left: 32px;
-    background-color: var(--bg);
+    background-color: var(--background);
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
     margin-top: -32px;
@@ -265,38 +264,38 @@ img {
     gap: 28px
 }
 
-/* cards */
+/* Cards */
 .card {
-    background: var(--card);
-    border-radius: var(--radius);
+    background: var(--card-color);
+    border-radius: var(--border-radius);
     padding: 22px;
     box-shadow: 0 10px 24px rgba(0, 0, 0, .05);
 }
 
-/* boas vindas */
-.welcome {
+/* Welcome card */
+.welcome-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--pink);
+    background: var(--pink-color);
     margin-bottom: 20px;
     height: 280px;
     padding-left: 30px;
 }
 
-.welcome h1 {
+.welcome-card h1 {
     margin: 0;
     font-size: 40px
 }
 
-.welcome p {
+.welcome-card p {
     margin: 6px 0 10px;
     color: #7a4b5a;
     font-size: 20px;
     margin-top: 15px;
 }
 
-.welcome h2 {
+.welcome-card h2 {
     color: #d45a8c;
     font-weight: 600;
     text-decoration: none;
@@ -305,18 +304,18 @@ img {
     margin-bottom: 0px;
 }
 
-/* welcome hover */
-.welcome h2 {
+/* Welcome hover effect */
+.welcome-card h2 {
     transition: transform 0.18s ease;
     cursor: pointer;
     transform-origin: left center;
 }
 
-.welcome h2:hover {
+.welcome-card h2:hover {
     transform: scale(1.05);
 }
 
-.monster {
+.monster-container {
     width: 140px;
     height: 120px;
     margin-top: -230px;
@@ -324,8 +323,8 @@ img {
     border-radius: 16px
 }
 
-/* clicar no monstro */
-.monster img {
+/* Monster click effect */
+.monster-container img {
     cursor: pointer;
 }
 
@@ -355,12 +354,12 @@ img {
     }
 }
 
-.monster img.shake {
+.monster-container img.shake {
     animation: shake 0.4s;
 }
 
-/* atalhos */
-.shortcuts {
+/* Shortcuts */
+.shortcuts-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 18px;
@@ -368,8 +367,8 @@ img {
     height: 200px;
 }
 
-.shortcut {
-    background: var(--green);
+.shortcut-card {
+    background: var(--green-color);
     border-radius: 18px;
     padding: 22px;
     font-size: 18px;
@@ -378,44 +377,44 @@ img {
     color: #5b6b2a;
 }
 
-.image-short {
+.shortcut-icon {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-/* hover shortcut*/
-.card.shortcut>* {
+/* Shortcut hover effect */
+.card.shortcut-card>* {
     transition: transform 0.18s ease;
     cursor: pointer;
 }
 
-.card.shortcut:hover>* {
+.card.shortcut-card:hover>* {
     transform: scale(1.05);
 }
 
-/* calculadora */
-.calc {
-    background: var(--yellow);
+/* Calculator */
+.calculator-card {
+    background: var(--yellow-color);
     height: 280px;
     margin-bottom: 60px;
     padding-left: 30px;
 }
 
-.calc-title {
+.calculator-title {
     font-weight: 700;
     font-size: 22px;
     margin-top: 20px;
     margin-bottom: 40px;
-    color: var(--yellow-text);
+    color: var(--yellow-text-color);
 }
 
-.calc-row {
+.calculator-row {
     display: flex;
     gap: 12px;
     height: 150px;
 }
 
-.calc-box-N {
+.grade-box {
     background: #fbdf9f;
     border-radius: 14px;
     padding: 22px;
@@ -427,13 +426,13 @@ img {
     height: 125px;
 }
 
-.calc-box-N hr {
+.grade-box hr {
     margin-top: 40px;
     width: 80px;
     border-color: #e8c677;
 }
 
-.calc-box-plus {
+.plus-box {
     border-radius: 14px;
     padding: 22px;
     font-size: 50px;
@@ -444,7 +443,7 @@ img {
     user-select: none;
 }
 
-.calc-box-need {
+.required-box {
     background: #fbdf9f;
     border-radius: 14px;
     padding: 22px;
@@ -458,8 +457,8 @@ img {
     font-size: 20px;
 }
 
-/* coluna direita */
-.right {
+/* Right column */
+.right-column {
     display: flex;
     flex-direction: column;
     gap: 22px;
@@ -467,12 +466,12 @@ img {
     margin-left: -100px;
 }
 
-.left {
+.left-column {
     width: 750px;
 }
 
-/* calendário */
-.calendar-all {
+/* Calendar */
+.calendar-container {
     width: 500px;
     height: 200px;
     padding-right: 80px;
@@ -501,6 +500,12 @@ img {
     height: 300px;
 }
 
+.calendar-header button {
+    font-size: 34px;
+    padding: 6px 14px;
+    cursor: pointer;
+}
+
 .day {
     font-size: 17px;
     text-align: center;
@@ -509,7 +514,7 @@ img {
 }
 
 .day.head {
-    color: var(--muted);
+    color: var(--muted-color);
     font-weight: 700
 }
 
@@ -518,12 +523,12 @@ img {
     height: 40px;
 }
 
-#month,
+#current-month,
 .day.head {
     user-select: none;
 }
 
-#month,
+#current-month,
 .day {
     user-select: none;
 }
@@ -538,13 +543,13 @@ img {
     font-weight: 700;
 }
 
-/* professores */
-.card-teachers {
+/* Teachers */
+.teachers-card {
     margin-top: 200px;
     height: 380px;
 }
 
-.teachers h3 {
+.teachers-card h3 {
     margin-top: 5px;
     margin-bottom: 20px;
     font-size: 22px;
@@ -560,27 +565,27 @@ img {
     font-size: 18px;
 }
 
-.t1 {
+.teacher-1 {
     background: #e6f7ff
 }
 
-.t2 {
+.teacher-2 {
     background: #ffe6ef
 }
 
-.t3 {
+.teacher-3 {
     background: #fff4da
 }
 
-.t4 {
+.teacher-4 {
     background: #eaffea
 }
 
-.t5 {
+.teacher-5 {
     background: #eef1ff
 }
 
-/* hover teacher */
+/* Teacher hover effect */
 .teacher {
     transition: transform 0.18s ease;
     cursor: pointer;
@@ -591,26 +596,26 @@ img {
     transform: scale(1.03);
 }
 
-/* Scrow */
+/* Scrollbar */
 
-/* largura da barra */
+/* Scrollbar width */
 ::-webkit-scrollbar {
     width: 10px;
 }
 
-/* fundo da barra */
+/* Scrollbar track */
 ::-webkit-scrollbar-track {
     background: #f2f2f2;
     border-radius: 10px;
 }
 
-/* parte que se move */
+/* Scrollbar thumb */
 ::-webkit-scrollbar-thumb {
     background: #e6b53b;
     border-radius: 10px;
 }
 
-/* hover */
+/* Scrollbar hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #e6b53b;
 }
