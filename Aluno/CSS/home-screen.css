@@ -591,3 +591,26 @@ img {
     transform: scale(1.03);
 }
 
+/* Scrow */
+
+/* largura da barra */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* fundo da barra */
+::-webkit-scrollbar-track {
+    background: #f2f2f2;
+    border-radius: 10px;
+}
+
+/* parte que se move */
+::-webkit-scrollbar-thumb {
+    background: #e6b53b;
+    border-radius: 10px;
+}
+
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #e6b53b;
+}
