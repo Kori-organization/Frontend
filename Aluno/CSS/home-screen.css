@@ -555,17 +555,17 @@ img {
 
 .day.today {
     background: #c8f3da;
-    height: 40px;
+    height: 36px;
 }
 
 .day.holiday {
     background-color: #a5ccff;
-    height: 40px;
+    height: 36px;
 }
 
 .day.today.holiday {
     background-color: #c8f3da;
-    height: 40px;
+    height: 36px;
 }
 
 .day.selected {
