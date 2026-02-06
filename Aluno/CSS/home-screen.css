@@ -30,28 +30,86 @@ img {
     user-select: none;
 }
 
-/* Main layout */
 .app {
     display: flex;
     min-height: 100vh;
-    padding-top: 33px;
     padding-right: 32px;
     padding-bottom: 1px;
 }
 
-.top-main {
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: var(--sidebar-color);
+    border-radius: 0 28px 28px 0;
+    padding: 20px 0;
     display: flex;
-    justify-content: space-around;
-    margin-top: 60px;
-    margin-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+    width: 200px;
+    user-select: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 1000;
 }
+
+.main {
+    padding-left: 32px;
+    background-color: var(--background);
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    margin-top: -3px;
+    margin-right: -32px;
+    width: calc(100% - 0px);
+    margin-left: 200px;
+}
+
+.top-main {
+    position: fixed;
+    top: 0;
+    left: 140px;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding: 0 32px;
+    z-index: 999;
+    background-color: var(--background);
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    width: 1400px;
+    margin-left: 70px;
+}
+
+.color {
+    background-color: var(--background);
+    width: 1300px;
+    height: 30px;
+    margin-left: 15px;
+    position: fixed;
+    z-index: 999;
+}
+
+.color2 {
+    background-color: var(--background);
+    width: 1300px;
+    height: 30px;
+    margin-left: 0;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 999;
+}
+
 
 .logo-container {
     width: 200px;
     height: 70px;
     border-radius: 8px;
-    margin-left: -340px;
-    margin-top: -10px;
+    margin-top: 0;
     cursor: pointer;
 }
 
@@ -59,14 +117,14 @@ img {
     width: 100px;
     height: 70px;
     border-radius: 8px;
-    margin-right: -340px;
-}
-
-/* Home button hover effect */
-.home-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: transform 0.18s ease;
     cursor: pointer;
-    transform-origin: -1px center;
+    transform-origin: 40px center;
+    margin-right: 120px;
+    margin-top: -10px;
 }
 
 .home-button:hover {
@@ -77,82 +135,88 @@ img {
     margin-bottom: -40px;
 }
 
-.sidebar {
-    background: var(--sidebar-color);
-    border-radius: 28px;
-    padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 26px;
-    width: 5710px;
-    user-select: none;
-    padding-left: 30px;
-    padding-right: -10;
-}
-
 .menu {
     display: flex;
     flex-direction: column;
-    gap: 18px
+    gap: 18px;
+    margin-top: 10px;
 }
 
 .menu .bulletin {
-    width: 56px;
-    height: 56px;
+    width: 70px;
+    height: 70px;
     border-radius: 18px;
-    margin-bottom: 100px;
-    margin-top: 30px;
-    margin-left: -40px;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    margin-left: 0;
+    align-items: center;
 }
 
 .menu .bulletin img {
-    margin-left: 36px;
-    margin-top: 33px;
+    margin: 0;
+    width: 45px;
+    height: 45px;
+    margin-top: 10px;
+    margin-left: 36.5px;
 }
-
 
 .menu .bulletin h2 {
     font-weight: 700;
     color: #BCE9F5;
-    margin-left: 16px;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-left: 24px;
 }
 
 .menu .observations {
-    width: 56px;
-    height: 56px;
+    width: 70px;
+    height: 70px;
     border-radius: 18px;
-    margin-bottom: 100px;
-    margin-left: -40px;
+    margin-bottom: 30px;
+    margin-left: 0;
+    align-items: center;
+    margin-top: 12px;
 }
 
 .menu .observations img {
-    margin-left: 46px;
-    margin-top: 33px;
+    margin: 0;
+    width: 34px;
+    height: 34px;
+    margin-left: 43.5px;
 }
 
 .menu .observations h2 {
     font-weight: 700;
     color: #BCE9F5;
-    margin-left: -8.5px;
+    margin-top: 10px;
+    margin-left: 2px;
+    text-align: center;
+    font-size: 17px;
 }
 
 .menu .teachers {
-    width: 56px;
-    height: 56px;
+    width: 70px;
+    height: 70px;
     border-radius: 18px;
-    margin-left: -40px;
+    margin-left: 0;
+    align-items: center;
 }
 
 .menu .teachers img {
-    margin-left: 46px;
-    margin-top: 33px;
+    margin: 0;
+    width: 36px;
+    height: 36px;
+    margin-left: 43px;
 }
 
 .menu .teachers h2 {
     font-weight: 700;
     color: #BCE9F5;
-    margin-left: -2px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 17px;
+    margin-left: 7px;
 }
 
 .menu .menu-item.active {
@@ -160,52 +224,59 @@ img {
     width: 120px;
     height: 170px;
     border-radius: 65px;
-    margin-left: -40px;
-}
-
-.menu .menu-item.active h2 {
-    font-weight: 700;
-    color: var(--sidebar-color);
-}
-
-.menu-group {
-    margin-top: 30px;
-    margin-left: 30px;
-}
-
-.menu-group img {
-    margin-top: 14px;
-    margin-left: 13.5px;
-}
-
-.menu-group h2 {
-    margin-top: 10px;
-}
-
-.profile {
-    margin-top: 190px;
-    width: 100px;
-    height: 140px;
-    margin-bottom: -50px;
-    border-top-left-radius: 150px;
-    border-top-right-radius: 150px;
-    background: #f5c542;
-    margin-left: -50px;
-}
-
-.profile img {
-    margin-top: 40px;
-    margin-left: 31px;
-}
-
-/* Sidebar hover effects */
-.menu>.menu-item.active {
+    margin-left: 0;
     transition: transform 0.18s ease;
     cursor: pointer;
 }
 
 .menu>.menu-item.active:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
+}
+
+.menu-group {
+    margin-top: 30px;
+    margin-left: 0;
+    text-align: center;
+}
+
+.menu-group img {
+    margin-top: 14px;
+    margin-left: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.menu-group h2 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.profile {
+    margin-top: 40px;
+    width: 80px;
+    height: 1400px;
+    margin-top: 55px;
+    margin-bottom: -50px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    background: #f5c542;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.18s ease;
+    cursor: pointer;
+    transform-origin: center center;
+}
+
+.profile:hover {
+    transform: scale(1.05);
+}
+
+.profile img {
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    margin-top: -50px;
 }
 
 .menu>.bulletin {
@@ -215,7 +286,7 @@ img {
 }
 
 .menu>.bulletin:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .menu>.observations {
@@ -225,7 +296,7 @@ img {
 }
 
 .menu>.observations:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .menu>.teachers {
@@ -235,38 +306,16 @@ img {
 }
 
 .menu>.teachers:hover {
-    transform: scale(1.1);
-}
-
-.profile {
-    transition: transform 0.18s ease;
-    cursor: pointer;
-    transform-origin: center center;
-}
-
-.profile:hover {
-    transform: scale(1.2);
-}
-
-/* Main content */
-.main {
-    padding-left: 32px;
-    background-color: var(--background);
-    border-bottom-left-radius: 50px;
-    border-top-left-radius: 50px;
-    margin-top: -32px;
-    margin-right: -32px;
-    width: 34000px;
-    margin-left: 0;
+    transform: scale(1.05);
 }
 
 .grid {
     display: grid;
     grid-template-columns: 1fr 340px;
-    gap: 28px
+    gap: 28px;
+    margin-top: 158px;
 }
 
-/* Cards */
 .card {
     background: var(--card-color);
     border-radius: var(--border-radius);
@@ -274,7 +323,6 @@ img {
     box-shadow: 0 10px 24px rgba(0, 0, 0, .05);
 }
 
-/* Welcome card */
 .welcome-card {
     display: flex;
     align-items: center;
@@ -304,10 +352,6 @@ img {
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 0px;
-}
-
-/* Welcome hover effect */
-.welcome-card h2 {
     transition: transform 0.18s ease;
     cursor: pointer;
     transform-origin: left center;
@@ -322,11 +366,7 @@ img {
     height: 120px;
     margin-top: -230px;
     margin-right: 150px;
-    border-radius: 16px
-}
-
-/* Monster click effect */
-.monster-container img {
+    border-radius: 16px;
     cursor: pointer;
 }
 
@@ -360,7 +400,6 @@ img {
     animation: shake 0.4s;
 }
 
-/* Shortcuts */
 .shortcuts-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -384,7 +423,6 @@ img {
     margin-bottom: 10px;
 }
 
-/* Shortcut hover effect */
 .card.shortcut-card>* {
     transition: transform 0.18s ease;
     cursor: pointer;
@@ -394,7 +432,6 @@ img {
     transform: scale(1.05);
 }
 
-/* Calculator */
 .calculator-card {
     background: var(--yellow-color);
     height: 280px;
@@ -459,24 +496,25 @@ img {
     font-size: 20px;
 }
 
-/* Right column */
 .right-column {
     display: flex;
     flex-direction: column;
     gap: 22px;
     width: 420px;
-    margin-left: -100px;
+    margin-left: -120px;
+    margin-top: 20px;
 }
 
 .left-column {
     width: 750px;
+    margin-left: 20px;
 }
 
-/* Calendar */
 .calendar-container {
     width: 500px;
     height: 200px;
     padding-right: 80px;
+    margin-top: -21px;
 }
 
 .calendar-header {
@@ -545,7 +583,6 @@ img {
     font-weight: 700;
 }
 
-/* Teachers */
 .teachers-card {
     margin-top: 200px;
     height: 380px;
@@ -565,6 +602,13 @@ img {
     padding: 10px 12px;
     margin-bottom: 12px;
     font-size: 18px;
+    transition: transform 0.18s ease;
+    cursor: pointer;
+    transform-origin: center center;
+}
+
+.teacher:hover {
+    transform: scale(1.03);
 }
 
 .teacher-1 {
@@ -587,37 +631,20 @@ img {
     background: #eef1ff
 }
 
-/* Teacher hover effect */
-.teacher {
-    transition: transform 0.18s ease;
-    cursor: pointer;
-    transform-origin: center center;
-}
-
-.teacher:hover {
-    transform: scale(1.03);
-}
-
-/* Scrollbar */
-
-/* Scrollbar width */
 ::-webkit-scrollbar {
     width: 10px;
 }
 
-/* Scrollbar track */
 ::-webkit-scrollbar-track {
     background: #f2f2f2;
     border-radius: 10px;
 }
 
-/* Scrollbar thumb */
 ::-webkit-scrollbar-thumb {
     background: #e6b53b;
     border-radius: 10px;
 }
 
-/* Scrollbar hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #e6b53b;
 }
