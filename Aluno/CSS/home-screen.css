@@ -203,6 +203,19 @@ img {
     align-items: center;
 }
 
+.user-group-teacher {
+    display: flex;
+    justify-content: space-around;
+}
+
+.user-group-teacher img {
+    margin-top: -15px;
+}
+
+.user-group-teacher h3 {
+    margin-right: 180px;
+}
+
 .menu .teachers img {
     margin: 0;
     width: 36px;
