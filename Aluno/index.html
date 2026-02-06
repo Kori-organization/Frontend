@@ -34,9 +34,11 @@
             <div class="color"></div>
             <div class="color2"></div>
             <div class="top-main">
-                <div class="logo-container"><img src="Assets/logo - kori.svg" alt="Kori Logo" width="180px" onclick="location.reload()">
+                <div class="logo-container"><img src="Assets/logo - kori.svg" alt="Kori Logo" width="180px"
+                        onclick="location.reload()">
                 </div>
-                <div class="home-button"><img src="Assets/Home.svg" alt="Home" width="40px" onclick="location.reload()"></div>
+                <div class="home-button"><img src="Assets/Home.svg" alt="Home" width="40px" onclick="location.reload()">
+                </div>
             </div>
 
             <div class="grid">
@@ -59,7 +61,8 @@
                             <img src="Assets/Suport.svg" alt="School Regulations" class="shortcut-icon">
                             <div>Ver regulamento escolar</div>
                         </div>
-                        <div class="card shortcut-card">
+                        <div class="card shortcut-card"
+                            onclick="window.location.href='mailto:korieducation@gmail.com?subject=Suporte%20Kori'">
                             <img src="Assets/doc - icon.svg" alt="Kori Support" class="shortcut-icon">
                             <div>Suporte Kori</div>
                         </div>
@@ -68,14 +71,22 @@
                     <div class="card calculator-card">
                         <div class="calculator-title">Calculadora Quanto Preciso</div>
                         <div class="calculator-row">
-                            <div class="grade-box">N1
+                            <div class="grade-box">
+                                N1
+                                <input type="number" id="n1" min="0" max="10" step="0.1">
                                 <hr>
                             </div>
                             <div class="plus-box">+</div>
-                            <div class="grade-box">N2
+                            <div class="grade-box">
+                                N2
+                                <input type="number" id="n2" min="0" max="10" step="0.1"
+                                    oninput="if(value.length>5)value=value.slice(0,5)">
                                 <hr>
                             </div>
-                            <div class="required-box">Você precisa de:</div>
+                            <div class="required-box" id="result">
+                                <div class="result-label">Você precisa de:</div>
+                                <div class="result-value"></div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -95,16 +106,16 @@
 
                     <div class="card teachers-card">
                         <h3>Professores</h3>
-                        <div class="teacher teacher-1">Ana Souza | MAT <span><img src="Assets/Email closed.svg" alt="Email"
-                                    style="margin-right: 7px; margin-top: 4px;"></span></div>
-                        <div class="teacher teacher-2">Carlos Lima | PORT <span><img src="Assets/Email closed.svg" alt="Email"
-                                    style="margin-right: 7px; margin-top: 4px;"></span></div>
-                        <div class="teacher teacher-3">Juliana Rocha | HIST <span><img src="Assets/Email closed.svg" alt="Email"
-                                    style="margin-right: 7px; margin-top: 4px;"></span></div>
-                        <div class="teacher teacher-4">Marcos Pereira | CIÊN <span><img src="Assets/Email closed.svg" alt="Email"
-                                    style="margin-right: 7px; margin-top: 4px;"></span></div>
-                        <div class="teacher teacher-5">Diogo Nascimento | INFO <span><img src="Assets/Email closed.svg" alt="Email"
-                                    style="margin-right: 7px; margin-top: 4px;"></span></div>
+                        <div class="teacher teacher-1">Ana Souza | MAT <span><img src="Assets/Email closed.svg"
+                                    alt="Email" style="margin-right: 7px; margin-top: 4px;"></span></div>
+                        <div class="teacher teacher-2">Carlos Lima | PORT <span><img src="Assets/Email closed.svg"
+                                    alt="Email" style="margin-right: 7px; margin-top: 4px;"></span></div>
+                        <div class="teacher teacher-3">Juliana Rocha | HIST <span><img src="Assets/Email closed.svg"
+                                    alt="Email" style="margin-right: 7px; margin-top: 4px;"></span></div>
+                        <div class="teacher teacher-4">Marcos Pereira | CIÊN <span><img src="Assets/Email closed.svg"
+                                    alt="Email" style="margin-right: 7px; margin-top: 4px;"></span></div>
+                        <div class="teacher teacher-5">Diogo Nascimento | INFO <span><img src="Assets/Email closed.svg"
+                                    alt="Email" style="margin-right: 7px; margin-top: 4px;"></span></div>
                     </div>
                 </aside>
             </div>

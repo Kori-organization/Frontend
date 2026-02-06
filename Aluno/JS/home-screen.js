@@ -64,3 +64,45 @@ monsterImage.addEventListener('click', () => {
     void monsterImage.offsetWidth;          // Force reflow
     monsterImage.classList.add('shake');
 });
+
+// Calculator
+const n1Input = document.getElementById('n1');
+const n2Input = document.getElementById('n2');
+const resultValue = document.querySelector('.result-value');
+
+const MEDIA = 7;
+
+function limitarInput(input) {
+    let valor = parseFloat(input.value);
+
+    if (isNaN(valor)) return;
+
+    if (valor > 10) input.value = 10;
+    if (valor < 0) input.value = 0;
+}
+
+function calcular() {
+    limitarInput(n1Input);
+    limitarInput(n2Input);
+
+    const n1 = parseFloat(n1Input.value);
+    const n2 = parseFloat(n2Input.value);
+
+    if (isNaN(n1) || isNaN(n2)) {
+        resultValue.textContent = '';
+        return;
+    }
+
+    const soma = n1 + n2;
+    const mediaAtual = soma / 2;
+
+    if (mediaAtual >= MEDIA) {
+        resultValue.textContent = '0';
+    } else {
+        const falta = (MEDIA * 2 - soma).toFixed(1);
+        resultValue.textContent = falta;
+    }
+}
+
+n1Input.addEventListener('input', calcular);
+n2Input.addEventListener('input', calcular);
