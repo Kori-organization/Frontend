@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --background: #f7f1e8;
     --sidebar-color: #55bfd6;
@@ -17,7 +19,7 @@
 
 body {
     margin: 0;
-    font-family: Inter, system-ui, Arial;
+    font-family: "Montserrat", sans-serif;
     background: var(--sidebar-color);
     color: var(--text-color);
     overflow-x: hidden;
