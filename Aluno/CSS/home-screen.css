@@ -13,6 +13,7 @@
     --border-radius: 22px;
 }
 
+/* Reset and Base Styles */
 * {
     box-sizing: border-box;
 }
@@ -30,6 +31,7 @@ img {
     user-select: none;
 }
 
+/* Main App Container */
 .app {
     display: flex;
     min-height: 100vh;
@@ -37,6 +39,7 @@ img {
     padding-bottom: 1px;
 }
 
+/* Sidebar */
 .sidebar {
     position: fixed;
     left: 0;
@@ -79,6 +82,68 @@ img {
     text-align: center;
     gap: 15px;
     margin-bottom: 20px;
+    transition: transform 0.18s ease;
+    cursor: pointer;
+    transform-origin: 55px center;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-item.active {
+    width: 120px;
+    height: 170px;
+    border-radius: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #52BDD9;
+    background-color: #FAF6EB;
+    transform-origin: center center;
+}
+
+.menu-item.active:hover {
+    transform: scale(1.03);
+}
+
+.menu-item img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.menu-item.bulletin img {
+    width: 45px;
+    height: 45px;
+    margin-top: 10px;
+}
+
+.menu-item.observations img {
+    width: 34px;
+    height: 34px;
+    margin-top: 30px;
+}
+
+.menu-item.teachers img {
+    width: 36px;
+    height: 36px;
+    margin-top: 30px;
+}
+
+.menu-item h2 {
+    margin: 8px 0 0 0;
+    font-size: 19px;
+    line-height: 1;
+    text-align: center;
+    color: #BCE9F5;
+    font-weight: 700;
+}
+
+.menu-item.active h2 {
+    color: #52BDD9;
+    margin-bottom: 45px;
+    margin-top: 15px;
 }
 
 .menu-group {
@@ -101,77 +166,6 @@ img {
     margin-top: 15px;
     font-size: 20px;
 }
-
-.menu-item img {
-    width: 40px;
-    height: 40px;
-    display: block;
-}
-
-.menu-item h2 {
-    margin: 8px 0 0 0;
-    font-size: 19px;
-    line-height: 1;
-    text-align: center;
-    color: #BCE9F5;
-    font-weight: 700;
-}
-
-.menu-item.bulletin,
-.menu-item.observations,
-.menu-item.teachers {
-    transition: transform 0.18s ease;
-    cursor: pointer;
-    transform-origin: 55px center;
-}
-
-.menu-item.bulletin:hover,
-.menu-item.observations:hover,
-.menu-item.teachers:hover {
-    transform: scale(1.05);
-}
-
-.menu-item.bulletin img {
-    width: 45px;
-    height: 45px;
-    margin-top: 10px;
-}
-
-.menu-item.observations img {
-    width: 34px;
-    height: 34px;
-    margin-top: 30px;
-}
-
-.menu-item.teachers img {
-    width: 36px;
-    height: 36px;
-    margin-top: 30px;
-}
-
-.menu-item.active {
-    width: 120px;
-    height: 170px;
-    border-radius: 65px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #52BDD9;
-    background-color: #FAF6EB;
-    cursor: pointer;
-    transition: transform 0.18s ease;
-}
-
-.menu-item.active:hover {
-    transform: scale(1.03);
-}
-
-.menu-item.active h2 {
-    color: #52BDD9;
-    margin-bottom: 45px;
-    margin-top: 15px;
-}
-
 
 .profile {
     width: 80px;
@@ -199,6 +193,7 @@ img {
     height: 40px;
 }
 
+/* Main Content Area */
 .main {
     padding-left: 32px;
     background-color: var(--background);
@@ -210,6 +205,7 @@ img {
     margin-left: 200px;
 }
 
+/* Top Background Elements */
 .color,
 .color2 {
     background-color: var(--background);
@@ -225,6 +221,7 @@ img {
     border-radius: 5px;
 }
 
+/* Top Main Header */
 .top-main {
     position: fixed;
     top: 0;
@@ -273,6 +270,7 @@ img {
     margin-bottom: -40px;
 }
 
+/* Grid Layout */
 .grid {
     display: grid;
     grid-template-columns: 1fr 340px;
@@ -280,6 +278,7 @@ img {
     margin-top: 190px;
 }
 
+/* Card Base Style */
 .card {
     background: var(--card-color);
     border-radius: var(--border-radius);
@@ -287,11 +286,13 @@ img {
     box-shadow: 0 10px 24px rgba(0, 0, 0, .05);
 }
 
+/* Left Column */
 .left-column {
     width: 750px;
     margin-left: 20px;
 }
 
+/* Welcome Card */
 .welcome-card {
     display: flex;
     align-items: center;
@@ -369,6 +370,7 @@ img {
     animation: shake 0.4s;
 }
 
+/* Shortcuts Container */
 .shortcuts-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -401,6 +403,7 @@ img {
     transform: scale(1.05);
 }
 
+/* Calculator Card */
 .calculator-card {
     background: var(--yellow-color);
     height: 280px;
@@ -494,6 +497,7 @@ img {
     color: #EBAB13;
 }
 
+/* Right Column */
 .right-column {
     display: flex;
     flex-direction: column;
@@ -503,6 +507,7 @@ img {
     margin-top: 20px;
 }
 
+/* Calendar */
 .calendar-container {
     width: 500px;
     height: 200px;
@@ -563,6 +568,7 @@ img {
     user-select: none;
 }
 
+/* Teachers Card */
 .teachers-card {
     margin-top: 200px;
     height: 380px;
@@ -621,11 +627,13 @@ img {
     background: #0000002E;
 }
 
+/* Additional Card Styles */
 .card {
     box-shadow: 5px 8px 20px rgba(52, 52, 52, 0.08),
         5px 2px 6px rgba(66, 66, 66, 0.04);
 }
 
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -643,6 +651,7 @@ img {
     background: #e6b53b;
 }
 
+/* Remove Number Input Arrows */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
