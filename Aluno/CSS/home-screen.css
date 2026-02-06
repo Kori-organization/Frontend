@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --background: #f7f1e8;
-    --sidebar-color: #55bfd6;
+    --background: #FAF6EB;
+    --sidebar-color: #53BDD9;
     --card-color: #ffffff;
-    --pink-color: #ffd6e6;
-    --green-color: #e7efb7;
-    --yellow-color: #fde9b6;
-    --yellow-text-color: #e6b53b;
+    --pink-color: #FFD3DF;
+    --green-color: #C1D25166;
+    --yellow-color: #F5C65966;
+    --yellow-text-color: #F5C659;
     --text-color: #1f2937;
     --muted-color: #6b7280;
     --border-radius: 22px;
@@ -345,7 +345,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--sidebar-color);
+    color: #52BDD9;
+    background-color: #FAF6EB;
 }
 
 .menu-group {
@@ -449,7 +450,7 @@ img {
 }
 
 .welcome-card h2 {
-    color: #d45a8c;
+    color: #E3809F;
     font-weight: 600;
     text-decoration: none;
     font-size: 20px;
@@ -518,7 +519,7 @@ img {
     font-size: 18px;
     text-align: center;
     font-weight: 600;
-    color: #5b6b2a;
+    color: #9AAA2C;
 }
 
 .shortcut-icon {
@@ -547,7 +548,7 @@ img {
     font-size: 22px;
     margin-top: 20px;
     margin-bottom: 40px;
-    color: var(--yellow-text-color);
+    color: #EBAB13;
 }
 
 .calculator-row {
@@ -557,13 +558,13 @@ img {
 }
 
 .grade-box {
-    background: #fbdf9f;
+    background: #F5C65930;
     border-radius: 14px;
     padding: 22px;
     text-align: center;
     font-weight: 700;
     font-size: 20px;
-    color: #9a7a2f;
+    color: #EAA400;
     width: 150px;
     height: 125px;
 }
@@ -571,7 +572,7 @@ img {
 .grade-box hr {
     margin-top: 0px;
     width: 80px;
-    border-color: #e8c677;
+    border-color: #EBAB13;
 }
 
 .plus-box {
@@ -581,7 +582,7 @@ img {
     text-align: center;
     font-weight: 220;
     margin-top: 12px;
-    color: #9a7a2f;
+    color: #EBAB13;
     user-select: none;
 }
 
@@ -590,7 +591,7 @@ img {
     height: 48px;
 
     background: #fbdf9f; 
-    color: #9a7a2f; 
+    color: #EBAB13; 
 
     border: none;
     border-radius: 12px;
@@ -612,16 +613,16 @@ img {
 .result-value {
     font-size: 56px;
     font-weight: 800;
-    color: #9a7a2f;
+    color: #EBAB13;
 }
 
 .required-box {
-    background: #fbdf9f;
+    background: #F5C65930;
     border-radius: 14px;
     padding: 22px;
     text-align: center;
     font-weight: 700;
-    color: #9a7a2f;
+    color: #EBAB13;
     margin-top: -30px;
     width: 250px;
     height: 180px;
@@ -745,23 +746,23 @@ img {
 }
 
 .teacher-1 {
-    background: #e6f7ff
+    background: #53BDD94D
 }
 
 .teacher-2 {
-    background: #ffe6ef
+    background: #F9B0C491
 }
 
 .teacher-3 {
-    background: #fff4da
+    background: #F8DEA1
 }
 
 .teacher-4 {
-    background: #eaffea
+    background: #C1D25166
 }
 
 .teacher-5 {
-    background: #eef1ff
+    background: #0000002E
 }
 
 .card {
@@ -792,9 +793,4 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-
-/* Firefox */
-input[type="number"] {
-    -moz-appearance: textfield;
 }
