@@ -1,76 +1,85 @@
 <!doctype html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Kori – Student</title>
     <link rel="stylesheet" href="CSS/home-screen.css">
 </head>
-
 <body>
     <div class="app">
         <aside class="sidebar">
-            <div class="menu">
+            <div class="sidebar-menu">
                 <div class="menu-item active" onclick="location.reload()">
-                    <div class="menu-group"><img src="Assets/home-2.svg" alt="Home">
+                    <div class="menu-group">
+                        <img src="Assets/home-2.svg" alt="Página inicial">
                         <h2>Início</h2>
                     </div>
                 </div>
-                <div class="menu-item bulletin"><img src="Assets/greeting.svg" alt="Bulletin">
+                <div class="menu-item bulletin">
+                    <img src="Assets/greeting.svg" alt="Boletim">
                     <h2>Boletim</h2>
                 </div>
-                <div class="menu-item observations"><img src="Assets/notes.svg" alt="Observations">
+                <div class="menu-item observations">
+                    <img src="Assets/notes.svg" alt="Observações">
                     <h2>Observações</h2>
                 </div>
-                <div class="menu-item teachers"><img src="Assets/info-circle.svg" alt="Teachers">
+                <div class="menu-item teachers">
+                    <img src="Assets/info-circle.svg" alt="Professores">
                     <h2>Professores</h2>
                 </div>
             </div>
-            <div class="profile"><img src="Assets/user.svg" alt="Profile" width="38px"></div>
+            <div class="profile">
+                <img src="Assets/user.svg" alt="Foto de perfil" width="38px">
+            </div>
         </aside>
 
         <main class="main">
             <div class="color"></div>
             <div class="color2"></div>
             <div class="top-main">
-                <div class="logo-container"><img src="Assets/logo.svg" alt="Kori Logo" width="180px"
-                        onclick="location.reload()">
+                <div class="logo-container">
+                    <img src="Assets/logo.svg" alt="Kori Logo" width="180px" onclick="location.reload()">
                 </div>
-                <div class="home-button"><img src="Assets/home.svg" alt="Home" width="40px" onclick="location.reload()">
+                <div class="home-button">
+                    <img src="Assets/home.svg" alt="Página inicial" width="40px" onclick="location.reload()">
                 </div>
             </div>
 
             <div class="grid">
-                <!-- left side -->
                 <section class="left-column">
                     <div class="card welcome-card">
                         <div>
                             <h1>Olá, Gabriela!</h1>
-                            <p>Não se esqueça <br>
+                            <p>
+                                Não se esqueça <br>
                                 de checar as <br>
                                 observações dos <br>
-                                professores para você.</p>
+                                professores para você.
+                            </p>
                             <h2>Ver observações</h2>
                         </div>
-                        <div class="monster-container"><img src="Assets/pink-monster.svg" alt="Monster"></div>
+                        <div class="monster-container">
+                            <img src="Assets/pink-monster.svg" alt="Monstro">
+                        </div>
                     </div>
 
                     <div class="shortcuts-container">
                         <div class="card shortcut-card">
-                            <img src="Assets/support.svg" alt="School Regulations" class="shortcut-icon">
+                            <img src="Assets/support.svg" alt="Regularmento escolar" class="shortcut-icon">
                             <div>Ver regulamento escolar</div>
                         </div>
-                        <div class="card shortcut-card"
-                            onclick="window.location.href='mailto:korieducation@gmail.com?subject=Suporte%20Kori'">
+                        <div class="card shortcut-card" onclick="window.location.href='mailto:korieducation@gmail.com?subject=Suporte%20Kori'">
                             <img src="Assets/document.svg" alt="Kori Support" class="shortcut-icon">
                             <div>Suporte Kori</div>
                         </div>
                     </div>
 
                     <div class="card calculator-card">
-                        <div class="calculator-title"><img src="Assets/star.svg" alt="">&nbsp; Calculadora Quanto
-                            Preciso</div>
+                        <div class="calculator-title">
+                            <img src="Assets/star.svg" alt="Estrelas">
+                            <span> Calculadora Quanto Preciso</span>
+                        </div>
                         <div class="calculator-row">
                             <div class="grade-box">
                                 N1
@@ -80,8 +89,7 @@
                             <div class="plus-box">+</div>
                             <div class="grade-box">
                                 N2
-                                <input type="number" id="n2" min="0" max="10" step="0.1"
-                                    oninput="if(value.length>5)value=value.slice(0,5)">
+                                <input type="number" id="n2" min="0" max="10" step="0.1" oninput="if(value.length>5)value=value.slice(0,5)">
                                 <hr>
                             </div>
                             <div class="required-box" id="result">
@@ -92,7 +100,6 @@
                     </div>
                 </section>
 
-                <!-- right side -->
                 <aside class="right-column">
                     <div class="calendar-container">
                         <div class="card">
@@ -107,26 +114,34 @@
 
                     <div class="card teachers-card">
                         <div class="user-group-teacher">
-                            <img src="Assets/user-group.svg" alt="">
+                            <img src="Assets/user-group.svg" alt="Professores">
                             <h3>Professores</h3>
                         </div>
-                        <div class="teacher teacher-1">Ana Souza | MAT <span><img src="Assets/email.svg"
-                                    alt="Email" style="margin-right: 7px; margin-top: 4px;"></span></div>
-                        <div class="teacher teacher-2">Carlos Lima | PORT <span><img src="Assets/email.svg"
-                                    alt="Email" style="margin-right: 7px; margin-top: 4px;"></span></div>
-                        <div class="teacher teacher-3">Juliana Rocha | HIST <span><img src="Assets/email.svg"
-                                    alt="Email" style="margin-right: 7px; margin-top: 4px;"></span></div>
-                        <div class="teacher teacher-4">Marcos Pereira | CIÊN <span><img src="Assets/email.svg"
-                                    alt="Email" style="margin-right: 7px; margin-top: 4px;"></span></div>
-                        <div class="teacher teacher-5">Diogo Nascimento | INFO <span><img src="Assets/email.svg"
-                                    alt="Email" style="margin-right: 7px; margin-top: 4px;"></span></div>
+                        <div class="teacher teacher-1">
+                            Ana Souza | MAT
+                            <span><img src="Assets/email.svg" alt="Email" style="margin-right: 7px; margin-top: 4px;"></span>
+                        </div>
+                        <div class="teacher teacher-2">
+                            Carlos Lima | PORT
+                            <span><img src="Assets/email.svg" alt="Email" style="margin-right: 7px; margin-top: 4px;"></span>
+                        </div>
+                        <div class="teacher teacher-3">
+                            Juliana Rocha | HIST
+                            <span><img src="Assets/email.svg" alt="Email" style="margin-right: 7px; margin-top: 4px;"></span>
+                        </div>
+                        <div class="teacher teacher-4">
+                            Marcos Pereira | CIÊN
+                            <span><img src="Assets/email.svg" alt="Email" style="margin-right: 7px; margin-top: 4px;"></span>
+                        </div>
+                        <div class="teacher teacher-5">
+                            Diogo Nascimento | INFO
+                            <span><img src="Assets/email.svg" alt="Email" style="margin-right: 7px; margin-top: 4px;"></span>
+                        </div>
                     </div>
                 </aside>
             </div>
         </main>
     </div>
-
     <script src="JS/home-screen.js"></script>
 </body>
-
 </html>
