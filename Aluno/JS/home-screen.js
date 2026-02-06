@@ -10,6 +10,19 @@ let currentDate = new Date();
 // Days of the week
 const daysOfWeek = ['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SAB'];
 
+// Fixed Brazilian holidays
+const fixedHolidays = [
+    '01-01', // New Year's Day
+    '04-21', // Tiradentes
+    '05-01', // Labor Day
+    '09-07', // Independence Day
+    '10-12', // Our Lady of Aparecida
+    '11-02', // All Souls' Day
+    '11-15', // Republic Proclamation
+    '11-20', // Black Awareness Day
+    '12-25'  // Christmas
+];
+
 function renderCalendar() {
     // Clear the calendar container
     calendarElement.innerHTML = '';
@@ -26,7 +39,7 @@ function renderCalendar() {
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth();
 
-    // Get month name fot the calendar header
+    // Get month name for the calendar header
     const monthName = currentDate.toLocaleString('pt-BR', { month: 'long' });
     const formattedMonth =
         monthName.charAt(0).toUpperCase() + monthName.slice(1);
@@ -63,6 +76,12 @@ function renderCalendar() {
             element.classList.add('today');
         }
 
+        // Highlight fixed holidays
+        const dateKey = `${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        if (fixedHolidays.includes(dateKey)) {
+            element.classList.add('holiday');
+        }
+
         // Add the day to the calendar
         calendarElement.appendChild(element);
     }
@@ -82,6 +101,7 @@ nextMonthButton.onclick = () => {
 
 // Calendar render
 renderCalendar();
+
 
 // ***********************************************************************************************************
 

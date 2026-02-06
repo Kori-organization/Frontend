@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
     <!-- Basic page settings -->
     <meta charset="utf-8" />
@@ -9,6 +10,7 @@
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="CSS/home-screen.css">
 </head>
+
 <body>
     <!-- App wrapper -->
     <div class="app">
@@ -91,7 +93,8 @@
                             <div>Ver regulamento escolar</div>
                         </div>
 
-                        <div class="card shortcut-card" onclick="window.location.href='mailto:korieducation@gmail.com?subject=Suporte%20Kori'">
+                        <div class="card shortcut-card"
+                            onclick="window.location.href='mailto:korieducation@gmail.com?subject=Suporte%20Kori'">
                             <img src="Assets/document.svg" alt="Kori Support" class="shortcut-icon">
                             <div>Suporte Kori</div>
                         </div>
@@ -141,6 +144,16 @@
                             <div class="calendar-grid" id="calendar"></div>
                         </div>
                     </div>
+                    <div class="calendar-legend">
+                        <div class="legend-item">
+                            <span class="legend-color today"></span>
+                            <span>Today</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color holiday"></span>
+                            <span>Holiday</span>
+                        </div>
+                    </div>
 
                     <!-- Teachers list -->
                     <div class="card teachers-card">
@@ -149,11 +162,11 @@
                             <h3>Professores</h3>
                         </div>
 
-                        <div class="teacher">Ana Souza | MAT</div>
-                        <div class="teacher">Carlos Lima | PORT</div>
-                        <div class="teacher">Juliana Rocha | HIST</div>
-                        <div class="teacher">Marcos Pereira | CIÊN</div>
-                        <div class="teacher">Diogo Nascimento | INFO</div>
+                        <div class="teacher one">Ana Souza | MAT</div>
+                        <div class="teacher two">Carlos Lima | PORT</div>
+                        <div class="teacher three">Juliana Rocha | HIST</div>
+                        <div class="teacher four">Marcos Pereira | CIÊN</div>
+                        <div class="teacher five">Diogo Nascimento | INFO</div>
                     </div>
                 </aside>
             </div>
@@ -163,4 +176,5 @@
     <!-- Scripts -->
     <script src="JS/home-screen.js"></script>
 </body>
+
 </html>

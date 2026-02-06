@@ -558,6 +558,16 @@ img {
     height: 40px;
 }
 
+.day.holiday {
+    background-color: #a5ccff;
+    height: 40px;
+}
+
+.day.today.holiday {
+    background-color: #c8f3da;
+    height: 40px;
+}
+
 .day.selected {
     background: #55bfd6;
     color: white;
@@ -568,9 +578,40 @@ img {
     user-select: none;
 }
 
+/* Calendar legend */
+.calendar-legend {
+    display: flex;
+    gap: 14px;
+    margin-top: 163px;
+    margin-left: 260px;
+    font-size: 13px;
+    color: #555;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+}
+
+/* Colors reference */
+.legend-color.today {
+    background-color: #c8f3da; /* Green */
+}
+
+.legend-color.holiday {
+    background-color: #a5ccff; /* Blue */
+}
+
 /* Teachers Card */
 .teachers-card {
-    margin-top: 200px;
+    margin-top: 0px;
     height: 380px;
 }
 
@@ -607,23 +648,23 @@ img {
     transform: scale(1.03);
 }
 
-.teacher-1 {
+.teacher.one {
     background: #53BDD94D;
 }
 
-.teacher-2 {
+.teacher.two {
     background: #F9B0C491;
 }
 
-.teacher-3 {
+.teacher.three {
     background: #F8DEA1;
 }
 
-.teacher-4 {
+.teacher.four {
     background: #C1D25166;
 }
 
-.teacher-5 {
+.teacher.five {
     background: #0000002E;
 }
 
