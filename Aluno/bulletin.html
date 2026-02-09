@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kori – Boletim</title>
+    <link rel="stylesheet" href="CSS/bulletin.css">
+</head>
+<body>
+    <!-- Main app container -->
+    <div class="app">
+        <!-- Sidebar navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <div class="menu-item home" onclick="window.location='index.html'">
+                    <img src="../Assets/home-3.svg">
+                    <h2>Início</h2>
+                </div>
+                <div class="menu-item active">
+                    <img src="../Assets/greeting-2.svg">
+                    <h2>Boletim</h2>
+                </div>
+                <div class="menu-item observations">
+                    <img src="../Assets/notes.svg">
+                    <h2>Observações</h2>
+                </div>
+                <div class="menu-item teachers">
+                    <img src="../Assets/info-circle.svg">
+                    <h2>Professores</h2>
+                </div>
+            </div>
+            <!-- User profile section -->
+            <div class="profile">
+                <img src="../Assets/user.svg" width="38">
+            </div>
+        </aside>
+
+        <!-- Main content area -->
+        <main class="main">
+            <!-- Top color overlay for visual effect -->
+            <div class="color"></div>
+            
+            <!-- Top header with logo and home button -->
+            <div class="top-main">
+                <div class="logo-container" onclick="window.location='index.html'">
+                    <img src="../Assets/logo.svg" alt="Kori Logo" width="180">
+                </div>
+                <div class="home-button" onclick="location.reload()">
+                    <img src="../Assets/greeting-3.svg" alt="Página inicial" width="50">
+                </div>
+            </div>
+
+            <!-- Bulletin section -->
+            <div class="bulletin-wrapper">
+                <div class="bulletin-title">
+                    <h1>Boletim escolar</h1>
+                </div>
+                
+                <!-- Final status card -->
+                <div class="final-status">
+                    Situação final: Aprovado<br>por conselho.
+                </div>
+
+                <!-- Report card grid -->
+                <div class="bulletin">
+                    <!-- Subjects column -->
+                    <div class="bcol left">
+                        <h3>Disciplina</h3>
+                        <div class="bitem subject top">Ciências</div>
+                        <div class="bitem subject">História</div>
+                        <div class="bitem subject">Informática</div>
+                        <div class="bitem subject">Matemática</div>
+                        <div class="bitem subject bottom">Português</div>
+                    </div>
+
+                    <!-- First semester grades -->
+                    <div class="bcol left2">
+                        <h3><span class="badge yellow">1º Semestre</span>Média</h3>
+                        <div class="bitem top">10.0</div>
+                        <div class="bitem">9.5</div>
+                        <div class="bitem red">5.0</div>
+                        <div class="bitem">7.0</div>
+                        <div class="bitem bottom">10.0</div>
+                    </div>
+
+                    <!-- Second semester grades -->
+                    <div class="bcol left3">
+                        <h3><span class="badge yellow">2º Semestre</span>Média</h3>
+                        <div class="bitem top">9.0</div>
+                        <div class="bitem">8.7</div>
+                        <div class="bitem">7.9</div>
+                        <div class="bitem">7.0</div>
+                        <div class="bitem red bottom">0.0</div>
+                    </div>
+
+                    <!-- Recovery grades -->
+                    <div class="bcol right3">
+                        <h3><span class="badge pink">Recuperação</span>Média</h3>
+                        <div class="bitem top">-</div>
+                        <div class="bitem">-</div>
+                        <div class="bitem">10.0</div>
+                        <div class="bitem">-</div>
+                        <div class="bitem red bottom">1.0</div>
+                    </div>
+
+                    <!-- Final averages -->
+                    <div class="bcol right2">
+                        <h3>Média Final</h3>
+                        <div class="bitem top">9.5</div>
+                        <div class="bitem">9.1</div>
+                        <div class="bitem">8.2</div>
+                        <div class="bitem">7.0</div>
+                        <div class="bitem red bottom">3.0</div>
+                    </div>
+
+                    <!-- Final status per subject -->
+                    <div class="bcol right">
+                        <h3>Situação</h3>
+                        <div class="bitem green top">Aprovado</div>
+                        <div class="bitem green">Aprovado</div>
+                        <div class="bitem green">Aprovado</div>
+                        <div class="bitem green">Aprovado</div>
+                        <div class="bitem red bottom">Reprovado</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
