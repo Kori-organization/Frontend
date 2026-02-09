@@ -16,7 +16,7 @@ body {
     overflow: hidden;
 }
 
-/* ===== Background shapes ===== */
+/* Background shapes */
 .shape {
     position: absolute;
     border-radius: 50%;
@@ -55,7 +55,7 @@ body {
     right: 380px;
 }
 
-/* ===== Card ===== */
+/* Card */
 .login-card {
     position: relative;
     width: 480px;
@@ -76,7 +76,7 @@ body {
     cursor: pointer;
 }
 
-/* ===== Texts ===== */
+/* Texts */
 .login-card h1 {
     font-size: 28px;
     font-weight: 600;
@@ -99,7 +99,7 @@ body {
     color: #1385ae;
 }
 
-/* ===== Form ===== */
+/* Form */
 form {
     margin-top: 40px;
 }
@@ -144,7 +144,7 @@ input {
     opacity: 1;
 }
 
-/* ===== Button ===== */
+/* Button */
 button {
     width: 100%;
     padding: 14px;
@@ -161,7 +161,7 @@ button:hover {
     background: #eab84b;
 }
 
-/* ===== Forgot password ===== */
+/* Forgot password */
 .forgot {
     text-align: center;
     margin-top: 20px;
