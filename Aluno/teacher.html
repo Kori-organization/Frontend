@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kori – Boletim</title>
+    <link rel="stylesheet" href="CSS/teacher.css">
+    <link rel="icon" href="../Assets/logo-top.svg" type="image/png">
+</head>
+<body>
+    <!-- Main app container -->
+    <div class="app">
+        <!-- Sidebar navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <div class="menu-item home" onclick="window.location='index.html'">
+                    <img src="../Assets/home-3.svg">
+                    <h2>Início</h2>
+                </div>
+                <div class="menu-item bulletin">
+                    <img src="../Assets/greeting.svg" onclick="window.location='bulletin.html'">
+                    <h2>Boletim</h2>
+                </div>
+                <div class="menu-item observations" onclick="window.location='observation.html'">
+                    <img src="../Assets/notes.svg">
+                    <h2>Observações</h2>
+                </div>
+                <div class="menu-item active">
+                    <img src="../Assets/info-circle-2.svg">
+                    <h2>Professores</h2>
+                </div>
+            </div>
+            <!-- User profile section -->
+            <div class="profile">
+                <img src="../Assets/user.svg" width="38">
+            </div>
+        </aside>
+
+        <!-- Main content area -->
+        <main class="main">
+            <!-- Top color overlay for visual effect -->
+            <div class="color"></div>
+            
+            <!-- Top header with logo and home button -->
+            <div class="top-main">
+                <div class="logo-container" onclick="window.location='index.html'">
+                    <img src="../Assets/logo.svg" alt="Kori Logo" width="180">
+                </div>
+                <div class="home-button" onclick="location.reload()">
+                    <img src="../Assets/greeting-3.svg" alt="Página inicial" width="50">
+                </div>
+            </div>
+
+            
+        </main>
+    </div>
+</body>
+</html>

@@ -125,27 +125,21 @@ img {
     display: block;
 }
 
-.menu-item.active img {
-    width: 45px;
-    height: 45px;
-    margin-top: 10px;
-}
-
 .menu-item.home img {
     width: 37px;
     height: 37px;
     margin-top: 10px;
 }
 
-.menu-item.observations img {
-    width: 34px;
-    height: 34px;
+.menu-item.bulletin img {
+    width: 45px;
+    height: 45px;
     margin-top: 30px;
 }
 
-.menu-item.teachers img {
-    width: 36px;
-    height: 36px;
+.menu-item.observations img {
+    width: 34px;
+    height: 34px;
     margin-top: 30px;
 }
 
@@ -163,6 +157,13 @@ img {
     color: #52BDD9;
     margin-bottom: 14px;
     margin-top: 0px;
+}
+
+
+.menu-item.active img {
+    width: 41px;
+    height: 41px;
+    margin-top: 10px;
 }
 
 /* Profile section */
@@ -263,202 +264,6 @@ img {
 
 .home-button img {
     margin-bottom: -40px;
-}
-
-/* Bulletin container */
-.bulletin-wrapper {
-    margin-top: 160px;
-    margin-left: 40px;
-    position: relative;
-}
-
-.bulletin-title {
-    font-size: 18px;
-    margin-bottom: 0px;
-    z-index: 2;
-}
-
-.bulletin-wrapper .bulletin-title h1 {
-    margin-bottom: -25px;
-    padding-top: 20px;
-    padding-left: 25px;
-}
-
-/* Final status card */
-.final-status {
-    position: absolute;
-    right: 98.5px;
-    height: 180px;
-    top: -10px;
-    background: #FFFFFF;
-    padding: 29px 32px;
-    border-radius: 49px;
-    font-weight: 600;
-    z-index: 1;
-    font-size: 21px;
-    margin-top: 10px;
-}
-
-/* Report card grid */
-.bulletin {
-    position: relative;
-    display: flex;
-    gap: 6px;
-    background: #FFFFFF;
-    border-radius: 28px;
-    width: fit-content;
-    z-index: 2;
-    padding-top: 15px;
-    padding-right: 30px;
-    border-top-left-radius: 60px;
-    margin-left: 120px;
-    margin-top: 97px;
-    transform: scale(1.20);
-}
-
-/* Bulletin columns */
-.bcol {
-    padding: 16px;
-    border-radius: 22px;
-    min-width: 160px;
-    margin-right: -30px;
-}
-
-/* Column headers with unique rounded corners */
-.bcol.left h3 {
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 12px;
-    background-color: #ECECEC;
-    padding-top: 32%;
-    width: 145px;
-    height: 110px;
-    margin-top: -20px;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 30px;
-}
-
-.bcol.left2 h3 {
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 12px;
-    background-color: #ECECEC;
-    padding-top: 22%;
-    width: 145px;
-    height: 110px;
-    margin-top: -20px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-}
-
-.bcol.left3 h3 {
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 12px;
-    background-color: #ECECEC;
-    padding-top: 22%;
-    width: 145px;
-    height: 110px;
-    margin-top: -20px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-}
-
-.bcol.right3 h3 {
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 12px;
-    background-color: #ECECEC;
-    padding-top: 22%;
-    width: 145px;
-    height: 110px;
-    margin-top: -20px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-}
-
-.bcol.right2 h3 {
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 12px;
-    background-color: #ECECEC;
-    padding-top: 32%;
-    width: 145px;
-    height: 110px;
-    margin-top: -20px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-}
-
-.bcol.right h3 {
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 12px;
-    background-color: #ECECEC;
-    padding-top: 32%;
-    width: 145px;
-    height: 110px;
-    margin-top: -20px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 60px;
-}
-
-/* Badge styles for semester labels */
-.badge {
-    display: block;
-    font-size: 12px;
-    padding: 4px 12px;
-    border-radius: 12px;
-    margin: 0 auto 6px;
-    width: fit-content;
-}
-
-.badge.yellow {
-    background: #F5C65966;
-}
-
-.badge.pink {
-    background: #FFD3DF;
-}
-
-/* Grade items */
-.bitem {
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 3px solid #D6D6D6;
-    font-weight: 600;
-    background-color: #F6F6F6;
-}
-
-.bitem.top {
-    margin-top: -20px;
-}
-
-.bitem.bottom {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    height: 70px;
-}
-
-.bitem:last-child {
-    border: none;
-}
-
-.subject {
-    justify-content: center;
-    padding-left: 0;
-    text-align: center;
-}
-
-/* Color coding for grades */
-.red {
-    color: #ff3b30;
-}
-
-.green {
-    color: #8CA11C;
 }
 
 /* Custom scrollbar */

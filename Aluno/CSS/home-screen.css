@@ -104,6 +104,11 @@ img {
     transform-origin: center center;
 }
 
+.menu-item.active img {
+    width: 38px;
+    height: 38px;
+}
+
 .menu-item.active:hover {
     transform: scale(1.03);
 }
