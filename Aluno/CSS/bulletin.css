@@ -93,6 +93,7 @@ img {
     transition: transform 0.18s ease;
     cursor: pointer;
     transform-origin: 55px center;
+    transform: scale(0.90);
 }
 
 .menu-item:hover {
@@ -131,8 +132,8 @@ img {
 }
 
 .menu-item.home img {
-    width: 40px;
-    height: 40px;
+    width: 37px;
+    height: 37px;
     margin-top: 10px;
 }
 

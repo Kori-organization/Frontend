@@ -67,6 +67,7 @@ img {
     gap: 18px;
     margin-top: 10px;
     width: 100%;
+    transform: scale(0.90);
 }
 
 .menu-item {
