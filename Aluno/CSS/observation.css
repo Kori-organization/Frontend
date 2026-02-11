@@ -88,8 +88,7 @@ img {
     margin: 0;
     padding: 0;
     text-align: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 2px;
     transition: transform 0.18s ease;
     cursor: pointer;
     transform-origin: 55px center;
@@ -111,7 +110,31 @@ img {
     color: #52BDD9;
     background-color: #FAF6EB;
     transform-origin: center center;
-    margin-top: -2.5px;
+    margin-top: -60px;
+    margin-bottom: 5px;
+    gap: 13px;
+}
+
+.menu-item.active:hover {
+    transform: scale(0.89);
+}
+
+.menu-item.active2 {
+    width: 120px;
+    height: 170px;
+    border-radius: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #52BDD9;
+    transform-origin: center center;
+    margin-top: -60px;
+    margin-bottom: 5px;
+    gap: 13px;
+}
+
+.menu-item.three {
+    margin-top: -60px;
 }
 
 .menu-item.active:hover {
@@ -125,29 +148,33 @@ img {
     display: block;
 }
 
-.menu-item.active img {
-    width: 36px;
-    height: 36px;
-    margin-top: 10px;
+.menu-item.one img {
+    width: 40px;
+    height: 40px;
 }
 
-.menu-item.home img {
-    width: 37px;
-    height: 37px;
-    margin-top: -22px;
+.menu-item.one h2 {
+    font-size: 17px;
 }
 
-.menu-item.bulletin img {
+.menu-item.two img {
     width: 45px;
     height: 45px;
-    margin-top: 47px;
 }
 
-.menu-item.teachers img {
-    width: 36px;
-    height: 36px;
-    margin-top: -38px;
+.menu-item.two h2 {
+    font-size: 17px;
 }
+
+.menu-item.three img {
+    width: 39px;
+    height: 39px;
+}
+
+.menu-item.three h2 {
+    font-size: 17px;
+}
+
 
 /* Menu text */
 .menu-item h2 {
@@ -161,9 +188,16 @@ img {
 
 .menu-item.active h2 {
     color: #52BDD9;
-    margin-bottom: 14px;
-    margin-top: 0px;
+    font-size: 17px;
 }
+
+
+.menu-item.active img {
+    width: 39px;
+    height: 39px;
+
+}
+
 
 /* Profile section */
 .profile {

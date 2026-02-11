@@ -88,8 +88,7 @@ img {
     margin: 0;
     padding: 0;
     text-align: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 2px;
     transition: transform 0.18s ease;
     cursor: pointer;
     transform-origin: 55px center;
@@ -111,11 +110,45 @@ img {
     color: #52BDD9;
     background-color: #FAF6EB;
     transform-origin: center center;
-    margin-top: -15px;
+    margin-top: -60px;
+    margin-bottom: 5px;
+    gap: 13px;
 }
 
 .menu-item.active:hover {
     transform: scale(0.89);
+}
+
+.menu-item.active2 {
+    width: 120px;
+    height: 170px;
+    border-radius: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #52BDD9;
+    transform-origin: center center;
+    margin-top: -60px;
+    margin-bottom: 5px;
+    gap: 13px;
+}
+
+.menu-item.active:hover {
+    transform: scale(0.89);
+}
+
+.menu-item.one {
+    margin-top: -45px;
+}
+
+.menu-item.two {
+    margin-top: -58px;
+    gap: 14px;
+}
+
+.menu-item.three {
+    margin-top: -63px;
+    gap: 12px;
 }
 
 /* Menu icons */
@@ -125,29 +158,33 @@ img {
     display: block;
 }
 
-.menu-item.active img {
-    width: 47px;
-    height: 47px;
-    margin-top: 12px;
+.menu-item.one img {
+    width: 40px;
+    height: 40px;
 }
 
-.menu-item.home img {
+.menu-item.one h2 {
+    font-size: 17px;
+}
+
+.menu-item.two img {
     width: 37px;
-    height: 37px;
-    margin-top: 10px;
+    height: 37.5px;
 }
 
-.menu-item.observations img {
-    width: 34px;
-    height: 34px;
-    margin-top: -42px;
+.menu-item.two h2 {
+    font-size: 17px;
 }
 
-.menu-item.teachers img {
-    width: 36px;
-    height: 36px;
-    margin-top: 24px;
+.menu-item.three img {
+    width: 39px;
+    height: 42px;
 }
+
+.menu-item.three h2 {
+    font-size: 17px;
+}
+
 
 /* Menu text */
 .menu-item h2 {
@@ -161,9 +198,14 @@ img {
 
 .menu-item.active h2 {
     color: #52BDD9;
-    margin-bottom: 14px;
-    margin-top: 0px;
-    font-size: 19px;
+    font-size: 17px;
+}
+
+
+.menu-item.active img {
+    width: 47px;
+    height: 48px;
+
 }
 
 /* Profile section */
