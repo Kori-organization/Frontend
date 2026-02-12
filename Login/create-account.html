@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kori - Criar Conta</title>
+    <link rel="stylesheet" href="CSS/create-account.css">
+    <link rel="icon" href="Assets/logo-top.svg" type="image/png">
+</head>
+
+<body>
+
+    <!-- Background shapes -->
+    <div class="shape blue"></div>
+    <div class="shape pink"></div>
+    <div class="shape green"></div>
+    <div class="shape yellow"></div>
+
+    <!-- Card -->
+    <div class="login-card">
+
+        <div class="logo">
+            <img src="../Assets/logo.svg" width="100px" onclick="location.href='index.html'">
+        </div>
+
+        <h1>Criar conta</h1>
+        <p class="subtitle">Já esteve aqui antes? <a href="../index.html">Entrar</a></p>
+
+        <form>
+
+            <label>E-mail</label>
+            <input type="email" placeholder="Digite seu e-mail" required>
+
+            <label>Senha</label>
+            <div class="password-field">
+                <input type="password" id="password" placeholder="Digite sua senha" required>
+                <img src="../Assets/eye-off.svg" class="eye" id="togglePassword">
+            </div>
+
+            <label>Confirmar senha</label>
+            <div class="password-field">
+                <input type="password" id="confirmPassword" placeholder="Confirme sua senha" required>
+                <img src="../Assets/eye-off.svg" class="eye" id="toggleConfirm">
+            </div>
+
+            <button type="submit">Entrar</button>
+
+        </form>
+    </div>
+
+    <button class="back-button" onclick="location.href='../index.html'">
+        ← Voltar
+    </button>
+
+</body>
+<script src="JS/create-account.js"></script>
+
+</html>
