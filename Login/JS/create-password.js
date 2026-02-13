@@ -13,3 +13,18 @@ toggles.forEach(toggle => {
         }
     });
 });
+
+const newPassword = document.getElementById('newPassword');
+const confirmNewPassword = document.getElementById('confirmNewPassword');
+
+document.querySelector("form").addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    if (newPassword.value !== confirmNewPassword.value) {
+        e.preventDefault();
+        alert("As senhas não coincidem!");
+    } else {
+        window.location.href = "new-password.html";
+    }
+});
