@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="CSS/observation.css">
     <link rel="icon" href="../Assets/logo-top.svg" type="image/png">
 </head>
+
 <body>
     <!-- Main app container -->
     <div class="app">
@@ -21,7 +23,7 @@
                     <img src="../Assets/greeting.svg" onclick="window.location='bulletin.html'">
                     <h2>Boletim</h2>
                 </div>
-                <div class="menu-item active">
+                <div class="menu-item active" onclick="location.reload()">
                     <img src="../Assets/notes-2.svg">
                     <h2>Observações</h2>
                 </div>
@@ -40,7 +42,7 @@
         <main class="main">
             <!-- Top color overlay for visual effect -->
             <div class="color"></div>
-            
+
             <!-- Top header with logo and home button -->
             <div class="top-main">
                 <div class="logo-container" onclick="window.location='index.html'">
@@ -51,8 +53,87 @@
                 </div>
             </div>
 
-            
+            <!-- Observation header -->
+            <div class="obs-header">
+                <h1>Observações</h1>
+                <p>Observações são oportunidades de melhorar. Não fique chateado — use isso para <br>crescer.</p>
+            </div>
+
+            <!-- Observation container -->
+            <div class="obs-container" id="obsContainer">
+                <div class="obs-card pink">
+                    <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                        relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                    <button class="copy-btn">
+                        <img src="../Assets/copy.svg" alt="Copiar">
+                    </button>
+                </div>
+                <div class="obs-card yellow">
+                    <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                        relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                    <button class="copy-btn">
+                        <img src="../Assets/copy.svg" alt="Copiar">
+                    </button>
+                </div>
+                <div class="obs-card blue">
+                    <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                        relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                    <button class="copy-btn">
+                        <img src="../Assets/copy.svg" alt="Copiar">
+                    </button>
+                </div>
+                <div class="obs-card green">
+                    <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                        relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                    <button class="copy-btn">
+                        <img src="../Assets/copy.svg" alt="Copiar">
+                    </button>
+                </div>
+                <div class="obs-card pink">
+                    <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                        relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                    <button class="copy-btn">
+                        <img src="../Assets/copy.svg" alt="Copiar">
+                    </button>
+                </div>
+                <div class="obs-card yellow">
+                    <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                        relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                    <button class="copy-btn">
+                        <img src="../Assets/copy.svg" alt="Copiar">
+                    </button>
+                </div>
+                <div class="obs-card blue">
+                    <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                        relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                    <button class="copy-btn">
+                        <img src="../Assets/copy.svg" alt="Copiar">
+                    </button>
+                </div>
+                <div class="obs-card green">
+                    <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                        relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                    <button class="copy-btn">
+                        <img src="../Assets/copy.svg" alt="Copiar">
+                    </button>
+                </div>
+            </div>
+
         </main>
     </div>
+    <div id="copyToast" class="copy-toast">
+        Copiado para a área de transferência
+    </div>
 </body>
+
+<script src="JS/observation.js"></script>
+
 </html>

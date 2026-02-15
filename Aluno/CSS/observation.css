@@ -1,8 +1,3 @@
-/* 
- * Bulletin Page Styles
- * Kori School System
- */
-
 /* Google Font import */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -297,6 +292,160 @@ img {
 
 .home-button img {
     margin-bottom: -40px;
+}
+
+/* Header */
+.obs-header{
+    margin-top: 160px;
+    margin-left: 60px;
+}
+
+.obs-header h1{
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.obs-header p{
+    color: var(--muted-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.copy-btn {
+    position: absolute;
+    bottom: 7px;
+    right: 12px;
+
+    width: 33px;
+    height: 33px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: #F4F1E8;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.2s ease;
+}
+
+.copy-btn:hover {
+    transform: scale(1.02);
+}
+
+.copy-btn img {
+    width: 15px;
+    height: 15px;
+}
+
+/* Grid container */
+.obs-container{
+    margin-left: 70px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    gap: 55px;
+}
+
+/* Card base */
+.obs-card {
+    width: 240px;
+    height: 240px;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.2s ease;
+    transform: scale(1.15);
+    
+}
+
+/* Colors */
+.pink{
+    background: #FFBCCF;
+}
+
+.yellow{
+    background: #FFCE5C;
+}
+
+.blue{
+    background: #53BDD9;
+}
+
+.green{
+    background: #B2C537;
+}
+
+.pink {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+        url("../../Assets/intersect-pink.svg");
+}
+
+.yellow {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+        url("../../Assets/intersect-yellow.svg");
+}
+
+.blue {
+    background-image:
+        linear-gradient(rgba(254, 223, 223, 0.3), rgba(254, 226, 226, 0.3)),
+        url("../../Assets/intersect-blue.svg");
+}
+
+.green {
+    background-image:
+        linear-gradient(rgba(254, 223, 223, 0.3), rgba(254, 226, 226, 0.3)),
+        url("../../Assets/intersect-green.svg");
+}
+
+.copy-toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    
+    background: rgb(131, 131, 131);
+    color: white;
+    
+    padding: 12px 22px;
+    border-radius: 8px;
+    
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 22px;
+    
+    opacity: 0;
+    pointer-events: none;
+    
+    transition: all 0.3s ease;
+    
+    z-index: 9999;
+}
+
+/* Visible state */
+.copy-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
 /* Custom scrollbar */
