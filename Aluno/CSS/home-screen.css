@@ -1,5 +1,7 @@
+/* Google Font import */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* CSS Variables for consistent theming */
 :root {
     --background: #FAF6EB;
     --sidebar-color: #53BDD9;
@@ -359,7 +361,7 @@ img {
 }
 
 .welcome-card h2:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .monster-container {
@@ -676,7 +678,7 @@ img {
 }
 
 .teacher:hover {
-    transform: scale(1.03);
+    transform: scale(1.01);
 }
 
 .teacher.one {
