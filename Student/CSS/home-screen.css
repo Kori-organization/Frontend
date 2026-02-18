@@ -701,6 +701,15 @@ img {
     background: #0000002E;
 }
 
+/* Teacher email icon */
+.teacher img {
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
 /* Additional Card Styles */
 .card {
     box-shadow: 5px 8px 20px rgba(52, 52, 52, 0.08),

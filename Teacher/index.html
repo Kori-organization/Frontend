@@ -70,62 +70,38 @@
                     <!-- Welcome card -->
                     <div class="card welcome-card">
                         <div>
-                            <h1>Olá, Gabriela!</h1>
+                            <h1>Olá, Prof. Igor!</h1>
                             <p>
                                 Não se esqueça <br>
-                                de checar as <br>
-                                observações dos <br>
-                                professores para você.
+                                de fazer observações <br>
+                                para os alunos de suas <br>
+                                turmas.
                             </p>
                             <h2 onclick="window.location='observation.html'">Ver observações</h2>
                         </div>
 
                         <div class="monster-container">
-                            <img src="../Assets/pink-monster.svg" alt="Monster">
+                            <img src="../Assets/rocket.svg" alt="Monster" width="260px">
                         </div>
                     </div>
 
                     <!-- Shortcuts -->
                     <div class="shortcuts-container">
-                        <div class="card shortcut-card">
-                            <img src="../Assets/support.svg" alt="School rules" class="shortcut-icon">
+                        <div class="card shortcut-card" onclick="window.location='information.html'">
+                            <img src="../Assets/document-2.svg" alt="School rules" class="shortcut-icon">
                             <div>Ver regulamento escolar</div>
                         </div>
 
                         <div class="card shortcut-card"
                             onclick="window.location.href='mailto:korieducation@gmail.com?subject=Suporte%20Kori'">
-                            <img src="../Assets/document.svg" alt="Kori Support" class="shortcut-icon">
+                            <img src="../Assets/support-2.svg" alt="Kori Support" class="shortcut-icon">
                             <div>Suporte Kori</div>
                         </div>
                     </div>
 
                     <!-- Grade calculator -->
-                    <div class="card calculator-card">
-                        <div class="calculator-title">
-                            <img src="../Assets/star.svg" alt="Stars">
-                            <span> Calculadora Quanto Preciso</span>
-                        </div>
+                    <div class="card calculator-card" style="box-shadow: none;">
 
-                        <div class="calculator-row">
-                            <div class="grade-box">
-                                N1
-                                <input type="number" id="n1" min="0" max="10" step="0.1">
-                                <hr>
-                            </div>
-
-                            <div class="plus-box">+</div>
-
-                            <div class="grade-box">
-                                N2
-                                <input type="number" id="n2" min="0" max="10" step="0.1">
-                                <hr>
-                            </div>
-
-                            <div class="required-box" id="result">
-                                <div class="result-label">Você precisa de:</div>
-                                <div class="result-value"></div>
-                            </div>
-                        </div>
                     </div>
                 </section>
 
@@ -158,14 +134,53 @@
                     <div class="card teachers-card">
                         <div class="user-group-teacher">
                             <img src="../Assets/user-group.svg" alt="Teachers">
-                            <h3>Professores</h3>
+                            <h3>Suas Turmas</h3>
                         </div>
 
-                        <div class="teacher one">Ana Souza | MAT</div>
-                        <div class="teacher two">Carlos Lima | PORT</div>
-                        <div class="teacher three">Juliana Rocha | HIST</div>
-                        <div class="teacher four">Marcos Pereira | CIÊN</div>
-                        <div class="teacher five">Diogo Nascimento | INFO</div>
+                        <div class="teacher one">
+                            <span>1° Série</span>
+                            <div class="teacher-icons">
+                                <img src="../Assets/notes-4.svg" class="img1">
+                                <img src="../Assets/greeting-4.svg" class="img2">
+                            </div>
+                        </div>
+
+
+                        <div class="teacher two">
+                            <span>2° Série</span>
+                            <div class="teacher-icons">
+                                <img src="../Assets/notes-4.svg" class="img1">
+                                <img src="../Assets/greeting-4.svg" class="img2">
+                            </div>
+                        </div>
+
+
+                        <div class="teacher three">
+                            <span>3° Série</span>
+                            <div class="teacher-icons">
+                                <img src="../Assets/notes-4.svg" class="img1">
+                                <img src="../Assets/greeting-4.svg" class="img2">
+                            </div>
+                        </div>
+
+
+                        <div class="teacher four">
+                            <span>4° Série</span>
+                            <div class="teacher-icons">
+                                <img src="../Assets/notes-4.svg" class="img1">
+                                <img src="../Assets/greeting-4.svg" class="img2">
+                            </div>
+
+                        </div>
+
+                        <div class="teacher five">
+                            <span>5° Série</span>
+                            <div class="teacher-icons">
+                                <img src="../Assets/notes-4.svg" class="img1">
+                                <img src="../Assets/greeting-4.svg" class="img2">
+                            </div>
+
+                        </div>
                     </div>
                 </aside>
             </div>
