@@ -673,12 +673,7 @@ img {
     margin-bottom: 12px;
     font-size: 18px;
     transition: transform 0.18s ease;
-    cursor: pointer;
     transform-origin: center center;
-}
-
-.teacher:hover {
-    transform: scale(1.01);
 }
 
 .teacher.one {
@@ -705,7 +700,6 @@ img {
 .teacher img {
     width: 21px;
     height: 21px;
-    cursor: pointer;
     opacity: 0.8;
     transition: transform 0.18s ease, opacity 0.18s ease;
 }
