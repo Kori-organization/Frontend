@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kori - Email enviado</title>
+    <link rel="stylesheet" href="CSS/confirmation-email.css">
+    <link rel="icon" href="../Assets/logo-top.svg" type="image/png">
+</head>
+
+<body>
+    <!-- Background shapes -->
+    <div class="shape blue"></div>
+    <div class="shape pink"></div>
+    <div class="shape green"></div>
+    <div class="shape yellow"></div>
+
+    <!-- Card -->
+    <div class="login-card success-card">
+        <div class="logo">
+            <img src="../Assets/logo.svg" alt="Logo" width="100px" onclick="location.href='../index.html'">
+        </div>
+
+        <!-- Success header -->
+        <div class="success-header">
+            <img src="../Assets/check-icon.svg" alt="Email enviado" class="success-icon">
+            <h1>Email enviado!</h1>
+        </div>
+
+        <p class="subtitle">
+            Vá até sua caixa de entrada e clique em <br>
+            Alterar Senha no email que mandamos para <br>
+            <span>gabriela.ricci@kori.com.br</span>.
+        </p>
+
+        <p class="resend-text">
+            Não recebeu um email?
+        </p>
+
+        <button type="button" onclick="location.href='forgot-password.html'">
+            Enviar email novamente
+        </button>
+    </div>
+
+    <!-- Back button -->
+    <button class="back-button" onclick="location.href='forgot-password.html'">
+        ← Voltar
+    </button>
+</body>
+
+</html>
