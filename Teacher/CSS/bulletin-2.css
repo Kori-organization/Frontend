@@ -286,8 +286,7 @@ select {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    border-top-left-radius: 14px;
-    border-top-right-radius: 14px;
+    border-radius: 22px;
 }
 
 /* Student name in modal */
@@ -423,7 +422,7 @@ select {
 .average-box .value {
     font-size: 34px;
     font-weight: 700;
-    color: #e03131;
+    color: #504949;
 }
 
 /* Admin warning note */
@@ -434,7 +433,7 @@ select {
     padding: 10px;
     border-radius: 8px;
     margin-top: 10px;
-    display: none;
+    display: block !important;
 }
 
 /* Modal footer */
@@ -476,12 +475,72 @@ select {
 
 /* Confirmation modal */
 .confirm-content {
-    width: 760px;
-    height: 200px;
+    width: 520px;
     background: white;
-    border-radius: 12px;
-    padding: 18px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25)
+    border-radius: 28px;
+    padding: 42px 36px 36px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+
+/* Icon */
+.confirm-icon {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    background: #F9D88A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.confirm-icon img {
+    width: 42px;
+    height: 42px;
+}
+
+/* Title */
+.confirm-content h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #102c3d;
+    margin-bottom: 22px;
+    line-height: 1.25;
+}
+
+/* Pill */
+.confirm-pill {
+    display: inline-flex;
+    gap: 26px;
+    padding: 10px 20px;
+    background: #f4f4f4;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #21303a;
+    margin-bottom: 22px;
+}
+
+/* Warning text */
+.confirm-warning {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 32px;
+    line-height: 1.4;
+}
+
+/* Actions */
+.confirm-actions {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+
+.confirm-actions .btn {
+    width: 200px;
+    height: 52px;
+    font-size: 16px;
 }
 
 /* Toast container */

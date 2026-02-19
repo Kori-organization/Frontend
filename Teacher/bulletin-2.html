@@ -190,14 +190,16 @@
                         <div class="field">
                             <div class="label">Digite a Nota 1</div>
                             <div class="note-row">
-                                <input id="nota1" class="note-input" type="number" min="0" max="10" step="0.1" placeholder="—" />
+                                <input id="nota1" class="note-input" type="number" min="0" max="10" step="0.1"
+                                    placeholder="—" />
                             </div>
                         </div>
 
                         <div class="field">
                             <div class="label">Digite a Nota 2</div>
                             <div class="note-row">
-                                <input id="nota2" class="note-input" type="number" min="0" max="10" step="0.1" placeholder="—" />
+                                <input id="nota2" class="note-input" type="number" min="0" max="10" step="0.1"
+                                    placeholder="—" />
                             </div>
                         </div>
                     </div>
@@ -227,23 +229,32 @@
     <div id="confirmOverlay" class="overlay" aria-hidden="true">
         <div class="confirm-content" role="dialog" aria-modal="true">
 
-            <!-- Confirmation content -->
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-top: 20px;">
-                <div>
-                    <strong id="confirmStudent">Aluno</strong>
-                    <div id="confirmAvg">Média: —</div>
-                </div>
-                <div>
-                    <div>Atenção</div>
-                    <div>Somente um administrador poderá alterar a nota após salvar.</div>
-                </div>
+            <!-- Icon -->
+            <div class="confirm-icon">
+                <img src="../Assets/info-circle-3.svg" alt="Atenção">
             </div>
 
-            <!-- Confirmation buttons -->
-            <div style="display:flex; gap:12px; justify-content:flex-end; margin-top: 40px;">
-                <button id="confirmCancel" class="btn ghost">Voltar</button>
-                <button id="confirmSend" class="btn primary">Tem certeza?</button>
+            <!-- Title -->
+            <h2>Tem certeza que deseja<br>salvar a nota?</h2>
+
+            <!-- Info pill -->
+            <div class="confirm-pill">
+                <span id="confirmStudent">Aluno</span>
+                <span id="confirmAvg">Média: —</span>
             </div>
+
+            <!-- Warning -->
+            <p class="confirm-warning">
+                Atenção: somente um administrador poderá<br>
+                alterar essa informação.
+            </p>
+
+            <!-- Actions -->
+            <div class="confirm-actions">
+                <button id="confirmCancel" class="btn ghost">Voltar</button>
+                <button id="confirmSend" class="btn primary">Salvar</button>
+            </div>
+
         </div>
     </div>
 
