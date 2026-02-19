@@ -85,32 +85,46 @@ confirmObsSend.addEventListener("click", () => {
     confirmObservationOverlay.classList.remove("show");
     observationOverlay.classList.remove("show");
 
-    showToast("Observação salva com sucesso");
+    showToast(
+    "success",
+    "Observação salva com sucesso",
+    "A observação foi registrada com êxito."
+);
 
 });
 
 
-
 function showToast(type = 'success', title = '', subtitle = '') {
+
     const toast = document.createElement('div');
     toast.className = `toast ${type}`;
 
-    const iconSrc = type === 'error' ? '../Assets/error-icon.svg' : '../Assets/check-icon.svg';
+    const iconSrc =
+        type === 'error'
+            ? '../Assets/error-icon.svg'
+            : '../Assets/check-icon.svg';
 
     toast.innerHTML = `
         <img src="${iconSrc}" class="toast-icon" alt="">
         <div class="toast-text">
             <h4>${title}</h4>
-            <p>${subtitle}</p>
+            ${subtitle ? `<p>${subtitle}</p>` : ''}
         </div>
     `;
 
     toastWrap.appendChild(toast);
 
-    // auto-hide: adiciona classe .hide (anima saída) e remove do DOM depois
+    // tempo total visível
     const AUTO_HIDE_MS = 4000;
+
     setTimeout(() => {
+
         toast.classList.add('hide');
-        setTimeout(() => toast.remove(), 350); // espera animação terminar
+
+        setTimeout(() => {
+            toast.remove();
+        }, 350);
+
     }, AUTO_HIDE_MS);
+
 }
