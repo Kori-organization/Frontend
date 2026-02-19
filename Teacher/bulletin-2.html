@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Character encoding -->
+    <meta charset="utf-8" />
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Page title -->
+    <title>Alunos do 1º Ano — Boletim</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../Assets/logo-top.svg" type="image/png">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="CSS/bulletin-2.css">
+</head>
+
+<body>
+
+    <!-- Top navigation bar -->
+    <div class="topbar">
+        <!-- Back button -->
+        <a class="back" href="bulletin.html" title="Voltar">
+            <img src="../Assets/left.svg" alt="Voltar" width="15px"> Voltar
+        </a>
+
+        <!-- Greeting icon (reloads page on click) -->
+        <img src="../Assets/greeting-4.svg" alt="" width="40px" class="img-greeting" onclick="location.reload()">
+    </div>
+
+    <main>
+        <!-- Page title -->
+        <h1>Alunos do 1º Ano</h1>
+
+        <!-- Search box -->
+        <div class="search-box">
+            <input type="text" placeholder="Pesquisar Aluno..." aria-label="Pesquisar Aluno">
+            <button class="search-btn" title="Pesquisar" aria-label="Pesquisar">
+                <img src="../Assets/icon-search.svg" width="17" alt="Pesquisar">
+            </button>
+        </div>
+
+        <!-- Students table section -->
+        <section class="table" aria-label="Lista de alunos">
+
+            <!-- Table header -->
+            <div class="header" role="row">
+                <div>Matrícula <img src="../Assets/chevron.svg" alt="" width="10"></div>
+                <div>Nome <img src="../Assets/chevron.svg" alt="" width="10"></div>
+                <div>Email <img src="../Assets/chevron.svg" alt="" width="10"></div>
+                <div>Admissão <img src="../Assets/chevron.svg" alt="" width="10"></div>
+            </div>
+
+            <!-- Student row -->
+            <div class="student-row" role="row">
+                <div class="matricula">1010</div>
+                <div class="nome">Davi Arakaki</div>
+                <div class="email">davi.arakaki@kori.com</div>
+                <div class="admissao">11/01/2025</div>
+
+                <!-- Action buttons -->
+                <div class="actions">
+                    <!-- Add grades button -->
+                    <button class="action-btn plus" title="Adicionar notas" aria-label="Adicionar notas">
+                        <img src="../Assets/plus.svg" alt="+" width="18">
+                    </button>
+
+                    <!-- Secondary actions -->
+                    <div class="square-actions">
+                        <img src="../Assets/email-2.svg" alt="email" width="30">
+                        <img src="../Assets/notes-5.svg" alt="notes" width="30">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeated student rows -->
+            <div class="student-row" role="row">
+                <div class="matricula">1011</div>
+                <div class="nome">Felipe Kogake</div>
+                <div class="email">felipe.kogake@kori.com</div>
+                <div class="admissao">11/01/2025</div>
+                <div class="actions">
+                    <button class="action-btn plus" title="Adicionar notas" aria-label="Adicionar notas">
+                        <img src="../Assets/plus.svg" alt="+" width="18">
+                    </button>
+                    <div class="square-actions">
+                        <img src="../Assets/email-2.svg" alt="email" width="30">
+                        <img src="../Assets/notes-5.svg" alt="notes" width="30">
+                    </div>
+                </div>
+            </div>
+
+            <div class="student-row" role="row">
+                <div class="matricula">1012</div>
+                <div class="nome">Gabriela Benfica Ricci</div>
+                <div class="email">gabriela.ricci@kori.com</div>
+                <div class="admissao">11/01/2025</div>
+                <div class="actions">
+                    <button class="action-btn plus" title="Adicionar notas" aria-label="Adicionar notas">
+                        <img src="../Assets/plus.svg" alt="+" width="18">
+                    </button>
+                    <div class="square-actions">
+                        <img src="../Assets/email-2.svg" alt="email" width="30">
+                        <img src="../Assets/notes-5.svg" alt="notes" width="30">
+                    </div>
+                </div>
+            </div>
+
+            <div class="student-row" role="row">
+                <div class="matricula">1013</div>
+                <div class="nome">Igor Quinto</div>
+                <div class="email">igor.quinto@kori.com</div>
+                <div class="admissao">11/01/2025</div>
+                <div class="actions">
+                    <button class="action-btn plus" title="Adicionar notas" aria-label="Adicionar notas">
+                        <img src="../Assets/plus.svg" alt="+" width="18">
+                    </button>
+                    <div class="square-actions">
+                        <img src="../Assets/email-2.svg" alt="email" width="30">
+                        <img src="../Assets/notes-5.svg" alt="notes" width="30">
+                    </div>
+                </div>
+            </div>
+
+            <div class="student-row" role="row">
+                <div class="matricula">1014</div>
+                <div class="nome">Lucas Lima</div>
+                <div class="email">lucas.lima@kori.com</div>
+                <div class="admissao">11/01/2025</div>
+                <div class="actions">
+                    <button class="action-btn plus" title="Adicionar notas" aria-label="Adicionar notas">
+                        <img src="../Assets/plus.svg" alt="+" width="18">
+                    </button>
+                    <div class="square-actions">
+                        <img src="../Assets/email-2.svg" alt="email" width="30">
+                        <img src="../Assets/notes-5.svg" alt="notes" width="30">
+                    </div>
+                </div>
+            </div>
+
+            <div class="student-row" role="row">
+                <div class="matricula">1015</div>
+                <div class="nome">Maria Eduarda Rosa</div>
+                <div class="email">madu.rosa@kori.com</div>
+                <div class="admissao">11/01/2025</div>
+                <div class="actions">
+                    <button class="action-btn plus" title="Adicionar notas" aria-label="Adicionar notas">
+                        <img src="../Assets/plus.svg" alt="+" width="18">
+                    </button>
+                    <div class="square-actions">
+                        <img src="../Assets/email-2.svg" alt="email" width="30">
+                        <img src="../Assets/notes-5.svg" alt="notes" width="30">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spacer at bottom -->
+            <div style="height:26px"></div>
+        </section>
+
+    </main>
+
+    <!-- Grade modal overlay -->
+    <div id="gradeOverlay" class="overlay" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="gradeTitle">
+
+            <!-- Modal header -->
+            <div class="modal-top">
+                <div class="student-info">
+                    <h2 id="gradeTitle">Nome do Aluno</h2>
+                    <p id="gradeEmail">email@exemplo.com</p>
+                </div>
+
+                <!-- Student metadata -->
+                <div class="meta">
+                    <div>Série: <strong id="gradeSerie">1º Ano</strong></div>
+                    <div>Matrícula: <strong id="gradeMat">—</strong></div>
+                </div>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="notes-col">
+
+                    <!-- Grades inputs -->
+                    <div class="notes-2">
+                        <div class="field">
+                            <div class="label">Digite a Nota 1</div>
+                            <div class="note-row">
+                                <input id="nota1" class="note-input" type="number" min="0" max="10" step="0.1" placeholder="—" />
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Digite a Nota 2</div>
+                            <div class="note-row">
+                                <input id="nota2" class="note-input" type="number" min="0" max="10" step="0.1" placeholder="—" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Admin warning -->
+                    <div id="saveHint" class="admin-note">
+                        Atenção: somente um administrador poderá alterar as notas digitadas acima.
+                    </div>
+                </div>
+
+                <!-- Average grade display -->
+                <div class="average-box">
+                    <div class="title">Média do aluno</div>
+                    <div id="avgValue" class="value">—</div>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button id="btnBack" class="btn ghost">Voltar</button>
+                <button id="btnSaveNote" class="btn primary">Salvar nota</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation modal -->
+    <div id="confirmOverlay" class="overlay" aria-hidden="true">
+        <div class="confirm-content" role="dialog" aria-modal="true">
+
+            <!-- Confirmation content -->
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top: 20px;">
+                <div>
+                    <strong id="confirmStudent">Aluno</strong>
+                    <div id="confirmAvg">Média: —</div>
+                </div>
+                <div>
+                    <div>Atenção</div>
+                    <div>Somente um administrador poderá alterar a nota após salvar.</div>
+                </div>
+            </div>
+
+            <!-- Confirmation buttons -->
+            <div style="display:flex; gap:12px; justify-content:flex-end; margin-top: 40px;">
+                <button id="confirmCancel" class="btn ghost">Voltar</button>
+                <button id="confirmSend" class="btn primary">Tem certeza?</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notifications container -->
+    <div class="toast-wrap" aria-live="polite" aria-atomic="true"></div>
+
+</body>
+
+<!-- Main JavaScript file -->
+<script src="JS/bulletin-2.js"></script>
+
+</html>
