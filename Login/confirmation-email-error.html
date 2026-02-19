@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kori - Erro ao enviar email</title>
+    <link rel="stylesheet" href="CSS/confirmation-email-error.css">
+    <link rel="icon" href="../Assets/logo-top.svg" type="image/png">
+</head>
+
+<body>
+    <!-- Background shapes -->
+    <div class="shape blue"></div>
+    <div class="shape pink"></div>
+    <div class="shape green"></div>
+    <div class="shape yellow"></div>
+
+    <!-- Card -->
+    <div class="login-card error-card">
+        <div class="logo">
+            <img src="../Assets/logo.svg" alt="Logo" width="100px"
+                onclick="location.href='../index.html'">
+        </div>
+
+        <!-- Error header -->
+        <div class="success-header">
+            <img src="../Assets/error-icon.svg" alt="Erro" class="success-icon">
+            <h1>Não foi possível<br>enviar o email.</h1>
+        </div>
+
+        <p class="subtitle">
+            Por favor, verifique se o endereço<br>
+            <span>gabriela.ricci@kori.com.br</span>
+            está apto a receber mensagens e tente novamente.
+        </p>
+
+        <button type="button" onclick="location.href='forgot-password.html'">
+            Enviar email novamente
+        </button>
+    </div>
+
+    <!-- Back button -->
+    <button class="back-button" onclick="location.href='forgot-password.html'">
+        ← Voltar
+    </button>
+</body>
+
+</html>
