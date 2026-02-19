@@ -317,22 +317,16 @@ main {
     top: 20px;
     left: 50%;
     transform: translateX(-50%) translateY(-20px);
-    
     background: rgb(131, 131, 131);
     color: white;
-    
     padding: 12px 22px;
     border-radius: 8px;
-    
     font-size: 14px;
     font-weight: 500;
     margin-top: 22px;
-    
     opacity: 0;
     pointer-events: none;
-    
     transition: all 0.3s ease;
-    
     z-index: 9999;
 }
 
@@ -361,52 +355,41 @@ main {
 
 /* Observation modal box */
 .observation-modal {
-
     width: 720px;
     background: #f3f0e7;
     border-radius: 40px;
     overflow: hidden;
     box-shadow: 0 30px 80px rgba(0,0,0,0.25);
-
 }
 
 /* Header pink */
 .observation-header {
-
     background: #E59AAA;
     padding: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 30px;
-
 }
 
 .observation-header h2 {
-
     margin: 0;
     font-size: 32px;
-
 }
 
 .observation-header p {
-
     margin: 4px 0 0 0;
-
 }
 
 /* Content */
 .observation-content {
-
     padding: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-
 }
 
 .observation-content textarea {
-
     height: 160px;
     border-radius: 25px;
     border: 4px solid #53BDD9;
@@ -415,15 +398,12 @@ main {
     font-size: 16px;
     resize: none;
     outline: none;
-
 }
 
 /* Warning text */
 .admin-warning {
-
     text-align: center;
     font-size: 14px;
-
 }
 
 /* Buttons */
@@ -432,7 +412,6 @@ main {
     display: flex;
     gap: 20px;
     padding: 20px 30px 30px;
-
 }
 
 .btn {
@@ -444,137 +423,95 @@ main {
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-
 }
 
 .btn-back {
-
     background: #d9d9d9;
-
 }
 
 .btn-save {
-
     background: #F5C659;
-
 }
 
 /* Confirm modal */
-/* CONFIRM MODAL */
 .confirm-modal {
-
     width: 520px;
     background: #F3F0E7;
     border-radius: 40px;
-
     padding: 40px 30px 35px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-
     box-shadow: 0 30px 80px rgba(0,0,0,0.25);
-
 }
 
 /* icon circle */
 .confirm-icon {
-
     width: 100px;
     height: 100px;
-
     background: #F5C659;
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin-bottom: 25px;
-
 }
 
 .confirm-icon img {
-
     width: 40px;
-
 }
 
 /* title */
 .confirm-title {
-
     font-size: 28px;
     font-weight: 700;
     color: #0e2b36;
-
     margin-bottom: 20px;
-
 }
 
 /* name pill */
 .confirm-name {
-
     background: #e5e5e5;
-
     padding: 10px 22px;
-
     border-radius: 999px;
-
     font-weight: 600;
-
     margin-bottom: 20px;
-
 }
 
 /* warning */
 .confirm-warning {
-
     font-size: 14px;
     color: rgba(3,18,23,0.7);
-
     margin-bottom: 30px;
-
 }
 
 /* buttons container */
 .confirm-buttons {
-
     display: flex;
     gap: 20px;
     width: 100%;
-
 }
 
 /* buttons */
 .btn-confirm {
-
     flex: 1;
-
     border: none;
     border-radius: 999px;
-
     padding: 16px;
-
     font-size: 18px;
     font-weight: 600;
-
     cursor: pointer;
-
 }
 
 /* cancel */
 .btn-cancel {
-
     background: #d9d9d9;
-
 }
 
 /* save */
 .btn-save {
-
     background: #F5C659;
-
 }
 
 /* Toast container */

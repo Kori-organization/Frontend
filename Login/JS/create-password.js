@@ -7,15 +7,13 @@ const newPasswordError = document.getElementById("newPasswordError");
 const confirmPasswordError = document.getElementById("confirmPasswordError");
 
 
-// SHOW / HIDE PASSWORD
+// Show / hide password
 const toggles = document.querySelectorAll('.toggle-password');
 
 toggles.forEach(toggle => {
 
     toggle.addEventListener('click', () => {
-
         const input = document.getElementById(toggle.dataset.target);
-
         if (input.type === 'password') {
             input.type = 'text';
             toggle.src = '../../Assets/eye.svg';
@@ -23,20 +21,17 @@ toggles.forEach(toggle => {
             input.type = 'password';
             toggle.src = '../../Assets/eye-off.svg';
         }
-
     });
-
 });
 
 
-// VALIDATION
+// Validation
 form.addEventListener("submit", function(e)
 {
     e.preventDefault();
-
     let valid = true;
 
-    // reset errors
+    // Reset errors
     newPasswordError.style.display = "none";
     confirmPasswordError.style.display = "none";
 
@@ -44,9 +39,8 @@ form.addEventListener("submit", function(e)
     confirmNewPassword.classList.remove("input-error");
 
 
-    // password strength
+    // Password strength
     const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&]).+$/;
-
     if(!regex.test(newPassword.value))
     {
         newPasswordError.style.display = "block";
@@ -54,8 +48,7 @@ form.addEventListener("submit", function(e)
         valid = false;
     }
 
-
-    // confirm password
+    // Confirm password
     if(newPassword.value !== confirmNewPassword.value)
     {
         confirmPasswordError.style.display = "block";
@@ -63,11 +56,9 @@ form.addEventListener("submit", function(e)
         valid = false;
     }
 
-
     if(valid)
     {
-        // sucesso
+        // Sucess
         window.location.href = "../index.html";
     }
-
 });

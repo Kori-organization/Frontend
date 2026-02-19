@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
+/* Global Reset & Base Layout */
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +17,7 @@ body {
     overflow: hidden;
 }
 
+/* Background Decorative Shapes */
 .shape {
     position: absolute;
     border-radius: 50%;
@@ -54,16 +56,19 @@ body {
     right: 380px;
 }
 
+/* Glassmorphism Login Card */
 .login-card {
     width: 420px;
     padding: 70px 60px;
     border-radius: 28px;
-    background: rgba(255,255,255,0.35);
+    background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(30px);
-    border: 1px solid rgba(255,255,255,0.6);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     text-align: center;
+    z-index: 1;
 }
 
+/* Typography & Elements */
 .logo {
     margin-bottom: 30px;
     cursor: pointer;
@@ -103,6 +108,7 @@ body {
     margin-bottom: 14px;
 }
 
+/* Interactive Elements */
 button {
     width: 100%;
     padding: 13px;

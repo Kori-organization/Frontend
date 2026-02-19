@@ -25,7 +25,7 @@ form.addEventListener("submit", function(e)
 
     let valid = true;
 
-    // reset
+    // Reset
     emailError.style.display = "none";
     passwordError.style.display = "none";
 
@@ -33,7 +33,7 @@ form.addEventListener("submit", function(e)
     password.classList.remove("input-error");
 
 
-    // EMAIL ERROR EXAMPLE
+    // Email error example
     if(email.value !== "admin@kori.com")
     {
         emailError.style.display = "block";
@@ -42,7 +42,7 @@ form.addEventListener("submit", function(e)
     }
 
 
-    // PASSWORD VALIDATION
+    // Password validation
     const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&]).+$/;
 
     if(!regex.test(password.value))

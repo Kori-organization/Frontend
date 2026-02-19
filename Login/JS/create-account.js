@@ -12,25 +12,20 @@ togglePassword.addEventListener('click', () => {
 });
 
 const form = document.getElementById("loginForm");
-
 const password = document.getElementById("password");
-
 const passwordError = document.getElementById("passwordError");
 
 form.addEventListener("submit", function(e)
 {
     e.preventDefault();
-
     let valid = true;
 
-    // reset
+    // Reset
     passwordError.style.display = "none";
-
     password.classList.remove("input-error");
 
-    // PASSWORD VALIDATION
+    // Password validation
     const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&]).+$/;
-
     if(!regex.test(password.value))
     {
         passwordError.style.display = "block";
@@ -41,5 +36,4 @@ form.addEventListener("submit", function(e)
     if(valid) {
         form.submit();
     }
-
 });
