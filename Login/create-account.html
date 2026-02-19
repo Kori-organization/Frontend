@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kori - Criar Conta</title>
     <link rel="stylesheet" href="CSS/create-account.css">
-    <link rel="icon" href="Assets/logo-top.svg" type="image/png">
+    <link rel="icon" href="../Assets/logo-top.svg" type="image/png">
 </head>
 
 <body>
@@ -27,24 +27,34 @@
         <h1>Criar conta</h1>
         <p class="subtitle">Já esteve aqui antes? <a href="../index.html">Entrar</a></p>
 
-        <form>
+        <form id="createAccountForm">
 
             <label>E-mail</label>
-            <input type="email" placeholder="Digite seu e-mail" required>
+            <input type="email" id="email" placeholder="Digite seu e-mail" required>
+            <p class="error-message" id="emailError">Digite um e-mail válido.</p>
+
 
             <label>Senha</label>
             <div class="password-field">
                 <input type="password" id="password" placeholder="Digite sua senha" required>
                 <img src="../Assets/eye-off.svg" class="eye" id="togglePassword">
             </div>
+            <p class="error-message" id="passwordError">
+                A senha deve conter letra, número e caractere especial.
+            </p>
+
 
             <label>Confirmar senha</label>
             <div class="password-field">
                 <input type="password" id="confirmPassword" placeholder="Confirme sua senha" required>
                 <img src="../Assets/eye-off.svg" class="eye" id="toggleConfirm">
             </div>
+            <p class="error-message" id="confirmError">
+                As senhas não coincidem.
+            </p>
 
-            <button type="submit">Entrar</button>
+
+            <button type="submit">Criar conta</button>
 
         </form>
     </div>

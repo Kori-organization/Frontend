@@ -23,21 +23,27 @@
         <h1>Seja bem-vindo(a)<br>de volta.</h1>
         <p class="subtitle">Novo aqui? <a href="Login/create-account.html">Criar uma conta</a></p>
 
-        <form>
+        <form id="loginForm">
+
             <label>E-mail ou usuário</label>
-            <input type="email" placeholder="Digite seu e-mail ou usuário">
+            <input type="text" id="email" placeholder="Digite seu e-mail ou usuário">
+
+            <p class="error-message" id="emailError">
+                Não foi possível encontrar sua conta Kori.
+            </p>
 
             <label>Senha</label>
             <div class="password-field">
                 <input type="password" id="password" placeholder="Digite sua senha">
-                <img src="Assets/eye-off.svg" class="eye" id="togglePassword" alt="Show password">
+                <img src="Assets/eye-off.svg" class="eye" id="togglePassword">
             </div>
+
+            <p class="error-message" id="passwordError">
+                Sua senha precisa conter pelo menos um número, uma letra e um caractere especial.
+            </p>
 
             <button type="submit">Entrar</button>
 
-            <p class="forgot">
-                Esqueceu sua senha? <a href="Login/forgot-password.html">Recuperar</a>
-            </p>
         </form>
     </div>
 
