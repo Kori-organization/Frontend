@@ -209,41 +209,33 @@ confirmOverlay.addEventListener('click', (e) => {
 // ===== TOAST NOTIFICATION =====
 
 // Create and display toast message
-function showToast(type = 'success', title = 'Ok', subtitle = '') {
-    const t = document.createElement('div');
-    t.className = 'toast' + (type === 'error' ? ' error' : '');
+function showToast(type = 'success', title = '', subtitle = '') {
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
 
-    // Toast content
-    t.innerHTML = `
-        <div class="icon">
-            ${
-                type === 'error'
-                    ? `<svg width="20" height="20" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="9" fill="#FF6B6B"/>
-                        <path d="M9 9l6 6M15 9l-6 6" stroke="#fff" stroke-width="2"/>
-                        </svg>`
-                    : `<svg width="20" height="20" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="9" fill="#8EE07D"/>
-                        <path d="M8 12.5l2.2 2.2L16 9" stroke="#fff" stroke-width="2"/>
-                        </svg>`
-            }
-        </div>
-        <div class="text">
+    const iconSrc =
+        type === 'error'
+            ? '../Assets/error-icon.svg'
+            : '../Assets/check-icon.svg';
+
+    toast.innerHTML = `
+        <img src="${iconSrc}" class="toast-icon" alt="">
+        <div class="toast-text">
             <h4>${title}</h4>
             <p>${subtitle}</p>
         </div>
     `;
 
-    toastWrap.appendChild(t);
+    toastWrap.appendChild(toast);
 
-    // Fade out animation
+    // Auto remove
     setTimeout(() => {
-        t.style.opacity = '0';
-        t.style.transform = 'translateX(-8px)';
-    }, 2800);
+        toast.classList.add('hide');
+    }, 2600);
 
-    // Remove toast from DOM
-    setTimeout(() => t.remove(), 3200);
+    setTimeout(() => {
+        toast.remove();
+    }, 3200);
 }
 
 
