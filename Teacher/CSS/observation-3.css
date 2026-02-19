@@ -88,6 +88,80 @@ main {
     min-height: calc(100vh - 140px);
 }
 
+/* Student header */
+.student-top {
+    margin-left: 115px; 
+    margin-bottom: 58px;
+    max-width: calc(100% - 140px);
+}
+
+.student-card {
+    background: #ffffff;
+    border-radius: 46px;
+    padding: 28px 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    margin-left: -340px;
+    width: 1300px;
+    height: 150px;
+}
+
+.student-left {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-left: 300px;
+}
+
+.student-name {
+    font-size: 38px;
+    color: #0e2b36;
+    margin: 0;
+}
+
+.student-email {
+    margin: 0;
+    color: rgba(3,18,23,0.65);
+    font-size: 20px;
+}
+
+.student-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.info-pill {
+    background: var(--page-bg);
+    padding: 18px 28px;
+    border-radius: 46px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    min-width: 220px;
+}
+
+.info-pill .series {
+    font-size: 28px;
+    font-weight: 700;
+    color: #102c3d;
+}
+
+.info-pill .matricula {
+    font-size: 16px;
+    color: rgba(3,18,23,0.6);
+}
+
+.student-note {
+    margin-top: 18px;
+    margin-left: 6px;
+    color: rgba(3,18,23,0.7);
+    font-size: 14px;
+}
+
 /* Header */
 .obs-header{
     margin-top: 160px;
@@ -178,6 +252,17 @@ main {
 
 .p2{
     background: #FFBCCF;
+    display: block;
+}
+
+.p2 img{
+    margin-top: 30px;
+    width: 80px;
+}
+
+.p2 h2{
+    font-size: 16px;
+    color: #E3869E;
 }
 
 .yellow{
