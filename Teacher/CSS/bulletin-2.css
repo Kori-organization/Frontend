@@ -382,10 +382,6 @@ select {
     margin: 0;
 }
 
-.note-input[type=number] {
-    -moz-appearance: textfield;
-}
-
 /* Placeholder style */
 .note-input::placeholder {
     color: rgba(33, 48, 58, 0.35);
