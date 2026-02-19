@@ -513,6 +513,10 @@ img {
     color: #8CA11C;
 }
 
+.yellow {
+    color: #d4a017;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
