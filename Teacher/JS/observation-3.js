@@ -32,3 +32,85 @@ botoesCopiar.forEach(botao => {
 
     });
 });
+
+const observationOverlay = document.getElementById("observationOverlay");
+const confirmObservationOverlay = document.getElementById("confirmObservationOverlay");
+
+const btnCancelObservation = document.getElementById("btnCancelObservation");
+const btnSaveObservation = document.getElementById("btnSaveObservation");
+
+const confirmObsCancel = document.getElementById("confirmObsCancel");
+const confirmObsSend = document.getElementById("confirmObsSend");
+
+const observationInput = document.getElementById("observationInput");
+
+const toastWrap = document.getElementById("toastWrap");
+
+
+// OPEN MODAL
+document.querySelector(".obs-card.p2").addEventListener("click", () => {
+
+    observationOverlay.classList.add("show");
+
+});
+
+
+// CLOSE MODAL
+btnCancelObservation.addEventListener("click", () => {
+
+    observationOverlay.classList.remove("show");
+
+});
+
+
+// OPEN CONFIRM
+btnSaveObservation.addEventListener("click", () => {
+
+    confirmObservationOverlay.classList.add("show");
+
+});
+
+
+// CANCEL CONFIRM
+confirmObsCancel.addEventListener("click", () => {
+
+    confirmObservationOverlay.classList.remove("show");
+
+});
+
+
+// CONFIRM SAVE
+confirmObsSend.addEventListener("click", () => {
+
+    confirmObservationOverlay.classList.remove("show");
+    observationOverlay.classList.remove("show");
+
+    showToast("Observação salva com sucesso");
+
+});
+
+
+
+function showToast(type = 'success', title = '', subtitle = '') {
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+
+    const iconSrc = type === 'error' ? '../Assets/error-icon.svg' : '../Assets/check-icon.svg';
+
+    toast.innerHTML = `
+        <img src="${iconSrc}" class="toast-icon" alt="">
+        <div class="toast-text">
+            <h4>${title}</h4>
+            <p>${subtitle}</p>
+        </div>
+    `;
+
+    toastWrap.appendChild(toast);
+
+    // auto-hide: adiciona classe .hide (anima saída) e remove do DOM depois
+    const AUTO_HIDE_MS = 4000;
+    setTimeout(() => {
+        toast.classList.add('hide');
+        setTimeout(() => toast.remove(), 350); // espera animação terminar
+    }, AUTO_HIDE_MS);
+}

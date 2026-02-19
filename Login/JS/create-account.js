@@ -1,66 +1,34 @@
-const form = document.getElementById("createAccountForm");
+const passwordInput = document.getElementById('password');
+const togglePassword = document.getElementById('togglePassword');
 
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const confirmPassword = document.getElementById("confirmPassword");
-
-const emailError = document.getElementById("emailError");
-const passwordError = document.getElementById("passwordError");
-const confirmError = document.getElementById("confirmError");
-
-
-// SHOW / HIDE PASSWORD
 togglePassword.addEventListener('click', () => {
-
-    password.type = password.type === 'password' ? 'text' : 'password';
-
-    togglePassword.src =
-        password.type === 'password'
-        ? '../Assets/eye-off.svg'
-        : '../Assets/eye.svg';
-
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        togglePassword.src = '../Assets/eye.svg';
+    } else {
+        passwordInput.type = 'password';
+        togglePassword.src = '../Assets/eye-off.svg';
+    }
 });
 
-toggleConfirm.addEventListener('click', () => {
+const form = document.getElementById("loginForm");
 
-    confirmPassword.type =
-        confirmPassword.type === 'password' ? 'text' : 'password';
+const password = document.getElementById("password");
 
-    toggleConfirm.src =
-        confirmPassword.type === 'password'
-        ? '../Assets/eye-off.svg'
-        : '../Assets/eye.svg';
+const passwordError = document.getElementById("passwordError");
 
-});
-
-
-// VALIDATION
 form.addEventListener("submit", function(e)
 {
     e.preventDefault();
 
     let valid = true;
 
-    // reset errors
-    emailError.style.display = "none";
+    // reset
     passwordError.style.display = "none";
-    confirmError.style.display = "none";
 
-    email.classList.remove("input-error");
     password.classList.remove("input-error");
-    confirmPassword.classList.remove("input-error");
 
-
-    // email validation
-    if(!email.value.includes("@"))
-    {
-        emailError.style.display = "block";
-        email.classList.add("input-error");
-        valid = false;
-    }
-
-
-    // password regex
+    // PASSWORD VALIDATION
     const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&]).+$/;
 
     if(!regex.test(password.value))
@@ -70,22 +38,8 @@ form.addEventListener("submit", function(e)
         valid = false;
     }
 
-
-    // confirm password
-    if(password.value !== confirmPassword.value)
-    {
-        confirmError.style.display = "block";
-        confirmPassword.classList.add("input-error");
-        valid = false;
-    }
-
-
-    if(valid)
-    {
-        alert("Conta criada com sucesso!");
-
-        // redirecionar
-        // location.href = "../index.html";
+    if(valid) {
+        form.submit();
     }
 
 });

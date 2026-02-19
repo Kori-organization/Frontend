@@ -23,7 +23,7 @@
     <!-- Top navigation bar -->
     <div class="topbar">
         <!-- Back button -->
-        <a class="back" href="observation.html" title="Voltar">
+        <a class="back" href="observation-2.html" title="Voltar">
             <img src="../Assets/left.svg" alt="Voltar" width="15px"> Voltar
         </a>
 
@@ -121,6 +121,88 @@
     <div id="copyToast" class="copy-toast">
         Copiado para a área de transferência
     </div>
+
+    <!-- POPUP 1 -->
+    <div id="observationOverlay" class="overlay" aria-hidden="true">
+        <div class="modal observation-modal" role="dialog" aria-modal="true" aria-labelledby="obsTitle">
+
+            <!-- header -->
+            <div class="observation-header">
+                <div class="obs-student-left">
+                    <h2 id="obsTitle">Davi Arakaki</h2>
+                    <p id="obsEmail">davi.arakaki@kori.com</p>
+                </div>
+
+                <div class="obs-student-right">
+                    <div>Série: <strong>1º Ano</strong></div>
+                    <div>Matrícula: <span id="obsMat">1010</span></div>
+                </div>
+            </div>
+
+            <!-- content -->
+            <div class="observation-content">
+                <label for="observationInput">Escreva a observação para o aluno.</label>
+
+                <textarea id="observationInput" placeholder="" maxlength="1000"></textarea>
+
+                <p class="admin-warning">
+                    Atenção: somente um administrador poderá alterar a observação digitada acima.
+                </p>
+            </div>
+
+            <!-- actions -->
+            <div class="modal-actions">
+                <button id="btnCancelObservation" class="btn btn-back" type="button">Voltar</button>
+                <button id="btnSaveObservation" class="btn btn-save" type="button">Salvar observação</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP 2 -->
+    <!-- POPUP 2 — confirmação estilo central -->
+    <div id="confirmObservationOverlay" class="overlay" aria-hidden="true">
+
+        <div class="confirm-modal">
+
+            <!-- icon -->
+            <div class="confirm-icon">
+                <img src="../Assets/info-circle-3.svg" alt="Info">
+            </div>
+
+            <!-- title -->
+            <h2 class="confirm-title">
+                Tem certeza que deseja<br>salvar a observação?
+            </h2>
+
+            <!-- student name pill -->
+            <div class="confirm-name" id="confirmObsName">
+                Davi Arakaki
+            </div>
+
+            <!-- warning -->
+            <p class="confirm-warning">
+                Atenção: somente um administrador poderá alterar essa informação.
+            </p>
+
+            <!-- buttons -->
+            <div class="confirm-buttons">
+
+                <button id="confirmObsCancel" class="btn-confirm btn-cancel">
+                    Voltar
+                </button>
+
+                <button id="confirmObsSend" class="btn-confirm btn-save">
+                    Salvar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TOAST -->
+    <div id="toastWrap" class="toast-wrap"></div>
 
 </body>
 <script src="JS/observation-3.js"></script>
