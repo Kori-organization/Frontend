@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Character encoding -->
+    <meta charset="utf-8" />
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Page title -->
+    <title>Alunos do 1º Ano — Observações</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../Assets/logo-top.svg" type="image/png">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="CSS/observation-2.css">
+</head>
+
+<body>
+
+    <!-- Top navigation bar -->
+    <div class="topbar">
+        <!-- Back button -->
+        <a class="back" href="observation.html" title="Voltar">
+            <img src="../Assets/left.svg" alt="Voltar" width="15px"> Voltar
+        </a>
+
+        <!-- Greeting icon (reloads page on click) -->
+        <img src="../Assets/notes-3.svg" alt="" width="40px" class="img-greeting" onclick="location.reload()">
+    </div>
+
+    <main>
+        <!-- Page title -->
+        <h1>Alunos do 1º Ano</h1>
+
+        <!-- Search box -->
+        <div class="search-box">
+            <input type="text" placeholder="Pesquisar Aluno..." aria-label="Pesquisar Aluno">
+            <button class="search-btn" title="Pesquisar" aria-label="Pesquisar">
+                <img src="../Assets/icon-search.svg" width="17" alt="Pesquisar">
+            </button>
+        </div>
+
+        <!-- Students table section -->
+        <section class="table" aria-label="Lista de alunos">
+
+            <!-- Table header -->
+            <div class="header" role="row">
+                <div>Matrícula <img src="../Assets/chevron.svg" alt="" width="10"></div>
+                <div>Nome <img src="../Assets/chevron.svg" alt="" width="10"></div>
+                <div>Email <img src="../Assets/chevron.svg" alt="" width="10"></div>
+                <div>Admissão <img src="../Assets/chevron.svg" alt="" width="10"></div>
+            </div>
+
+            <!-- Student row -->
+            <div class="student-row" role="row">
+                <div class="matricula">1010</div>
+                <div class="nome">Davi Arakaki</div>
+                <div class="email">davi.arakaki@kori.com</div>
+                <div class="admissao">11/01/2025</div>
+
+                <!-- Action buttons -->
+                <div class="actions">
+                    <button class="btn-observacoes">
+                        <img src="../Assets/notes-5.svg" width="18" alt="">
+                        Observações
+                    </button>
+                </div>
+            </div>
+
+            <!-- Repeated student rows -->
+            <div class="student-row" role="row">
+                <div class="matricula">1011</div>
+                <div class="nome">Felipe Kogake</div>
+                <div class="email">felipe.kogake@kori.com</div>
+                <div class="admissao">11/01/2025</div>
+                <div class="actions">
+                    <button class="btn-observacoes">
+                        <img src="../Assets/notes-5.svg" width="18" alt="">
+                        Observações
+                    </button>
+                </div>
+            </div>
+
+            <div class="student-row" role="row">
+                <div class="matricula">1012</div>
+                <div class="nome">Gabriela Benfica Ricci</div>
+                <div class="email">gabriela.ricci@kori.com</div>
+                <div class="admissao">11/01/2025</div>
+                <div class="actions">
+                    <button class="btn-observacoes">
+                        <img src="../Assets/notes-5.svg" width="18" alt="">
+                        Observações
+                    </button>
+                </div>
+            </div>
+
+            <div class="student-row" role="row">
+                <div class="matricula">1013</div>
+                <div class="nome">Igor Quinto</div>
+                <div class="email">igor.quinto@kori.com</div>
+                <div class="admissao">11/01/2025</div>
+                <div class="actions">
+                    <button class="btn-observacoes">
+                        <img src="../Assets/notes-5.svg" width="18" alt="">
+                        Observações
+                    </button>
+                </div>
+            </div>
+
+            <div class="student-row" role="row">
+                <div class="matricula">1014</div>
+                <div class="nome">Lucas Lima</div>
+                <div class="email">lucas.lima@kori.com</div>
+                <div class="admissao">11/01/2025</div>
+                <div class="actions">
+                    <button class="btn-observacoes">
+                        <img src="../Assets/notes-5.svg" width="18" alt="">
+                        Observações
+                    </button>
+                </div>
+            </div>
+
+            <div class="student-row" role="row">
+                <div class="matricula">1015</div>
+                <div class="nome">Maria Eduarda Rosa</div>
+                <div class="email">madu.rosa@kori.com</div>
+                <div class="admissao">11/01/2025</div>
+                <div class="actions">
+                    <button class="btn-observacoes">
+                        <img src="../Assets/notes-5.svg" width="18" alt="">
+                        Observações
+                    </button>
+                </div>
+            </div>
+
+            <!-- Spacer at bottom -->
+            <div style="height:26px"></div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

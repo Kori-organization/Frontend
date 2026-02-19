@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kori - Status do email</title>
+
+    <link rel="stylesheet" href="CSS/confirmation-email-complete.css">
+    <link rel="icon" href="../Assets/logo-top.svg" type="image/png">
+</head>
+
+<body>
+
+    <!-- Background shapes -->
+    <div class="shape blue"></div>
+    <div class="shape pink"></div>
+    <div class="shape green"></div>
+    <div class="shape yellow"></div>
+
+    <!-- Card -->
+    <div class="login-card">
+
+        <div class="logo">
+            <img src="../Assets/logo.svg" width="100px"
+                onclick="location.href='../index.html'">
+        </div>
+
+        <div class="success-header">
+            <img id="statusIcon" class="success-icon">
+            <h1 id="statusTitle"></h1>
+        </div>
+
+        <p class="subtitle" id="statusText"></p>
+
+        <p class="resend-text" id="resendText"></p>
+
+        <button onclick="location.href='forgot-password.html'">
+            Enviar email novamente
+        </button>
+
+    </div>
+
+    <button class="back-button"
+        onclick="location.href='forgot-password.html'">
+        ← Voltar
+    </button>
+</body>
+<script src="JS/confirmation-email-complete.js"></script>
+</html>
