@@ -99,9 +99,67 @@
                         </div>
                     </div>
 
-                    <!-- Grade calculator -->
-                    <div class="card calculator-card" style="box-shadow: none;">
+                    <!-- Ranking Card -->
+                    <div class="card ranking-card">
 
+                        <!-- Ranking header -->
+                        <div class="ranking-header">
+                            <span class="ranking-icon"><img src="../Assets/scale.svg" alt="" width="25px"></span>
+
+                            <!-- Ranking title -->
+                            <span class="ranking-title">
+                                3 Ranking: turmas com médias mais baixas na sua <br>disciplina.
+                            </span>
+                        </div>
+
+                        <!-- Ranking content -->
+                        <div class="ranking-content">
+                            <!-- Chart container -->
+                            <div class="chart-container">
+                                <!-- Bar 1 -->
+                                <div class="bar-item">
+                                    <!-- Class name -->
+                                    <div class="bar-label">1º Ano</div>
+                                    <!-- Bar background -->
+                                    <div class="bar-bg">
+                                        <!-- Bar fill -->
+                                        <div class="bar-fill" id="bar1"></div>
+                                    </div>
+                                    <!-- Average value -->
+                                    <div class="bar-value">
+                                        média <strong id="value1"></strong>
+                                    </div>
+                                </div>
+
+                                <!-- Bar 2 -->
+                                <div class="bar-item">
+                                    <div class="bar-label">5º Ano</div>
+                                    <div class="bar-bg">
+                                        <div class="bar-fill red" id="bar2"></div>
+                                    </div>
+                                    <div class="bar-value">
+                                        média <strong id="value2"></strong>
+                                    </div>
+                                </div>
+
+                                <!-- Bar 3 -->
+                                <div class="bar-item">
+                                    <div class="bar-label">3º Ano</div>
+                                    <div class="bar-bg">
+                                        <div class="bar-fill yellow" id="bar3"></div>
+                                    </div>
+                                    <div class="bar-value">
+                                        média <strong id="value3"></strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Info box -->
+                            <div class="ranking-info">
+                                <div class="info-icon"><img src="../Assets/info-circle-3.svg" alt="" width="10px"></div>
+                                <div class="info-text" id="rankingText"></div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
