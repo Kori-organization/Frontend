@@ -624,9 +624,7 @@ select {
     }
 }
 
-/* =========================================================
-   Student row states (controlled by data-state)
-   ========================================================= */
+/* Student row states (controlled by data-state) */
 
 /* Default: no grades yet */
 .student-row[data-state="no-notes"] {
@@ -646,9 +644,7 @@ select {
     box-shadow: 0 10px 28px rgba(159, 191, 63, 0.08);
 }
 
-/* =========================================================
-   Disabled actions
-   ========================================================= */
+/* Disabled actions */
 
 .action-btn.disabled {
     pointer-events: none;
