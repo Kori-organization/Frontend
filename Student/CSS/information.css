@@ -226,44 +226,7 @@ img {
     margin-right: -32px;
     width: calc(100% - 0px);
     margin-left: 200px;
-    height: 900px;
-}
-
-/* Top visual element */
-.color {
-    background-color: var(--background);
-    width: 1300px;
-    height: 30px;
-    margin-left: 15px;
-    position: fixed;
-    z-index: 999;
-}
-
-/* Top header section */
-.top-main {
-    position: fixed;
-    top: 0;
-    left: 140px;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    padding: 0 32px;
-    z-index: 999;
-    background-color: var(--background);
-    margin-top: 20px;
-    padding-top: 10px;
-    padding-bottom: 50px;
-    width: 1400px;
-    margin-left: 80px;
-}
-
-.logo-container {
-    width: 200px;
-    height: 70px;
-    border-radius: 8px;
-    margin-top: 0;
-    cursor: pointer;
+    height: 1000px;
 }
 
 /* Home refresh button */
@@ -279,6 +242,9 @@ img {
     transform-origin: 40px center;
     margin-right: 120px;
     margin-top: -10px;
+    position: fixed;
+    top: 30px;
+    left: 270px;
 }
 
 .home-button:hover {
@@ -287,6 +253,65 @@ img {
 
 .home-button img {
     margin-bottom: -40px;
+}
+
+.children-container {
+    position: relative;
+    width: fit-content;
+    margin-top: -19px;
+}
+
+.children-img {
+    margin-top: -2342px;
+    margin-left: 453px;
+}
+
+/* caixas */
+.info-box {
+    position: absolute;
+    padding: 18px 42px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(10px);
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+/* posição caixa 1 */
+.box1 {
+    top: -400px;
+    left: 670px;
+}
+
+/* posição caixa 2 */
+.box2 {
+    top: -280px;
+    left: 820px;
+}
+
+/* botão */
+.info-button {
+    position: absolute;
+    top: 720px;
+    left: 330px;
+    padding: 14px 78px;
+    border-radius: 30px;
+    border: none;
+    background: #F5C659;
+    font-weight: 650;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.18s ease;
+}
+
+.info-button:hover {
+    transform: scale(1.01);
+}
+
+.text-kori {
+    margin-top: -798px;
+    margin-left: 100px;
 }
 
 /* Custom scrollbar */

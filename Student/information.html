@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="CSS/information.css">
     <link rel="icon" href="../Assets/logo-top.svg" type="image/png">
 </head>
+
 <body>
     <!-- Main app container -->
     <div class="app">
@@ -38,21 +40,37 @@
 
         <!-- Main content area -->
         <main class="main">
-            <!-- Top color overlay for visual effect -->
-            <div class="color"></div>
-            
-            <!-- Top header with logo and home button -->
-            <div class="top-main">
-                <div class="logo-container" onclick="window.location='index.html'">
-                    <img src="../Assets/logo.svg" alt="Kori Logo" width="180">
+            <div>
+                <img src="../Assets/circles.svg" alt="" width="1400px">
+            </div>
+
+            <div class="home-button" onclick="location.reload()">
+                <img src="../Assets/info-circle-3.svg" alt="Página inicial" width="43">
+            </div>
+
+            <div class="children-container">
+                <img src="../Assets/children.svg" alt="Criança" class="children-img">
+
+                <div class="info-box box1">
+                    Nossa prioridade é a educação <br>infantil de qualidade.
                 </div>
-                <div class="home-button" onclick="location.reload()">
-                    <img src="../Assets/info-circle-3.svg" alt="Página inicial" width="43">
+
+                <div class="info-box box2">
+                    Empatia e respeito com o <br>futuro do país.
                 </div>
             </div>
 
-            
+            <div class="text-kori">
+                <img src="../Assets/text-information.svg" alt="">
+            </div>
+
+            <button class="info-button" onclick="window.location='index.html'">
+                Ir para Início
+            </button>
+
+
         </main>
     </div>
 </body>
+
 </html>
