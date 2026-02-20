@@ -248,3 +248,284 @@ document.addEventListener('keydown', (e) => {
     if (confirmOverlay.classList.contains('show')) closeConfirmModal();
     else if (gradeOverlay.classList.contains('show')) closeGradeModal();
 });
+
+// ===== RECOVERY - ELEMENTS =====
+const recoveryOverlay = document.getElementById('recoveryOverlay');
+const recNota1 = document.getElementById('recNota1');
+const recNota2 = document.getElementById('recNota2');
+const recMedia = document.getElementById('recMedia');
+const recInput = document.getElementById('recInput');
+const recFinal = document.getElementById('recFinal');
+const recoveryTitle = document.getElementById('recoveryTitle');
+const recoveryEmail = document.getElementById('recoveryEmail');
+const recoveryMat = document.getElementById('recoveryMat');
+
+const recBackBtn = document.getElementById('recBack');
+const recToConfirmBtn = document.getElementById('recToConfirm');
+
+// Confirmation modal elements
+const confirmRecoveryOverlay = document.getElementById('confirmRecoveryOverlay');
+const confirmRecoveryStudent = document.getElementById('confirmRecoveryStudent');
+const confirmRecoveryAvg = document.getElementById('confirmRecoveryAvg');
+const confirmRecoveryCancel = document.getElementById('confirmRecoveryCancel');
+const confirmRecoverySend = document.getElementById('confirmRecoverySend');
+
+// Stores the current student row being edited
+let currentRecoveryRow = null;
+
+
+// ===== HELPER FUNCTIONS =====
+
+/**
+ * Converts a value to number safely.
+ * Does NOT modify the original input field.
+ * Returns 0 if invalid.
+ */
+function parseGradeVal(val) {
+    if (val === undefined || val === null || val === '') return 0;
+    const n = Number(val);
+    if (isNaN(n)) return 0;
+    return n;
+}
+
+
+/**
+ * Formats number with one decimal place when necessary.
+ * Removes trailing ".0"
+ * Returns dash if invalid.
+ */
+function formatOneDecimal(v) {
+    const n = Number(v);
+    if (isNaN(n)) return '—';
+    const s = n.toFixed(1);
+    return s.replace('.0', '');
+}
+
+
+/**
+ * Calculates average between two grades
+ */
+function computeAverageFromNotes(n1, n2) {
+    const avg = (parseGradeVal(n1) + parseGradeVal(n2)) / 2;
+    return Number(avg.toFixed(1));
+}
+
+
+/**
+ * Calculates final average between media and recovery
+ */
+function computeFinalAverage(media, recovery) {
+    const avg = (parseGradeVal(media) + parseGradeVal(recovery)) / 2;
+    return Number(avg.toFixed(1));
+}
+
+
+
+// ===== OPEN RECOVERY MODAL =====
+
+// Detect click on recovery icon
+document.addEventListener('click', (e) => {
+    const recoveryIcon = e.target.closest('.recovery');
+    if (!recoveryIcon) return;
+    const row = recoveryIcon.closest('.student-row');
+    if (!row) return;
+    openRecoveryModal(row);
+});
+
+
+
+/**
+ * Opens recovery modal and fills student data
+ */
+function openRecoveryModal(row) {
+    currentRecoveryRow = row;
+
+    // Get stored grades if available
+    const savedN1 = row.dataset.nota1 ?? '';
+    const savedN2 = row.dataset.nota2 ?? '';
+
+    // Fill grade inputs
+    recNota1.value = savedN1;
+    recNota2.value = savedN2;
+
+    // Calculate media if possible
+    let mediaVal;
+
+    if (savedN1 || savedN2)
+        mediaVal = computeAverageFromNotes(savedN1, savedN2);
+    else if (row.dataset.average)
+        mediaVal = parseGradeVal(row.dataset.average);
+    else
+        mediaVal = '';
+
+    // Fill media field
+    recMedia.value = mediaVal !== '' ? formatOneDecimal(mediaVal) : '';
+
+    // Reset recovery input and final display
+    recInput.value = '';
+    recFinal.textContent = '—';
+
+    // Fill student info
+    recoveryTitle.textContent =
+        row.querySelector('.nome')?.textContent.trim() || '';
+
+    recoveryEmail.textContent =
+        row.querySelector('.email')?.textContent.trim() || '';
+
+    recoveryMat.textContent =
+        row.querySelector('.matricula')?.textContent.trim() || '';
+
+    // Show modal
+    recoveryOverlay.classList.add('show');
+    recoveryOverlay.setAttribute('aria-hidden', 'false');
+
+    // Focus input
+    setTimeout(() => recInput.focus(), 120);
+}
+
+
+
+// ===== RECOVERY INPUT EVENTS =====
+
+/**
+ * Updates final average while typing
+ * Does NOT modify the input value
+ */
+recInput.addEventListener('input', () => {
+    const raw = recInput.value;
+    // Reset if empty
+    if (raw === '') {
+        recFinal.textContent = '—';
+        return;
+    }
+    const recoveryVal = parseGradeVal(raw);
+    const mediaVal = parseGradeVal(recMedia.value);
+    const finalAvg = computeFinalAverage(mediaVal, recoveryVal);
+    recFinal.textContent = formatOneDecimal(finalAvg);
+});
+
+
+/**
+ * Formats recovery value only when leaving input
+ */
+recInput.addEventListener('blur', () => {
+    if (recInput.value === '') return;
+    let val = parseGradeVal(recInput.value);
+
+    // Clamp between 0 and 10
+    if (val < 0) val = 0;
+    if (val > 10) val = 10;
+
+    // Apply formatted value
+    recInput.value = formatOneDecimal(val);
+    const mediaVal = parseGradeVal(recMedia.value);
+    const finalAvg = computeFinalAverage(mediaVal, val);
+    recFinal.textContent = formatOneDecimal(finalAvg);
+});
+
+
+
+// ===== FOOTER BUTTON ACTIONS =====
+
+// Close recovery modal
+recBackBtn.addEventListener('click', () => {
+    recoveryOverlay.classList.remove('show');
+    recoveryOverlay.setAttribute('aria-hidden', 'true');
+});
+
+
+
+// Open confirmation modal
+recToConfirmBtn.addEventListener('click', () => {
+    if (!recInput.value) {
+        showToast(
+            'error',
+            'Digite a nota de recuperação',
+            'Por favor, informe a nota para continuar'
+        );
+        return;
+    }
+
+    const final = recFinal.textContent;
+
+    if (!final || final === '—') {
+        showToast(
+            'error',
+            'Média inválida',
+            'Verifique as notas e tente novamente'
+        );
+        return;
+    }
+    confirmRecoveryStudent.textContent = recoveryTitle.textContent;
+    confirmRecoveryAvg.textContent = `Média final: ${final}`;
+    confirmRecoveryOverlay.classList.add('show');
+    confirmRecoveryOverlay.setAttribute('aria-hidden', 'false');
+});
+
+
+
+// ===== CONFIRM MODAL EVENTS =====
+
+// Cancel confirmation
+confirmRecoveryCancel.addEventListener('click', () => {
+    confirmRecoveryOverlay.classList.remove('show');
+    confirmRecoveryOverlay.setAttribute('aria-hidden', 'true');
+});
+
+
+// Close when clicking outside
+confirmRecoveryOverlay.addEventListener('click', (e) => {
+    if (e.target === confirmRecoveryOverlay) {
+        confirmRecoveryOverlay.classList.remove('show');
+        confirmRecoveryOverlay.setAttribute('aria-hidden', 'true');
+    }
+});
+
+// ===== SAVE RECOVERY GRADE =====
+confirmRecoverySend.addEventListener('click', () => {
+    const btn = confirmRecoverySend;
+    btn.disabled = true;
+    btn.textContent = 'Salvando...';
+
+    setTimeout(() => {
+        const success = Math.random() < 0.92;
+        if (success) {
+            if (currentRecoveryRow) {
+                currentRecoveryRow.dataset.recovery = recInput.value;
+                currentRecoveryRow.dataset.averageFinal = recFinal.textContent;
+                if (recNota1.value)
+                    currentRecoveryRow.dataset.nota1 = recNota1.value;
+                if (recNota2.value)
+                    currentRecoveryRow.dataset.nota2 = recNota2.value;
+                currentRecoveryRow.style.boxShadow =
+                    '0 10px 28px rgba(2,6,23,0.06)';
+            }
+            showToast(
+                'success',
+                'Recuperação salva',
+                'A nota foi registrada com sucesso'
+            );
+            confirmRecoveryOverlay.classList.remove('show');
+            recoveryOverlay.classList.remove('show');
+        }
+        else {
+            showToast(
+                'error',
+                'Erro ao salvar',
+                'Verifique sua conexão e tente novamente'
+            );
+            confirmRecoveryOverlay.classList.remove('show');
+        }
+
+        btn.disabled = false;
+        btn.textContent = 'Salvar';
+    }, 720);
+});
+
+// ===== CLOSE RECOVERY MODAL ON OUTSIDE CLICK =====
+recoveryOverlay.addEventListener('click', (e) => {
+    if (e.target === recoveryOverlay) {
+        recoveryOverlay.classList.remove('show');
+        recoveryOverlay.setAttribute('aria-hidden', 'true');
+    }
+});

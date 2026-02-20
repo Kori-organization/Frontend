@@ -261,6 +261,88 @@
     <!-- Toast notifications container -->
     <div class="toast-wrap" aria-live="polite" aria-atomic="true"></div>
 
+    <!-- Recovery modal -->
+    <div id="recoveryOverlay" class="overlay" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true">
+
+            <!-- Header -->
+            <div class="modal-top" style="background-color: #C0CF5B;">
+                <div class="student-info">
+                    <h2 id="recoveryTitle">Nome do Aluno</h2>
+                    <p id="recoveryEmail">email@exemplo.com</p>
+                </div>
+
+                <div class="meta">
+                    <div>Série: <strong id="recoverySerie">1º Ano</strong></div>
+                    <div>Matrícula: <strong id="recoveryMat">—</strong></div>
+                </div>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+                <div class="notes-col">
+                    <div class="notes-2">
+                        <div class="field">
+                            <div class="label">Nota 1</div>
+                            <input id="recNota1" class="note-input" disabled placeholder="—">
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Nota 2</div>
+                            <input id="recNota2" class="note-input" disabled placeholder="—">
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Média</div>
+                            <input id="recMedia" class="note-input" disabled placeholder="—">
+                        </div>
+                    </div>
+
+                    <div class="field" style="margin-left: 35px;">
+                        <div class="label">Digite a nota de recuperação</div>
+                        <input id="recInput" class="note-input" type="number" min="0" max="10" step="0.1"
+                            placeholder="—">
+                    </div>
+                </div>
+
+                <div class="average-box">
+                    <div class="title" style="font-size: 14px;">Média final do aluno</div>
+                    <div id="recFinal" class="value">—</div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer" style="margin-top: -30px;">
+                <button id="recBack" class="btn ghost">Voltar</button>
+                <button id="recToConfirm" class="btn primary">Salvar nota</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recovery Confirmation modal -->
+    <div id="confirmRecoveryOverlay" class="overlay" aria-hidden="true">
+        <div class="confirm-content" role="dialog" aria-modal="true">
+            <div class="confirm-icon">
+                <img src="../Assets/info-circle-3.svg" alt="Atenção">
+            </div>
+
+            <h2>Salvar nota de recuperação?</h2>
+
+            <div class="confirm-pill">
+                <span id="confirmRecoveryStudent">Aluno</span>
+                <span id="confirmRecoveryAvg">Média final: —</span>
+            </div>
+
+            <p class="confirm-warning">
+                Atenção: somente um administrador poderá alterar essa informação.
+            </p>
+
+            <div class="confirm-actions">
+                <button id="confirmRecoveryCancel" class="btn ghost">Voltar</button>
+                <button id="confirmRecoverySend" class="btn primary">Salvar</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 <!-- Main JavaScript file -->
