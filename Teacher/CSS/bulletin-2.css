@@ -247,6 +247,15 @@ select {
     transform: scale(.8)
 }
 
+.square-actions .recovery {
+    cursor: pointer;
+    transition: transform .18s ease;
+}
+
+.square-actions .recovery:hover {
+    transform: scale(1.07);
+}
+
 /* Overlay background */
 .overlay {
     position: fixed;
