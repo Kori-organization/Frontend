@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Character encoding -->
+    <meta charset="utf-8" />
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Page title -->
+    <title>Alunos do 1º Ano — Observações</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../Assets/logo-top.svg" type="image/png">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="CSS/profile.css">
+</head>
+
+<body>
+
+    <!-- Top navigation bar -->
+    <div class="topbar">
+        <!-- Back button -->
+        <a class="back" href="index.html" title="Voltar">
+            <img src="../Assets/left.svg" alt="Voltar" width="15px"> Voltar
+        </a>
+
+        <!-- Greeting icon (reloads page on click) -->
+        <img src="../Assets/user-2.svg" alt="" width="40px" class="img-greeting" onclick="location.reload()">
+    </div>
+
+    <main>
+        <!-- Page title -->
+        <h1>Seu perfil</h1>
+
+        <!-- Profile card -->
+        <section class="profile-card" aria-label="Teacher profile">
+
+            <!-- Top colored hero -->
+            <div class="profile-hero">
+                <!-- Avatar icon -->
+                <div class="avatar-icon" aria-hidden="true">
+                    <img src="../Assets/user-2.svg" alt="Avatar">
+                </div>
+
+                <!-- Decorative diagonal highlight -->
+                <div class="hero-sheen" aria-hidden="true"></div>
+            </div>
+
+            <!-- Profile content -->
+            <div class="profile-body">
+                <!-- Left column -->
+                <div class="profile-col profile-left">
+
+                    <div class="field">
+                        <div class="label">Nome:</div>
+                        <div class="value name">Igor Eduardo Quinto</div>
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Disciplina:</div>
+                        <div class="value">Matemática</div>
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Usuário:</div>
+                        <div class="value">igor.mat</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Help text -->
+        <p class="profile-help">
+            Há algo de errado com suas informações?
+            <a href="mailto:korieducation@gmail.com" class="support-link">
+                Entre em contato com o suporte.
+            </a>
+        </p>
+    </main>
+
+</body>
+
+</html>
