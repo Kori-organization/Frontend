@@ -54,105 +54,123 @@
                 <div>Admissão <img src="../Assets/chevron.svg" alt="" width="10"></div>
             </div>
 
-            <!-- Student row -->
-            <div class="student-row" role="row">
+            <!--
+State reference:
+- no-notes        -> Only "+" enabled
+- needs-recovery  -> Recovery enabled
+- complete        -> Highlighted row, all actions locked
+-->
+
+            <!-- NO NOTES -->
+            <div class="student-row" role="row" data-state="no-notes">
                 <div class="matricula">1010</div>
                 <div class="nome">Davi Arakaki</div>
                 <div class="email">davi.arakaki@kori.com</div>
                 <div class="admissao">11/01/2025</div>
 
-                <!-- Action buttons -->
                 <div class="actions">
-                    <!-- Add grades button -->
-                    <button class="action-btn plus" title="Adicionar notas" aria-label="Adicionar notas">
-                        <img src="../Assets/plus.svg" alt="+" width="18">
+                    <button class="action-btn plus">
+                        <img src="../Assets/plus.svg" width="18">
                     </button>
 
-                    <!-- Secondary actions -->
                     <div class="square-actions">
-                        <img src="../Assets/recovery.svg" alt="Recuperação" width="42" class="recovery">
-                        <img src="../Assets/notes-5.svg" alt="notes" width="30">
+                        <img src="../Assets/recovery.svg" class="recovery disabled" width="42">
+                        <img src="../Assets/notes-5.svg" width="30">
                     </div>
                 </div>
             </div>
 
-            <!-- Repeated student rows -->
-            <div class="student-row" role="row">
-                <div class="matricula">1011</div>
+            <!-- COMPLETE (highlighted like screenshot) -->
+            <div class="student-row complete" role="row" data-state="complete">
+                <div class="matricula">1010</div>
                 <div class="nome">Felipe Kogake</div>
                 <div class="email">felipe.kogake@kori.com</div>
                 <div class="admissao">11/01/2025</div>
+
                 <div class="actions">
-                    <button class="action-btn plus" title="Adicionar notas" aria-label="Adicionar notas">
-                        <img src="../Assets/plus.svg" alt="+" width="18">
+                    <button class="action-btn plus disabled">
+                        <img src="../Assets/plus.svg" width="18">
                     </button>
+
                     <div class="square-actions">
-                        <img src="../Assets/recovery.svg" alt="Recuperação" width="42" class="recovery">
-                        <img src="../Assets/notes-5.svg" alt="notes" width="30">
+                        <img src="../Assets/recovery.svg" class="recovery disabled" width="42">
+                        <img src="../Assets/notes-5.svg" width="30">
                     </div>
                 </div>
             </div>
 
-            <div class="student-row" role="row">
-                <div class="matricula">1012</div>
+            <!-- NEEDS RECOVERY -->
+            <div class="student-row" role="row" data-state="needs-recovery">
+                <div class="matricula">1010</div>
                 <div class="nome">Gabriela Benfica Ricci</div>
                 <div class="email">gabriela.ricci@kori.com</div>
                 <div class="admissao">11/01/2025</div>
+
                 <div class="actions">
-                    <button class="action-btn plus" title="Adicionar notas" aria-label="Adicionar notas">
-                        <img src="../Assets/plus.svg" alt="+" width="18">
+                    <button class="action-btn plus disabled">
+                        <img src="../Assets/plus.svg" width="18">
                     </button>
+
                     <div class="square-actions">
-                        <img src="../Assets/recovery.svg" alt="Recuperação" width="42" class="recovery">
-                        <img src="../Assets/notes-5.svg" alt="notes" width="30">
+                        <img src="../Assets/recovery.svg" class="recovery active" width="42">
+                        <img src="../Assets/notes-5.svg" width="30">
                     </div>
                 </div>
             </div>
 
-            <div class="student-row" role="row">
-                <div class="matricula">1013</div>
+            <!-- NO NOTES -->
+            <div class="student-row" role="row" data-state="no-notes">
+                <div class="matricula">1010</div>
                 <div class="nome">Igor Quinto</div>
                 <div class="email">igor.quinto@kori.com</div>
                 <div class="admissao">11/01/2025</div>
+
                 <div class="actions">
-                    <button class="action-btn plus" title="Adicionar notas" aria-label="Adicionar notas">
-                        <img src="../Assets/plus.svg" alt="+" width="18">
+                    <button class="action-btn plus">
+                        <img src="../Assets/plus.svg" width="18">
                     </button>
+
                     <div class="square-actions">
-                        <img src="../Assets/recovery.svg" alt="Recuperação" width="42" class="recovery">
-                        <img src="../Assets/notes-5.svg" alt="notes" width="30">
+                        <img src="../Assets/recovery.svg" class="recovery disabled" width="42">
+                        <img src="../Assets/notes-5.svg" width="30">
                     </div>
                 </div>
             </div>
 
-            <div class="student-row" role="row">
-                <div class="matricula">1014</div>
+            <!-- NO NOTES -->
+            <div class="student-row" role="row" data-state="no-notes">
+                <div class="matricula">1010</div>
                 <div class="nome">Lucas Lima</div>
                 <div class="email">lucas.lima@kori.com</div>
                 <div class="admissao">11/01/2025</div>
+
                 <div class="actions">
-                    <button class="action-btn plus" title="Adicionar notas" aria-label="Adicionar notas">
-                        <img src="../Assets/plus.svg" alt="+" width="18">
+                    <button class="action-btn plus">
+                        <img src="../Assets/plus.svg" width="18">
                     </button>
+
                     <div class="square-actions">
-                        <img src="../Assets/recovery.svg" alt="Recuperação" width="42" class="recovery">
-                        <img src="../Assets/notes-5.svg" alt="notes" width="30">
+                        <img src="../Assets/recovery.svg" class="recovery disabled" width="42">
+                        <img src="../Assets/notes-5.svg" width="30">
                     </div>
                 </div>
             </div>
 
-            <div class="student-row" role="row">
-                <div class="matricula">1015</div>
+            <!-- NO NOTES -->
+            <div class="student-row" role="row" data-state="no-notes">
+                <div class="matricula">1010</div>
                 <div class="nome">Maria Eduarda Rosa</div>
                 <div class="email">madu.rosa@kori.com</div>
                 <div class="admissao">11/01/2025</div>
+
                 <div class="actions">
-                    <button class="action-btn plus" title="Adicionar notas" aria-label="Adicionar notas">
-                        <img src="../Assets/plus.svg" alt="+" width="18">
+                    <button class="action-btn plus">
+                        <img src="../Assets/plus.svg" width="18">
                     </button>
+
                     <div class="square-actions">
-                        <img src="../Assets/recovery.svg" alt="Recuperação" width="42" class="recovery">
-                        <img src="../Assets/notes-5.svg" alt="notes" width="30">
+                        <img src="../Assets/recovery.svg" class="recovery disabled" width="42">
+                        <img src="../Assets/notes-5.svg" width="30">
                     </div>
                 </div>
             </div>

@@ -624,6 +624,43 @@ select {
     }
 }
 
+/* =========================================================
+   Student row states (controlled by data-state)
+   ========================================================= */
+
+/* Default: no grades yet */
+.student-row[data-state="no-notes"] {
+    background: #ffffff;
+}
+
+/* Needs recovery */
+.student-row[data-state="needs-recovery"] {
+    background: #fffbe9;
+    border: 2px solid rgba(245, 198, 89, 0.45);
+}
+
+/* Completed (grades or recovery done) */
+.student-row[data-state="complete"] {
+    background: #eaf3c6;
+    border: 2px solid #9fbf3f;
+    box-shadow: 0 10px 28px rgba(159, 191, 63, 0.08);
+}
+
+/* =========================================================
+   Disabled actions
+   ========================================================= */
+
+.action-btn.disabled {
+    pointer-events: none;
+    opacity: 0.45;
+    transform: scale(0.8);
+}
+
+.recovery.disabled {
+    pointer-events: none;
+    opacity: 0.35;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 10px;

@@ -529,3 +529,45 @@ recoveryOverlay.addEventListener('click', (e) => {
         recoveryOverlay.setAttribute('aria-hidden', 'true');
     }
 });
+
+
+// =========================================================
+// Apply UI behavior based on data-state
+// (Business rules come from backend)
+// =========================================================
+
+function applyRowUIState(row) {
+    if (!row) return;
+
+    const state = row.dataset.state;
+
+    const plusBtn = row.querySelector('.action-btn.plus');
+    const recoveryIcon = row.querySelector('.recovery');
+
+    // Reset states
+    plusBtn?.classList.remove('disabled');
+    recoveryIcon?.classList.remove('disabled');
+
+    switch (state) {
+        case 'no-notes':
+            // User can add grades, recovery is disabled
+            recoveryIcon?.classList.add('disabled');
+            break;
+
+        case 'needs-recovery':
+            // Grades locked, recovery enabled
+            plusBtn?.classList.add('disabled');
+            break;
+
+        case 'complete':
+            // Everything locked, row highlighted
+            plusBtn?.classList.add('disabled');
+            recoveryIcon?.classList.add('disabled');
+            break;
+    }
+}
+
+// Apply state to all rows on page load
+document.querySelectorAll('.student-row').forEach(row => {
+    applyRowUIState(row);
+});
