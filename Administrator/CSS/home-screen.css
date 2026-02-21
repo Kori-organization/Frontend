@@ -198,6 +198,33 @@ img {
 
 }
 
+/* Profile section */
+.logout {
+    width: 80px;
+    height: 100px;
+    bottom: 0;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    background: #FFC4C4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.18s ease;
+    cursor: pointer;
+    transform-origin: center center;
+    position: fixed;
+}
+
+.logout:hover {
+    transform: scale(1.04);
+}
+
+.logout img {
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+}
+
 /* Main Content Area */
 .main {
     padding-left: 32px;
