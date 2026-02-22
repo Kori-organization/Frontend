@@ -434,13 +434,13 @@ img {
     margin-bottom: 10px;
 }
 
-.card.shortcut-card>* {
+.card.shortcut-card {
     transition: transform 0.18s ease;
     cursor: pointer;
 }
 
-.card.shortcut-card:hover>* {
-    transform: scale(1.05);
+.card.shortcut-card:hover {
+    transform: scale(1.015);
 }
 
 /* Actions */
