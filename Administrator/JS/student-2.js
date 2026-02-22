@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!activeRow) return;
 
         const matricula = activeRow.querySelector('.matricula')?.textContent.trim();
-        window.location.href = `observacoes.html?matricula=${encodeURIComponent(matricula)}`;
+        window.location.href = `observation.html?matricula=${encodeURIComponent(matricula)}`;
     });
 
     // =========================
