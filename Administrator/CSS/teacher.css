@@ -231,7 +231,7 @@ img {
     margin-right: -32px;
     width: calc(100% - 0px);
     margin-left: 200px;
-    height: 780px;
+    min-height: 780px;
 }
 
 /* Top visual element */
