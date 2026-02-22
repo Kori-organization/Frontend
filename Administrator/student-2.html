@@ -52,7 +52,7 @@
             </div>
 
             <!-- Student row -->
-            <div class="student-row" role="row" onclick="window.location='observation-3.html'">
+            <div class="student-row" role="row">
                 <div class="matricula">1010</div>
                 <div class="nome">Davi Arakaki</div>
                 <div class="email">davi.arakaki@kori.com</div>
@@ -67,7 +67,7 @@
             </div>
 
             <!-- Repeated student rows -->
-            <div class="student-row" role="row" onclick="window.location='observation-3.html'">
+            <div class="student-row" role="row">
                 <div class="matricula">1011</div>
                 <div class="nome">Felipe Kogake</div>
                 <div class="email">felipe.kogake@kori.com</div>
@@ -79,7 +79,7 @@
                 </div>
             </div>
 
-            <div class="student-row" role="row" onclick="window.location='observation-3.html'">
+            <div class="student-row" role="row">
                 <div class="matricula">1012</div>
                 <div class="nome">Gabriela Benfica Ricci</div>
                 <div class="email">gabriela.ricci@kori.com</div>
@@ -91,7 +91,7 @@
                 </div>
             </div>
 
-            <div class="student-row" role="row" onclick="window.location='observation-3.html'">
+            <div class="student-row" role="row">
                 <div class="matricula">1013</div>
                 <div class="nome">Igor Quinto</div>
                 <div class="email">igor.quinto@kori.com</div>
@@ -103,7 +103,7 @@
                 </div>
             </div>
 
-            <div class="student-row" role="row" onclick="window.location='observation-3.html'">
+            <div class="student-row" role="row">
                 <div class="matricula">1014</div>
                 <div class="nome">Lucas Lima</div>
                 <div class="email">lucas.lima@kori.com</div>
@@ -115,7 +115,7 @@
                 </div>
             </div>
 
-            <div class="student-row" role="row" onclick="window.location='observation-3.html'">
+            <div class="student-row" role="row">
                 <div class="matricula">1015</div>
                 <div class="nome">Maria Eduarda Rosa</div>
                 <div class="email">madu.rosa@kori.com</div>
@@ -127,12 +127,40 @@
                 </div>
             </div>
 
-            <!-- Spacer at bottom -->
-            <div style="height:26px"></div>
         </section>
-
+        <!-- Spacer at bottom -->
+        <div style="height:120px"></div>
     </main>
 
+    <!-- Popup menu container -->
+    <div class="popup-menu" id="popupMenu">
+
+        <!-- Edit option -->
+        <div class="popup-item edit" id="popupEdit">
+            <img src="../Assets/icon-edit.svg" width="16">
+            Editar
+        </div>
+
+        <!-- Bulletin option -->
+        <div class="popup-item" id="popupBulletin">
+            <img src="../Assets/greeting-4.svg" width="18" style="margin-left: -3px;">
+            Boletim
+        </div>
+
+        <!-- Observations option -->
+        <div class="popup-item" id="popupObservations">
+            <img src="../Assets/notes-5.svg" width="16">
+            Observações
+        </div>
+
+        <!-- Delete option -->
+        <div class="popup-item delete" id="popupDelete">
+            <img src="../Assets/trash.svg" width="16">
+            Deletar
+        </div>
+
+    </div>
 </body>
+<script src="JS/student-2.js"></script>
 
 </html>
