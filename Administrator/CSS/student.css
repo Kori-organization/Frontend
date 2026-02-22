@@ -329,15 +329,11 @@ img {
     margin-bottom: -40px;
 }
 
-/* Cards */
-
-.cards-title {
-    font-size: 31px;
-    font-weight: 650;
-    margin-bottom: 35px;
-    margin-left: 25px;
-    margin-top: 180px;
+.bulletin-wrapper {
+    margin-top: 220px;
 }
+
+/* Cards */
 
 .cards-grid {
     display: grid;
