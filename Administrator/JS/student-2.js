@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     popupMenu?.addEventListener('click', (e) => e.stopPropagation());
 
     // =========================
-    // BOLETIM (REAL REDIRECT)
+    // BULLETIN
     // =========================
     popupBulletin?.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -119,11 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!activeRow) return;
 
         const matricula = activeRow.querySelector('.matricula')?.textContent.trim();
-        window.location.href = `boletim.html?matricula=${encodeURIComponent(matricula)}`;
+        window.location.href = `bulletin.html?matricula=${encodeURIComponent(matricula)}`;
     });
 
     // =========================
-    // OBSERVAÇÕES (REAL REDIRECT)
+    // OBSERVATION
     // =========================
     popupObservations?.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // =========================
-    // EDITAR
+    // EDIT
     // =========================
     popupEdit?.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // =========================
-    // EXCLUIR
+    // DELETE
     // =========================
     popupDelete?.addEventListener('click', (e) => {
         e.stopPropagation();
