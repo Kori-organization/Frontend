@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Character encoding -->
+    <meta charset="utf-8" />
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Page title -->
+    <title>Alunos do 1º Ano — Observações</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../Assets/logo-top.svg" type="image/png">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="CSS/observation.css">
+</head>
+
+<body>
+
+    <!-- Top navigation bar -->
+    <div class="topbar">
+        <!-- Back button -->
+        <a class="back" href="observation.html" title="Voltar">
+            <img src="../Assets/left.svg" alt="Voltar" width="15px"> Voltar
+        </a>
+    </div>
+
+    <main>
+
+        <section class="student-top">
+            <div class="student-card">
+                <div class="student-left">
+                    <h2 class="student-name">Davi Arakaki</h2>
+                    <p class="student-email">davi.arakaki@kori.com</p>
+                </div>
+
+                <div class="student-right">
+                    <div class="info-pill">
+                        <div class="series">Série: <strong>1º Ano</strong></div>
+                        <div class="matricula">Matrícula: <span>1010</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="student-note">
+                Veja as observações de todos os professores para este aluno.
+            </p>
+        </section>
+
+        <!-- Observation container -->
+        <div class="obs-container" id="obsContainer">
+            <div class="obs-card pink">
+                <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                    relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                <button class="delete-btn">
+                    <img src="../Assets/trash.svg" alt="Excluir">
+                </button>
+
+                <button class="copy-btn">
+                    <img src="../Assets/copy.svg" alt="Copiar">
+                </button>
+            </div>
+            <div class="obs-card yellow">
+                <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                    relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                <button class="delete-btn">
+                    <img src="../Assets/trash.svg" alt="Excluir">
+                </button>
+
+                <button class="copy-btn">
+                    <img src="../Assets/copy.svg" alt="Copiar">
+                </button>
+            </div>
+            <div class="obs-card blue">
+                <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                    relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                <button class="delete-btn">
+                    <img src="../Assets/trash.svg" alt="Excluir">
+                </button>
+
+                <button class="copy-btn">
+                    <img src="../Assets/copy.svg" alt="Copiar">
+                </button>
+            </div>
+            <div class="obs-card green">
+                <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                    relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                <button class="delete-btn">
+                    <img src="../Assets/trash.svg" alt="Excluir">
+                </button>
+
+                <button class="copy-btn">
+                    <img src="../Assets/copy.svg" alt="Copiar">
+                </button>
+            </div>
+            <div class="obs-card pink">
+                <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                    relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                <button class="delete-btn">
+                    <img src="../Assets/trash.svg" alt="Excluir">
+                </button>
+
+                <button class="copy-btn">
+                    <img src="../Assets/copy.svg" alt="Copiar">
+                </button>
+            </div>
+            <div class="obs-card yellow">
+                <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                    relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                <button class="delete-btn">
+                    <img src="../Assets/trash.svg" alt="Excluir">
+                </button>
+
+                <button class="copy-btn">
+                    <img src="../Assets/copy.svg" alt="Copiar">
+                </button>
+            </div>
+            <div class="obs-card blue">
+                <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                    relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                <button class="delete-btn">
+                    <img src="../Assets/trash.svg" alt="Excluir">
+                </button>
+
+                <button class="copy-btn">
+                    <img src="../Assets/copy.svg" alt="Copiar">
+                </button>
+            </div>
+            <div class="obs-card green">
+                <p>O aluno demonstra interesse nas aulas e participa quando é incentivado. Apresenta bom
+                    relacionamento com os colegas, sendo respeitoso e colaborativo nas atividades em grupo</p>
+
+                <button class="delete-btn">
+                    <img src="../Assets/trash.svg" alt="Excluir">
+                </button>
+
+                <button class="copy-btn">
+                    <img src="../Assets/copy.svg" alt="Copiar">
+                </button>
+            </div>
+        </div>
+    </main>
+    <div id="copyToast" class="copy-toast">
+        Copiado para a área de transferência
+    </div>
+
+    <div id="confirmDeleteOverlay" class="overlay" aria-hidden="true">
+
+    <div class="confirm-modal">
+        <div class="confirm-icon-edit">
+            <img src="../Assets/info-circle-red.svg" alt="">
+        </div>
+
+        <h2 class="confirm-title">
+            Deseja excluir esta observação?
+        </h2>
+
+        <div class="confirm-buttons">
+            <button id="confirmCancel" class="btn-confirm btn-cancel">
+                Cancelar
+            </button>
+
+            <button id="confirmDelete" class="btn-confirm btn-save">
+                Excluir
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- TOAST CONTAINER IGUAL PROFESSOR -->
+<div id="toastWrapTeacher" class="toast-wrap-teacher"></div>
+
+</body>
+<script src="JS/observation.js"></script>
+
+</html>
