@@ -142,6 +142,7 @@ main {
     position: relative;
     margin-left: 90px;
     margin-right: 140px;
+    color: #102C3D;
 }
 
 .bulletin-year {
@@ -150,7 +151,7 @@ main {
     top: 10px;
     font-size: 28px;
     font-weight: 600;
-    color: #0f1724;
+    color: #102C3D;
     margin-top: -11px;
 }
 
@@ -303,7 +304,7 @@ main {
     color: #d4a017;
 }
 
-/* small overlay show class behavior */
+/* Small overlay show class behavior */
 .overlay.show {
     display: flex;
 }
@@ -333,12 +334,12 @@ main {
     border: none;
 
     background: #F5C659;
-    color: #021018;
+    color: #102C3D;
 
     font-weight: 600;
     font-size: 15px;
     width: 230px;
-
+    font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
     cursor: pointer;
     transition: background .2s, transform .15s;
 }
