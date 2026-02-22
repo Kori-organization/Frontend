@@ -134,7 +134,6 @@
 
     <!-- Popup menu container -->
     <div class="popup-menu" id="popupMenu">
-
         <!-- Edit option -->
         <div class="popup-item edit" id="popupEdit">
             <img src="../Assets/icon-edit.svg" width="16">
@@ -157,6 +156,128 @@
         <div class="popup-item delete" id="popupDelete">
             <img src="../Assets/trash.svg" width="16">
             Deletar
+        </div>
+    </div>
+
+    <!-- DELETE CONFIRM OVERLAY -->
+    <div id="confirmDeleteOverlay" class="overlay" aria-hidden="true">
+        <div class="confirm-card" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+            <div class="confirm-icon" aria-hidden="true">
+                <div class="confirm-icon-inner">
+                    <img src="../Assets/info-circle-red.svg" alt="Atenção" width="40" height="40">
+                </div>
+            </div>
+
+            <h2 id="confirmTitle" class="confirm-title">
+                Tem certeza que deseja<br>
+                deletar <span id="confirmName">Ana souza</span>?
+            </h2>
+
+            <div class="confirm-actions">
+                <button id="confirmCancel" class="btn btn-cancel" type="button">Voltar</button>
+                <button id="confirmDelete" class="btn btn-delete" type="button">Deletar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toastWrapTeacher" class="toast-wrap-teacher" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- EDIT STUDENT OVERLAY (matches your screenshot) -->
+    <div id="editStudentOverlay" class="overlay" aria-hidden="true">
+
+        <div class="edit-student-card" role="dialog" aria-modal="true" aria-labelledby="editStudentTitle">
+
+            <!-- big colored header -->
+            <div class="edit-student-header">
+                <h2 id="editStudentTitle">Alterar <span id="editStudentNameHeader">Aluno</span></h2>
+            </div>
+
+            <!-- form -->
+            <form class="edit-student-form" onsubmit="return false;">
+                <div class="row-2">
+                    <div class="field t1">
+                        <label>Nome</label>
+                        <input id="inputName" type="text" placeholder="Nome completo">
+                    </div>
+
+                    <div class="field t1">
+                        <label>Email</label>
+                        <input id="inputEmail" type="email" placeholder="email@kori.com">
+                    </div>
+                </div>
+
+                <div class="row-3" style="margin-top:18px;">
+                    <div class="field small t2">
+                        <label>Admissão</label>
+                        <input id="inputAdmission" type="date" placeholder="01 / 02 / 2025">
+                    </div>
+
+                    <div class="field xsmall t2">
+                        <label>Série</label>
+                        <select id="inputSeries">
+
+                            <option value="">Selecionar turma</option>
+
+                            <option value="1º Ano">1º Ano</option>
+                            <option value="2º Ano">2º Ano</option>
+                            <option value="3º Ano">3º Ano</option>
+                            <option value="4º Ano">4º Ano</option>
+                            <option value="5º Ano">5º Ano</option>
+
+                        </select>
+                    </div>
+
+                    <div class="field t1">
+                        <label>Senha</label>
+                        <div class="password-input-wrap small">
+                            <input id="inputPassword" type="password" placeholder="••••••">
+                            <button type="button" class="password-toggle" id="togglePwd">
+                                <img src="../Assets/eye-off.svg" width="18" alt="toggle">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+            <!-- actions -->
+            <div class="edit-student-actions">
+                <button class="btn-edit-cancel">Voltar</button>
+                <button class="btn-edit-save">Salvar</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- POPUP 2 -->
+    <div id="confirmTeacherOverlay" class="overlay" aria-hidden="true">
+
+        <div class="confirm-modal">
+
+            <!-- icon -->
+            <div class="confirm-icon-edit">
+                <img src="../Assets/info-circle-orange.svg" alt="Info">
+            </div>
+
+            <!-- title -->
+            <h2 class="confirm-title">
+                Tem certeza que deseja<br>salvar as alterações?
+            </h2>
+
+            <!-- buttons -->
+            <div class="confirm-buttons">
+
+                <button id="confirmTeacherCancel" class="btn-confirm btn-cancel">
+                    Voltar
+                </button>
+
+                <button id="confirmTeacherSend" class="btn-confirm btn-save">
+                    Salvar
+                </button>
+
+            </div>
+
         </div>
 
     </div>

@@ -1,47 +1,260 @@
-// Get popup element
-const popupMenu = document.getElementById("popupMenu");
+document.addEventListener('DOMContentLoaded', () => {
 
-// Get all observation buttons
-const observationButtons = document.querySelectorAll(".btn-observacoes");
+    // =========================
+    // ELEMENTS
+    // =========================
+    const popupMenu = document.getElementById('popupMenu');
+    const observationButtons = Array.from(document.querySelectorAll('.btn-observacoes'));
 
+    const popupEdit = document.getElementById('popupEdit');
+    const popupBulletin = document.getElementById('popupBulletin');
+    const popupObservations = document.getElementById('popupObservations');
+    const popupDelete = document.getElementById('popupDelete');
 
-// ==========================
-// OPEN POPUP WHEN BUTTON CLICKED
-// ==========================
-observationButtons.forEach(button => {
-    button.addEventListener("click", function(event) {
-        // Prevent row click redirect
-        event.stopPropagation();
-        // Get button position
+    const editOverlay = document.getElementById('editStudentOverlay');
+    const inputName = document.getElementById('inputName');
+    const inputEmail = document.getElementById('inputEmail');
+    const inputAdmission = document.getElementById('inputAdmission');
+    const inputSeries = document.getElementById('inputSeries');
+    const inputPassword = document.getElementById('inputPassword');
+    const editHeaderName = document.getElementById('editStudentNameHeader');
+
+    const btnEditCancel = document.querySelector('.btn-edit-cancel');
+    const btnEditSave = document.querySelector('.btn-edit-save');
+    const togglePwd = document.getElementById('togglePwd');
+
+    const confirmDeleteOverlay = document.getElementById('confirmDeleteOverlay');
+    const confirmDeleteBtn = document.getElementById('confirmDelete');
+    const confirmCancelBtn = document.getElementById('confirmCancel');
+    const confirmName = document.getElementById('confirmName');
+
+    const confirmSaveOverlay = document.getElementById('confirmTeacherOverlay');
+    const confirmSaveBtn = document.getElementById('confirmTeacherSend');
+    const confirmSaveCancelBtn = document.getElementById('confirmTeacherCancel');
+
+    const toastWrap = document.getElementById('toastWrapTeacher');
+
+    let activeRow = null;
+
+    // =========================
+    // TOAST
+    // =========================
+    function createToast(title, message = '', type = 'success') {
+        if (!toastWrap) return;
+
+        const toast = document.createElement('div');
+        toast.className = `toast ${type === 'error' ? 'error' : 'success'}`;
+
+        const icon = type === 'error'
+            ? '../Assets/error-icon.svg'
+            : '../Assets/check-icon.svg';
+
+        toast.innerHTML = `
+            <img src="${icon}" style="width:30px;height:22px" alt="">
+            <div class="toast-text">
+                <h4>${title}</h4>
+                ${message ? `<p>${message}</p>` : ''}
+            </div>
+        `;
+
+        toastWrap.appendChild(toast);
+
+        setTimeout(() => {
+            toast.classList.add('hide');
+            setTimeout(() => toast.remove(), 300);
+        }, 3500);
+    }
+
+    // =========================
+    // OVERLAYS
+    // =========================
+    function openOverlay(el) {
+        if (!el) return;
+        el.classList.add('show');
+        el.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeOverlay(el) {
+        if (!el) return;
+        el.classList.remove('show');
+        el.setAttribute('aria-hidden', 'true');
+    }
+
+    // =========================
+    // POSITION POPUP
+    // =========================
+    function positionPopupNear(button) {
+        if (!popupMenu || !button) return;
+
         const rect = button.getBoundingClientRect();
-        // Position popup near button
-        popupMenu.style.top = rect.bottom + window.scrollY + 10 + "px";
-        popupMenu.style.left = rect.left - 160 + "px";
-        // Toggle popup visibility
-        popupMenu.classList.toggle("show");
+        popupMenu.style.left = rect.left - 150 + 'px';
+        popupMenu.style.top = rect.bottom + window.scrollY + 10 + 'px';
+    }
+
+    // =========================
+    // OPEN POPUP
+    // =========================
+    observationButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            activeRow = btn.closest('.student-row');
+            positionPopupNear(btn);
+            popupMenu.classList.toggle('show');
+        });
     });
-});
 
+    document.addEventListener('click', () => {
+        popupMenu.classList.remove('show');
+    });
 
-// ==========================
-// CLOSE POPUP WHEN CLICKING OUTSIDE
-// ==========================
-document.addEventListener("click", function() {
-    popupMenu.classList.remove("show");
-});
+    popupMenu?.addEventListener('click', (e) => e.stopPropagation());
 
+    // =========================
+    // BOLETIM (REAL REDIRECT)
+    // =========================
+    popupBulletin?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        popupMenu.classList.remove('show');
 
-// ==========================
-// REDIRECT ACTIONS
-// ==========================
+        if (!activeRow) return;
 
-// Redirect to bulletin page
-document.getElementById("popupBulletin").addEventListener("click", function() {
-    window.location.href = "student-3.html";
-});
+        const matricula = activeRow.querySelector('.matricula')?.textContent.trim();
+        window.location.href = `boletim.html?matricula=${encodeURIComponent(matricula)}`;
+    });
 
+    // =========================
+    // OBSERVAÇÕES (REAL REDIRECT)
+    // =========================
+    popupObservations?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        popupMenu.classList.remove('show');
 
-// Redirect to observations page
-document.getElementById("popupObservations").addEventListener("click", function() {
-    window.location.href = "student-3b.html";
+        if (!activeRow) return;
+
+        const matricula = activeRow.querySelector('.matricula')?.textContent.trim();
+        window.location.href = `observacoes.html?matricula=${encodeURIComponent(matricula)}`;
+    });
+
+    // =========================
+    // EDITAR
+    // =========================
+    popupEdit?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        popupMenu.classList.remove('show');
+
+        if (!activeRow) return;
+
+        const name = activeRow.querySelector('.nome')?.textContent.trim() || '';
+        const email = activeRow.querySelector('.email')?.textContent.trim() || '';
+        const admission = activeRow.querySelector('.admissao')?.textContent.trim() || '';
+
+        editHeaderName.textContent = name;
+        inputName.value = name;
+        inputEmail.value = email;
+
+        if (admission.includes('/')) {
+            const [d, m, y] = admission.split('/');
+            inputAdmission.value = `${y}-${m}-${d}`;
+        }
+
+        openOverlay(editOverlay);
+    });
+
+    btnEditCancel?.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeOverlay(editOverlay);
+        activeRow = null;
+    });
+
+    btnEditSave?.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (!inputName.value.trim() || !inputEmail.value.trim()) {
+            createToast('Preencha os campos obrigatórios', '', 'error');
+            return;
+        }
+
+        openOverlay(confirmSaveOverlay);
+    });
+
+    confirmSaveCancelBtn?.addEventListener('click', () => {
+        closeOverlay(confirmSaveOverlay);
+    });
+
+    confirmSaveBtn?.addEventListener('click', () => {
+
+        const name = inputName.value.trim();
+        const email = inputEmail.value.trim();
+
+        activeRow.querySelector('.nome').textContent = name;
+        activeRow.querySelector('.email').textContent = email;
+
+        closeOverlay(confirmSaveOverlay);
+        closeOverlay(editOverlay);
+
+        createToast('Aluno atualizado com sucesso', name, 'success');
+
+        activeRow = null;
+    });
+
+    // =========================
+    // EXCLUIR
+    // =========================
+    popupDelete?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        popupMenu.classList.remove('show');
+
+        if (!activeRow) return;
+
+        confirmName.textContent = activeRow.querySelector('.nome')?.textContent.trim();
+        openOverlay(confirmDeleteOverlay);
+    });
+
+    confirmCancelBtn?.addEventListener('click', () => {
+        closeOverlay(confirmDeleteOverlay);
+        activeRow = null;
+    });
+
+    confirmDeleteBtn?.addEventListener('click', () => {
+
+        const name = confirmName.textContent;
+
+        activeRow.remove();
+
+        closeOverlay(confirmDeleteOverlay);
+
+        createToast('Aluno excluído com sucesso', name, 'success');
+
+        activeRow = null;
+    });
+
+    // =========================
+    // PASSWORD TOGGLE
+    // =========================
+    togglePwd?.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const img = togglePwd.querySelector('img');
+
+        if (inputPassword.type === 'password') {
+            inputPassword.type = 'text';
+            img.src = '../Assets/eye.svg';
+        } else {
+            inputPassword.type = 'password';
+            img.src = '../Assets/eye-off.svg';
+        }
+    });
+
+    // =========================
+    // CLOSE OVERLAY ON ESC
+    // =========================
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            popupMenu.classList.remove('show');
+            closeOverlay(editOverlay);
+            closeOverlay(confirmDeleteOverlay);
+            closeOverlay(confirmSaveOverlay);
+        }
+    });
+
 });
