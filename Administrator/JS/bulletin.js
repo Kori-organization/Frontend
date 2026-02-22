@@ -1,36 +1,37 @@
+// Save button
 const btnSave = document.querySelector('.save-btn');
+btnSave.addEventListener('click', calculateAll);
 
-btnSave.addEventListener('click', calcularTudo);
-
-function calcularTudo() {
+// Main calculation
+function calculateAll() {
     const n1 = document.querySelectorAll('.n1');
     const n2 = document.querySelectorAll('.n2');
     const rec = document.querySelectorAll('.rec');
     const medias = document.querySelectorAll('.media-final');
     const status = document.querySelectorAll('.status');
 
-    let aprovadoGeral = true;
+    let approvedOverall = true;
 
     n1.forEach((_, i) => {
-        const nota1 = Number(n1[i].value) || 0;
-        const nota2 = Number(n2[i].value) || 0;
+        const grade1 = Number(n1[i].value) || 0;
+        const grade2 = Number(n2[i].value) || 0;
 
-        const media = (nota1 + nota2) / 2;
+        const avg = (grade1 + grade2) / 2;
+        let finalAvg = avg;
 
-        let mediaFinal = media;
-
-        if (media < 7) {
+        // Enable recovery only if average < 7
+        if (avg < 7) {
             rec[i].disabled = false;
-            const r = Number(rec[i].value) || 0;
-            mediaFinal = (media + r) / 2;
+            const recovery = Number(rec[i].value) || 0;
+            finalAvg = (avg + recovery) / 2;
         } else {
             rec[i].disabled = true;
             rec[i].value = '';
         }
 
-        medias[i].textContent = mediaFinal.toFixed(1);
+        medias[i].textContent = finalAvg.toFixed(1);
 
-        if (mediaFinal >= 7) {
+        if (finalAvg >= 7) {
             status[i].textContent = 'Aprovado';
             status[i].classList.remove('red');
             status[i].classList.add('green');
@@ -38,21 +39,30 @@ function calcularTudo() {
             status[i].textContent = 'Reprovado';
             status[i].classList.remove('green');
             status[i].classList.add('red');
-            aprovadoGeral = false;
+            approvedOverall = false;
         }
     });
 
-    const finalBox = document.querySelector('.final-status span');
-    finalBox.textContent = `Situação final: ${aprovadoGeral ? 'Aprovado' : 'Reprovado'}.`;
+    document.querySelector('.final-status span').textContent =
+        `Situação final: ${approvedOverall ? 'Aprovado' : 'Reprovado'}.`;
+
+    updateWarnings();
 }
 
-document.addEventListener('DOMContentLoaded', calcularTudo);
+// Init
+document.addEventListener('DOMContentLoaded', () => {
+    calculateAll();
+    attachInputListeners();
+});
 
+// Toast
 const toast = document.getElementById('toast');
 let toastTimeout;
 
-function showToast(msg) {
-    toast.textContent = msg;
+function showToast(message) {
+    if (!toast) return;
+
+    toast.textContent = message;
     toast.classList.add('show');
 
     clearTimeout(toastTimeout);
@@ -61,18 +71,59 @@ function showToast(msg) {
     }, 2500);
 }
 
-function validarNota(input) {
+// Input validation (0–10)
+function validateGrade(input) {
     input.addEventListener('input', () => {
-        const valor = Number(input.value);
-
         if (input.value === '') return;
 
-        if (valor < 0 || valor > 10) {
+        const value = Number(input.value);
+        if (Number.isNaN(value)) return;
+
+        if (value < 0 || value > 10) {
             input.value = '';
-            showToast('Número inválido (0 a 10)');
-            calcularTudo();
+            showToast('Invalid number (0 to 10)');
+            calculateAll();
+        } else {
+            input.classList.remove('warning');
         }
     });
 }
 
-document.querySelectorAll('.nota').forEach(validarNota);
+// Apply warning borders
+function updateWarnings() {
+    const n1 = document.querySelectorAll('.n1');
+    const n2 = document.querySelectorAll('.n2');
+    const rec = document.querySelectorAll('.rec');
+
+    n1.forEach((_, i) => {
+        const g1 = n1[i];
+        const g2 = n2[i];
+        const r = rec[i];
+
+        // Grades warning
+        if (g1.value === '' || g2.value === '') {
+            g1.classList.add('warning');
+            g2.classList.add('warning');
+        } else {
+            g1.classList.remove('warning');
+            g2.classList.remove('warning');
+        }
+
+        // Recovery warning (only if enabled)
+        if (!r.disabled && r.value === '') {
+            r.classList.add('warning');
+        } else {
+            r.classList.remove('warning');
+        }
+    });
+}
+
+// Listeners
+function attachInputListeners() {
+    document.querySelectorAll('.nota').forEach(input => {
+        validateGrade(input);
+
+        input.addEventListener('input', updateWarnings);
+        input.addEventListener('blur', calculateAll);
+    });
+}
