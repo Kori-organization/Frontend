@@ -133,8 +133,32 @@
             </section>
         </main>
     </div>
+
+    <!-- DELETE CONFIRM OVERLAY -->
+    <div id="confirmDeleteOverlay" class="overlay" aria-hidden="true">
+        <div class="confirm-card" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+            <div class="confirm-icon" aria-hidden="true">
+                <div class="confirm-icon-inner">
+                    <img src="../Assets/info-circle-3.svg" alt="Atenção" width="40" height="40">
+                </div>
+            </div>
+
+            <h2 id="confirmTitle" class="confirm-title">
+                Tem certeza que deseja<br>
+                deletar <span id="confirmName">Ana souza</span>?
+            </h2>
+
+            <div class="confirm-actions">
+                <button id="confirmCancel" class="btn btn-cancel" type="button">Voltar</button>
+                <button id="confirmDelete" class="btn btn-delete" type="button">Deletar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toastWrapTeacher" class="toast-wrap-teacher" aria-live="polite" aria-atomic="true"></div>
 </body>
 
-<script src="JS/observation.js"></script>
+<script src="JS/teacher.js"></script>
 
 </html>
