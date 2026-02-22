@@ -157,6 +157,97 @@
 
     <!-- Toast container -->
     <div id="toastWrapTeacher" class="toast-wrap-teacher" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- EDIT TEACHER OVERLAY -->
+    <div id="editTeacherOverlay" class="overlay" aria-hidden="true">
+
+        <div class="edit-card" role="dialog" aria-modal="true" aria-labelledby="editTeacherTitle">
+
+            <!-- Header -->
+            <div class="edit-header">
+                <h2 id="editTeacherTitle">Editar Professor</h2>
+            </div>
+
+            <!-- Form -->
+            <form class="edit-form">
+                <!-- Row 1 -->
+                <div class="edit-row">
+                    <div class="edit-field small">
+                        <label>Usuário</label>
+                        <input type="text" placeholder="usuario">
+                    </div>
+
+                    <div class="edit-field">
+                        <label>Nome</label>
+                        <input type="text" placeholder="Nome completo">
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="edit-row">
+                    <div class="edit-field">
+                        <label>Disciplina</label>
+                        <input type="text" placeholder="Disciplina">
+                    </div>
+
+                    <div class="edit-field password-field">
+                        <label>Senha</label>
+
+                        <div class="password-input-wrap">
+                            <input type="password" placeholder="••••••••">
+
+                            <!-- Eye icon -->
+                            <button type="button" class="password-toggle">
+                                <img src="../Assets/eye-off.svg" width="18">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Buttons -->
+            <div class="edit-actions">
+                <button class="btn-edit-cancel">
+                    Voltar
+                </button>
+                <button class="btn-edit-save">
+                    Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP 2 -->
+    <div id="confirmTeacherOverlay" class="overlay" aria-hidden="true">
+
+        <div class="confirm-modal">
+
+            <!-- icon -->
+            <div class="confirm-icon-edit">
+                <img src="../Assets/info-circle-orange.svg" alt="Info">
+            </div>
+
+            <!-- title -->
+            <h2 class="confirm-title">
+                Tem certeza que deseja<br>salvar as alterações?
+            </h2>
+
+            <!-- buttons -->
+            <div class="confirm-buttons">
+
+                <button id="confirmTeacherCancel" class="btn-confirm btn-cancel">
+                    Voltar
+                </button>
+
+                <button id="confirmTeacherSend" class="btn-confirm btn-save">
+                    Salvar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
 </body>
 
 <script src="JS/teacher.js"></script>

@@ -66,15 +66,6 @@
 
             if (pendingRow) {
 
-                // Optional fade-out animation before removing the row
-                pendingRow.animate(
-                    [
-                        { opacity: 1, transform: 'translateY(0) scale(1)' },
-                        { opacity: 0, transform: 'translateY(8px) scale(0.98)' }
-                    ],
-                    { duration: 180, easing: 'ease' }
-                );
-
                 // Remove row after animation completes
                 setTimeout(() => {
                     pendingRow.remove();
@@ -123,6 +114,262 @@
         if (e.key === 'Escape' && confirmOverlay && confirmOverlay.classList.contains('show')) {
             closeConfirm();
         }
+    });
+
+})();
+
+(function () {
+    // Elements
+    const editOverlay = document.getElementById('editTeacherOverlay');
+    const confirmOverlay = document.getElementById('confirmTeacherOverlay');
+    const confirmTeacherSend = document.getElementById('confirmTeacherSend');
+    const confirmTeacherCancel = document.getElementById('confirmTeacherCancel');
+    const toastWrapTeacher = document.getElementById('toastWrapTeacher');
+
+    if (!editOverlay || !confirmOverlay) {
+        // required modals not found, abort gracefully
+        return;
+    }
+
+    // Inputs inside edit modal (based on markup order)
+    const editInputs = Array.from(editOverlay.querySelectorAll('input'));
+    const editUserInput = editInputs[0] || null;      // Usuário
+    const editNameInput = editInputs[1] || null;      // Nome
+    const editSubjectInput = editInputs[2] || null;   // Disciplina
+    const editPasswordInput = editInputs[3] || null;  // Senha
+
+    const btnEditCancel = editOverlay.querySelector('.btn-edit-cancel');
+    const btnEditSave = editOverlay.querySelector('.btn-edit-save');
+
+    // Keep reference to the row being edited
+    let editingRow = null;
+
+    // Helper: open/close overlay (matches your CSS 'show' behavior)
+    function openOverlay(ov) {
+        if (!ov) return;
+        ov.classList.add('show');
+        ov.setAttribute('aria-hidden', 'false');
+    }
+    function closeOverlay(ov) {
+        if (!ov) return;
+        ov.classList.remove('show');
+        ov.setAttribute('aria-hidden', 'true');
+    }
+
+    // Helper: small toast fallback (used when global showToast isn't available)
+    function fallbackToast(title, message, type = 'success') {
+        if (!toastWrapTeacher) return;
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        const icon = type === 'error' ? '../Assets/error-icon.svg' : '../Assets/check-icon.svg';
+        toast.innerHTML = `
+            <img src="${icon}" style="width:30px;height:22px">
+            <div class="toast-text">
+                <h4>${title}</h4>
+                ${message ? `<p>${message}</p>` : ''}
+            </div>
+        `;
+        toastWrapTeacher.appendChild(toast);
+        setTimeout(() => {
+            toast.classList.add('hide');
+            setTimeout(() => toast.remove(), 300);
+        }, 4000);
+    }
+
+    function showToastTeacher(title, message, type = 'success') {
+        // If a global showToast matching your other scripts exists, reuse it
+        if (typeof window.showToast === 'function') {
+            // many variants in your repo call: showToast('teacher','success', 'Title', 'message')
+            // attempt to call in that shape first (owner, type, title, message)
+            try {
+                window.showToast('teacher', type, title, message);
+                return;
+            } catch (err) {
+                // fallback to simpler call
+            }
+            try {
+                window.showToast(title, message, type);
+                return;
+            } catch (err) {
+                // continue to fallback
+            }
+        }
+
+        // fallback
+        fallbackToast(title, message, type);
+    }
+
+    // Fill edit modal with data from a row
+    function populateEditModal(row) {
+        if (!row) return;
+        editingRow = row;
+
+        const usernameEl = row.querySelector('.teacher-username');
+        const nameEl = row.querySelector('.teacher-name');
+        const subjectEl = row.querySelector('.teacher-subject');
+        const passwordEl = row.querySelector('.teacher-password');
+
+        const username = usernameEl ? usernameEl.textContent.trim() : '';
+        const name = nameEl ? nameEl.textContent.trim() : '';
+        const subject = subjectEl ? subjectEl.textContent.trim() : '';
+        // don't read real password (it's masked) — leave input empty for security
+        const pwd = '';
+
+        if (editUserInput) editUserInput.value = username;
+        if (editNameInput) editNameInput.value = name;
+        if (editSubjectInput) editSubjectInput.value = subject;
+        if (editPasswordInput) editPasswordInput.value = pwd;
+    }
+
+    // When clicking any edit icon in the actions, open edit modal (delegation)
+    document.querySelectorAll('.actions').forEach(actions => {
+        actions.addEventListener('click', (e) => {
+            const img = e.target.closest('img');
+            if (!img) return;
+
+            const src = (img.getAttribute('src') || '').toLowerCase();
+            // consider any edit icon filename containing 'edit' or 'icon-edit'
+            if (!src.includes('edit')) return;
+
+            const row = img.closest('.student-row');
+            if (!row) return;
+
+            populateEditModal(row);
+            openOverlay(editOverlay);
+
+            // focus first input
+            setTimeout(() => {
+                if (editUserInput) editUserInput.focus();
+            }, 60);
+        });
+    });
+
+    // Close edit modal via Cancel button
+    if (btnEditCancel) {
+        btnEditCancel.addEventListener('click', () => {
+            editingRow = null;
+            closeOverlay(editOverlay);
+        });
+    }
+
+    // Click outside to close edit modal
+    editOverlay.addEventListener('click', (e) => {
+        if (e.target === editOverlay) {
+            editingRow = null;
+            closeOverlay(editOverlay);
+        }
+    });
+
+    // ESC closes edit modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            // close both edit and confirm if open
+            if (editOverlay.classList.contains('show')) {
+                editingRow = null;
+                closeOverlay(editOverlay);
+            }
+            if (confirmOverlay.classList.contains('show')) {
+                closeOverlay(confirmOverlay);
+            }
+        }
+    });
+
+    // When user clicks SAVE on edit modal -> open confirm modal
+    if (btnEditSave) {
+        btnEditSave.addEventListener('click', (ev) => {
+            ev.preventDefault();
+
+            // basic validation: username & name required
+            const userVal = editUserInput ? String(editUserInput.value || '').trim() : '';
+            const nameVal = editNameInput ? String(editNameInput.value || '').trim() : '';
+
+            if (!userVal || !nameVal) {
+                showToastTeacher('Campos obrigatórios', 'Preencha usuário e nome.', 'error');
+                return;
+            }
+
+            openOverlay(confirmOverlay);
+        });
+    }
+
+    // Cancel on confirm modal
+    if (confirmTeacherCancel) {
+        confirmTeacherCancel.addEventListener('click', () => {
+            closeOverlay(confirmOverlay);
+        });
+    }
+
+    // When confirming the save -> apply changes to DOM (no backend) and show toast
+    if (confirmTeacherSend) {
+        confirmTeacherSend.addEventListener('click', () => {
+            // apply changes only to the editingRow in the DOM
+            if (editingRow) {
+                const usernameEl = editingRow.querySelector('.teacher-username');
+                const nameEl = editingRow.querySelector('.teacher-name');
+                const subjectEl = editingRow.querySelector('.teacher-subject');
+                const passwordEl = editingRow.querySelector('.teacher-password');
+
+                const userVal = editUserInput ? String(editUserInput.value || '').trim() : '';
+                const nameVal = editNameInput ? String(editNameInput.value || '').trim() : '';
+                const subjectVal = editSubjectInput ? String(editSubjectInput.value || '').trim() : '';
+                const pwdVal = editPasswordInput ? String(editPasswordInput.value || '').trim() : '';
+
+                if (usernameEl) usernameEl.textContent = userVal || usernameEl.textContent;
+                if (nameEl) nameEl.textContent = nameVal || nameEl.textContent;
+                if (subjectEl) subjectEl.textContent = subjectVal || subjectEl.textContent;
+
+                // For password, keep masked bullets for UI consistency
+                if (passwordEl) {
+                    if (pwdVal) passwordEl.textContent = '••••••••';
+                    // if empty, leave it as it was
+                }
+
+            }
+
+            // close both overlays
+            closeOverlay(confirmOverlay);
+            closeOverlay(editOverlay);
+            // clear editing state
+            const editedNameForToast = (editNameInput && editNameInput.value.trim()) || 'Professor';
+
+            // show success toast (reuse global if available)
+            showToastTeacher('Professor(a) salvo', `${editedNameForToast} atualizado com sucesso.`, 'success');
+
+            editingRow = null;
+        });
+    }
+
+    // Close confirm overlay by clicking outside
+    confirmOverlay.addEventListener('click', (e) => {
+        if (e.target === confirmOverlay) closeOverlay(confirmOverlay);
+    });
+
+})();
+
+// ----- Password toggle (edit modal) -----
+(function () {
+
+    const passwordWrap = document.querySelector('#editTeacherOverlay .password-input-wrap');
+    if (!passwordWrap) return;
+
+    const passwordInput = passwordWrap.querySelector('input');
+    const toggleBtn = passwordWrap.querySelector('.password-toggle');
+    const toggleImg = toggleBtn ? toggleBtn.querySelector('img') : null;
+
+    if (!passwordInput || !toggleBtn || !toggleImg) return;
+
+    toggleBtn.addEventListener('click', () => {
+
+        const isHidden = passwordInput.type === 'password';
+
+        // Toggle input type
+        passwordInput.type = isHidden ? 'text' : 'password';
+
+        // Swap icon
+        toggleImg.src = isHidden
+            ? '../Assets/eye.svg'
+            : '../Assets/eye-off.svg';
+
     });
 
 })();

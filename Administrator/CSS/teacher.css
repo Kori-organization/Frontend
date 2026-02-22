@@ -561,3 +561,208 @@ select {
 ::-webkit-scrollbar-thumb:hover {
     background: #e6b53b;
 }
+
+/* ---------- EDIT TEACHER MODAL ---------- */
+
+.edit-card {
+    width: min(720px, 92vw);
+    height: 400px;
+    background: #ffffff;
+    border-radius: 26px;
+    box-shadow: 0 18px 40px rgba(2, 6, 23, 0.35);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.edit-header {
+    background: #E59AAA;
+    padding: 18px 30px;
+    height: 100px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.edit-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #08202a;
+    margin: 0;
+}
+
+/* Form */
+form {
+    margin-left: 30px;
+    margin-right: 30px;
+    flex: 1;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Row layout */
+.edit-row {
+    display: flex;
+    gap: 18px;
+    width: 100%;
+}
+
+/* Field */
+.edit-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Smaller field (Usuário) */
+.edit-field {
+    flex: 1;
+}
+
+/* Label */
+.edit-field label {
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+/* Inputs */
+.edit-field input {
+    width: 100%;
+    height: 48px;
+    border-radius: 999px;
+    border: none;
+    background: #efefef;
+    padding: 0 16px;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+}
+
+/* Password */
+.password-input-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.password-input-wrap input {
+    width: 100%;
+    padding-right: 44px;
+}
+
+/* Eye icon */
+.password-toggle {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Buttons */
+.edit-actions {
+    display: flex;
+    gap: 14px;
+    margin-top: auto;
+    padding: 0 30px 25px 30px;
+}
+
+.btn-edit-cancel {
+    flex: 1;
+    height: 48px;
+    border-radius: 999px;
+    border: none;
+    background: #ECECEC;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform .18s ease;
+}
+
+.btn-edit-save {
+    flex: 1;
+    height: 48px;
+    border-radius: 999px;
+    border: none;
+    background: #F5C659;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform .18s ease;
+}
+
+/* CONFIRMATION MODAL */
+
+.confirm-modal {
+    width: 420px;
+    background: #ffffff;
+    border-radius: 42px;
+    padding: 40px 40px 36px;
+    text-align: center;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.25s ease;
+}
+
+/* Icon */
+.confirm-icon-edit {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 26px;
+    border-radius: 50%;
+    background: #FCE9B8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm-icon-edit img {
+    width: 47px;
+    height: 47px;
+}
+
+/* Title */
+.confirm-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0e2b36;
+    line-height: 1.25;
+    margin-bottom: 42px;
+}
+
+/* Buttons */
+.confirm-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.confirm-buttons .btn-confirm {
+    flex: 1;
+    height: 54px;
+    border-radius: 999px;
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Cancel */
+.btn-confirm.btn-cancel {
+    background: #eeeeee;
+    color: #8b8b8b;
+}
+
+/* Confirm */
+.btn-confirm.btn-save {
+    background: #F5C659;
+    color: #0e2b36;
+}
