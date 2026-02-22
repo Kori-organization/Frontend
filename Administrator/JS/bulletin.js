@@ -81,7 +81,7 @@ function validateGrade(input) {
 
         if (value < 0 || value > 10) {
             input.value = '';
-            showToast('Invalid number (0 to 10)');
+            showToast('Número inválido (0 até 10)');
             calculateAll();
         } else {
             input.classList.remove('warning');
