@@ -9,12 +9,13 @@
 
 body {
     height: 100vh;
-    background: #fbf6e6;
+    background: #FDF6E3;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Montserrat", sans-serif;
     overflow: hidden;
+    user-select: none;
 }
 
 /* Background Decorative Shapes */
@@ -89,23 +90,25 @@ body {
 .login-card h1 {
     font-size: 24px;
     font-weight: 600;
-    color: #102c3d;
+    color: #102C3D;
 }
 
 .subtitle {
     font-size: 13px;
     margin-bottom: 28px;
-    color: #102c3d;
+    color: #102C3D;
 }
 
 .subtitle span {
     display: block;
     font-weight: 600;
+    color: #102C3D;
 }
 
 .resend-text {
     font-size: 13px;
     margin-bottom: 14px;
+    color: #102C3D;
 }
 
 /* Interactive Elements */
@@ -114,11 +117,12 @@ button {
     padding: 13px;
     border-radius: 999px;
     border: none;
-    background: #f5c659;
+    background: #F5C659;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
+    color: #102C3D;
 }
 
 button:hover {

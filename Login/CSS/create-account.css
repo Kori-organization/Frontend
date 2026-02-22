@@ -16,6 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    user-select: none;
 }
 
 /* Background shapes */
@@ -86,6 +87,7 @@ h1 {
 .subtitle {
     font-size: 14px;
     margin-bottom: 30px;
+    color: #102C3D;
 }
 
 .subtitle a {
@@ -102,6 +104,7 @@ label {
     font-size: 13px;
     margin-bottom: 5px;
     display: block;
+    color: #102C3D;
 }
 
 input {
@@ -151,6 +154,7 @@ button {
     font-weight: 530;
     cursor: pointer;
     margin-top: 10px;
+    color: #102C3D;
 }
 
 button:hover {

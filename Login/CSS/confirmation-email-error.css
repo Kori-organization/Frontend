@@ -11,7 +11,7 @@
 /* Body */
 body {
     height: 100vh;
-    background: #fbf6e6;
+    background: #FDF6E3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,14 +99,14 @@ body {
 .login-card h1 {
     font-size: 24px;
     font-weight: 600;
-    color: #102c3d;
+    color: #102C3D;
     line-height: 1.2;
 }
 
 /* Texts */
 .subtitle {
     font-size: 13px;
-    color: #102c3d;
+    color: #102C3D;
     line-height: 1.5;
     margin-bottom: 28px;
     text-align: center;
@@ -114,7 +114,7 @@ body {
 
 .resend-text {
     font-size: 13px;
-    color: #102c3d;
+    color: #102C3D;
     margin-bottom: 14px;
     text-align: center;
 }
@@ -123,7 +123,7 @@ body {
 .subtitle span {
     display: block;
     font-weight: 600;
-    color: #102c3d;
+    color: #102C3D;
     margin-top: 4px;
     word-break: break-all;
 }
@@ -139,7 +139,7 @@ button {
     font-weight: 600;
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
-    color: #102c3d;
+    color: #102C3D;
     transition: background 0.2s ease;
 }
 
@@ -160,7 +160,7 @@ button:hover {
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
     font-weight: 600;
-    color: #102c3d;
+    color: #102C3D;
     cursor: pointer;
     z-index: 20;
     transition: background 0.2s ease, transform 0.2s ease;
