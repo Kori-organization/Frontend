@@ -6,18 +6,19 @@
     const confirmDelete = document.getElementById('confirmDelete');
     const toastWrapTeacher = document.getElementById('toastWrapTeacher');
 
-    // fallback in case your existing getEl strategy is used elsewhere:
+    // Ensure toast container is globally accessible if needed
     window.toastWrapTeacher = toastWrapTeacher;
 
-    let pendingRow = null; // row to be deleted
+    let pendingRow = null; // Stores the row that will be deleted
 
-    // helper to open overlay
+    // Opens the confirmation overlay
     function openConfirm() {
         if (!confirmOverlay) return;
         confirmOverlay.classList.add('show');
         confirmOverlay.setAttribute('aria-hidden', 'false');
     }
 
+    // Closes the confirmation overlay
     function closeConfirm() {
         if (!confirmOverlay) return;
         confirmOverlay.classList.remove('show');
@@ -25,46 +26,56 @@
         pendingRow = null;
     }
 
-    // Click on trash icon (delegation)
+    // Listen for clicks on trash icons (event delegation per actions container)
     document.querySelectorAll('.actions').forEach(actions => {
         actions.addEventListener('click', e => {
+
+            // Check if an image was clicked
             const img = e.target.closest('img');
             if (!img) return;
 
+            // Ensure the clicked image is the trash icon
             const src = (img.getAttribute('src') || '').toLowerCase();
-            if (!src.includes('trash')) return; // só reage a ícones de trash (arquivo com 'trash' no nome)
+            if (!src.includes('trash')) return;
 
+            // Find the corresponding row
             const row = img.closest('.student-row');
             if (!row) return;
 
-            // pega nome do professor (ou username / fallback)
+            // Get teacher name (fallback to username if necessary)
             const nameEl = row.querySelector('.teacher-name') || row.querySelector('.teacher-username');
             const name = nameEl ? nameEl.textContent.trim() : 'este registro';
 
+            // Store row and update confirmation modal
             pendingRow = row;
             confirmNameEl.textContent = name;
             openConfirm();
         });
     });
 
-    // Cancel / Voltar
+    // Cancel button (Voltar)
     if (confirmCancel) {
         confirmCancel.addEventListener('click', () => {
             closeConfirm();
         });
     }
 
-    // Confirm delete
+    // Confirm delete button
     if (confirmDelete) {
         confirmDelete.addEventListener('click', () => {
-            if (pendingRow) {
-                // animação opcional: reduz e remove
-                pendingRow.animate([
-                    { opacity: 1, transform: 'translateY(0) scale(1)' },
-                    { opacity: 0, transform: 'translateY(8px) scale(0.98)' }
-                ], { duration: 180, easing: 'ease' });
 
-                // Espera a animação terminar para realmente remover (não necessário, mas fica suave)
+            if (pendingRow) {
+
+                // Optional fade-out animation before removing the row
+                pendingRow.animate(
+                    [
+                        { opacity: 1, transform: 'translateY(0) scale(1)' },
+                        { opacity: 0, transform: 'translateY(8px) scale(0.98)' }
+                    ],
+                    { duration: 180, easing: 'ease' }
+                );
+
+                // Remove row after animation completes
                 setTimeout(() => {
                     pendingRow.remove();
                 }, 180);
@@ -72,22 +83,26 @@
 
             closeConfirm();
 
-            // Mostra toast (usa sua função showToast já existente)
+            // Show success toast
             const deletedName = confirmNameEl.textContent || 'Professor';
+
             if (typeof showToast === 'function') {
-                showToast('teacher', 'success', 'Professor excluído', `${deletedName} removido com sucesso.`);
+                showToast('teacher', 'success', 'Professor(a) excluído', `${deletedName} removido com sucesso.`);
             } else {
-                // fallback — cria toast diretamente se showToast não existir
+
+                // Fallback toast creation if showToast is not available
                 const toast = document.createElement('div');
                 toast.className = 'toast success';
                 toast.innerHTML = `
-          <img src="../Assets/check-icon.svg" style="width:30px;height:22px">
-          <div class="toast-text">
-            <h4>Professor excluído</h4>
-            <p>${deletedName} removido com sucesso.</p>
-          </div>
-        `;
+                    <img src="../Assets/check-icon.svg" style="width:30px;height:22px">
+                    <div class="toast-text">
+                        <h4>Professor(a) excluído</h4>
+                        <p>${deletedName} removido com sucesso.</p>
+                    </div>
+                `;
+
                 toastWrapTeacher && toastWrapTeacher.appendChild(toast);
+
                 setTimeout(() => {
                     toast.classList.add('hide');
                     setTimeout(() => toast.remove(), 300);
@@ -96,14 +111,14 @@
         });
     }
 
-    // click outside overlay to close
+    // Close overlay when clicking outside the modal
     if (confirmOverlay) {
         confirmOverlay.addEventListener('click', e => {
             if (e.target === confirmOverlay) closeConfirm();
         });
     }
 
-    // ESC fecha
+    // Close overlay with ESC key
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape' && confirmOverlay && confirmOverlay.classList.contains('show')) {
             closeConfirm();

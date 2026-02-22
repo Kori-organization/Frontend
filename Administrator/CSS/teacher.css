@@ -427,7 +427,7 @@ select {
     width: 86px;
     height: 86px;
     border-radius: 50%;
-    background: var(--pink-color, #FFD3DF);
+    background: #FFC8C8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -470,7 +470,7 @@ select {
 
 /* Cancel (gray) */
 .btn-cancel {
-    background: #f3f4f6;
+    background: #ECECEC;
     color: #374151;
     border: 1px solid rgba(2, 6, 23, 0.04);
 }
