@@ -163,6 +163,16 @@ select {
     align-items: center;
 }
 
+.bulletin {
+    width: 35px;
+    transition: transform .18s ease;
+    cursor: pointer;
+}
+
+.bulletin:hover {
+    transform: scale(1.04);
+}
+
 /* Student row card */
 .student-row {
     margin-top: 12px;

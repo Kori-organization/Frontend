@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Character encoding -->
+    <meta charset="utf-8" />
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Page title -->
+    <title>Alunos do 1º Ano — Observações</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../Assets/logo-top.svg" type="image/png">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="CSS/bulletin-3.css">
+</head>
+
+<body>
+
+    <!-- Top navigation bar -->
+    <div class="topbar">
+        <!-- Back button -->
+        <a class="back" href="bulletin-2.html" title="Voltar">
+            <img src="../Assets/left.svg" alt="Voltar" width="15px"> Voltar
+        </a>
+
+        <!-- Greeting icon (reloads page on click) -->
+        <img src="../Assets/greeting-4.svg" alt="" width="40px" class="img-greeting" onclick="location.reload()">
+    </div>
+
+    <main>
+        <!-- Bulletin section -->
+        <div class="bulletin-wrapper">
+            <div class="bulletin-title">
+                <h1>Davi Arakaki</h1>
+                <span class="bulletin-year">1º Ano</span>
+            </div>
+
+            <!-- Final status card -->
+            <div class="final-status">
+                <img src="../Assets/download.svg" class="download-icon" alt="Download">
+                <span>Situação final: Reprovado.</span>
+            </div>
+
+            <!-- Report card grid -->
+            <div class="bulletin">
+                <!-- Subjects column -->
+                <div class="bcol left">
+                    <h3>Disciplina</h3>
+                    <div class="bitem subject top">Ciências</div>
+                    <div class="bitem subject">História</div>
+                    <div class="bitem subject">Informática</div>
+                    <div class="bitem subject">Matemática</div>
+                    <div class="bitem subject bottom">Português</div>
+                </div>
+
+                <!-- First semester grades -->
+                <div class="bcol left2">
+                    <h3><span class="badge yellow">1º Semestre</span>Média</h3>
+                    <div class="bitem top">10.0</div>
+                    <div class="bitem">9.5</div>
+                    <div class="bitem red">5.0</div>
+                    <div class="bitem">7.0</div>
+                    <div class="bitem bottom">10.0</div>
+                </div>
+
+                <!-- Second semester grades -->
+                <div class="bcol left3">
+                    <h3><span class="badge yellow">2º Semestre</span>Média</h3>
+                    <div class="bitem top">9.0</div>
+                    <div class="bitem">8.7</div>
+                    <div class="bitem">7.9</div>
+                    <div class="bitem">7.0</div>
+                    <div class="bitem red bottom">0.0</div>
+                </div>
+
+                <!-- Recovery grades -->
+                <div class="bcol right3">
+                    <h3><span class="badge pink">Recuperação</span>Média</h3>
+                    <div class="bitem top">-</div>
+                    <div class="bitem">-</div>
+                    <div class="bitem">10.0</div>
+                    <div class="bitem">-</div>
+                    <div class="bitem red bottom">1.0</div>
+                </div>
+
+                <!-- Final averages -->
+                <div class="bcol right2">
+                    <h3>Média Final</h3>
+                    <div class="bitem top">9.5</div>
+                    <div class="bitem">9.1</div>
+                    <div class="bitem">8.2</div>
+                    <div class="bitem">7.0</div>
+                    <div class="bitem red bottom">3.0</div>
+                </div>
+
+                <!-- Final status per subject -->
+                <div class="bcol right">
+                    <h3>Situação</h3>
+                    <div class="bitem green top">Aprovado</div>
+                    <div class="bitem green">Aprovado</div>
+                    <div class="bitem green">Aprovado</div>
+                    <div class="bitem green">Aprovado</div>
+                    <div class="bitem red bottom">Reprovado</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+<script src="JS/observation-3.js"></script>
+
+</html>
