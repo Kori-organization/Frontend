@@ -299,10 +299,11 @@ img {
 .obs-header h1 {
     font-size: 32px;
     margin-bottom: 5px;
+    color: #092831;
 }
 
 .obs-header p {
-    color: var(--muted-color);
+    color: #102C3D7D;
     font-size: 16px;
     font-weight: 600;
 }
@@ -361,7 +362,7 @@ img {
 
     font-size: 14px;
     font-weight: 600;
-    color: #1f2937;
+    color: #102C3D;
 
     background-size: cover;
     background-position: center;
@@ -465,10 +466,10 @@ img {
 
 
 /* ============================================
-   MEDIA QUERIES — RESPONSIVIDADE
+   MEDIA QUERIES — RESPONSIVE
    ============================================ */
 
-/* --- Desktop grande --- */
+/* --- Desktop - Large --- */
 @media (max-width: 1400px) {
     .top-main {
         width: calc(100% - 200px);
@@ -508,7 +509,7 @@ img {
 
 }
 
-/* --- desktop média --- */
+/* --- Desktop - Mid-range --- */
 @media (max-width: 1200px) {
     .sidebar {
         width: 160px;
@@ -560,7 +561,7 @@ img {
 
 /* --- Tablet--- */
 @media (max-width: 860px) {
-    /*menu passa a ser inferior*/
+    /* The menu becomes lower */
     .sidebar {
         top: auto;
         left: 0;
@@ -710,7 +711,7 @@ img {
     }
 }
 
-/* --- Mobile Grande --- */
+/* --- Mobile - Large --- */
 @media (max-width: 600px) {
     .obs-header {
         margin-top: 110px;
@@ -765,7 +766,7 @@ img {
     }
 }
 
-/* --- Mobile Pequeno --- */
+/* --- Mobile - Small --- */
 @media (max-width: 400px) {
     .sidebar {
         height: 70px;
