@@ -127,3 +127,65 @@ function attachInputListeners() {
         input.addEventListener('blur', calculateAll);
     });
 }
+
+const form = document.getElementById('bulletinForm');
+
+form.addEventListener('submit', function (e) {
+
+    e.preventDefault();
+
+    calculateAll();
+
+    const formData = new FormData(form);
+
+    console.log("Dados do formulário:");
+    console.log(Object.fromEntries(formData));
+
+});
+
+
+// Calculation
+function calculateAll() {
+    const n1 = document.querySelectorAll('.n1');
+    const n2 = document.querySelectorAll('.n2');
+    const rec = document.querySelectorAll('.rec');
+    const medias = document.querySelectorAll('.media-final');
+    const status = document.querySelectorAll('.status');
+    let approvedOverall = true;
+
+    n1.forEach((_, i) => {
+        const grade1 = Number(n1[i].value) || 0;
+        const grade2 = Number(n2[i].value) || 0;
+        const avg = (grade1 + grade2) / 2;
+        let finalAvg = avg;
+
+        if (avg < 7) {
+            rec[i].disabled = false;
+            const recovery = Number(rec[i].value) || 0;
+            finalAvg = (avg + recovery) / 2;
+        }
+        else {
+            rec[i].disabled = true;
+            rec[i].value = '';
+        }
+
+        medias[i].textContent = finalAvg.toFixed(1);
+
+        if (finalAvg >= 7) {
+            status[i].textContent = 'Aprovado';
+            status[i].classList.add('green');
+            status[i].classList.remove('red');
+        }
+        else {
+            status[i].textContent = 'Reprovado';
+            status[i].classList.add('red');
+            status[i].classList.remove('green');
+            approvedOverall = false;
+        }
+    });
+    document.querySelector('.final-status span').textContent =
+        `Situação final: ${approvedOverall ? 'Aprovado' : 'Reprovado'}.`;
+}
+
+// Init
+document.addEventListener('DOMContentLoaded', calculateAll);
