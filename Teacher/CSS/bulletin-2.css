@@ -286,8 +286,8 @@ select {
 
 /* Modal container */
 .modal {
-    width: 870px;
-    height: 500px;
+    width: 60%;
+    height: 70%;
     max-width: 100%;
     background: white;
     border-radius: 40px;
@@ -301,7 +301,7 @@ select {
 .modal-top {
     background: #53BDD9;
     color: #01333b;
-    height: 150px;
+    height: 30%;
     padding: 22px 28px;
     display: flex;
     justify-content: space-between;
@@ -458,7 +458,7 @@ select {
 
 /* Modal footer */
 .modal-footer {
-    padding: 38px 28px;
+    padding: 3% 5%;
     display: flex;
     gap: 16px;
     align-items: center;
@@ -495,7 +495,7 @@ select {
 
 /* Confirmation modal */
 .confirm-content {
-    width: 520px;
+    width: 40%;
     background: white;
     border-radius: 28px;
     padding: 42px 36px 36px;
@@ -684,4 +684,222 @@ select {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #e6b53b;
+}
+
+/* ============================================
+   MEDIA QUERIES — RESPONSIVE
+   ============================================ */
+
+/* --- Desktop - Large --- */
+@media (max-width: 1400px) {
+    .label {
+        margin-top: 0px;
+    }
+}
+
+/* --- Desktop - Mid-range --- */
+@media (max-width: 1200px) {
+    .modal {
+        height: 75%;
+    }
+
+    .confirm-content {
+        width: 45%;
+    }
+    
+    .notes-2 {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 935px) {
+    .modal {
+        height: 80%;
+    }
+    
+    .modal-top {
+        height: 27%;
+    }
+
+    .modal-footer {
+        height: 20%;
+    }
+
+    .modal-body {
+        height: 55%;
+    }
+
+    .modal-top .meta {
+        margin-top: 20px;
+        font-size: 17px;
+        max-width: 87px;
+    } 
+
+    .student-info {
+        max-width: 230px;
+    }
+
+    .student-info h2 {
+        font-size: 34px !important;
+        margin-top: 3% !important;
+        margin-left: 4% !important;
+    }
+
+    .student-info p {
+        margin-left: 10px !important;
+    }
+
+    .label {
+        margin-top: 0px !important;
+    }
+    
+    .admin-note {
+        font-size: 10px
+    }
+
+    .notes-2 {
+        flex-wrap: wrap;
+        max-width: 230px !important;
+    }
+
+    .confirm-content {
+        width: 50%;
+    }
+
+    .confirm-content h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* --- Tablet--- */
+@media (max-width: 860px) {
+    .modal {
+        height: 80%;
+    }
+    
+    .modal-top {
+        height: 27%;
+    }
+
+    .modal-footer {
+        height: 20%;
+    }
+
+    .modal-body {
+        height: 55%;
+    }
+
+    .modal-top .meta {
+        margin-top: 20px;
+        font-size: 17px;
+        max-width: 87px;
+    } 
+
+    .student-info {
+        max-width: 230px;
+    }
+
+    .student-info h2 {
+        font-size: 34px !important;
+        margin-top: 3% !important;
+        margin-left: 4% !important;
+    }
+
+    .student-info p {
+        margin-left: 4% !important;
+    }
+
+    .label {
+        margin-top: 0px !important;
+    }
+    
+    .admin-note {
+        font-size: 10px
+    }
+
+    .notes-2 {
+        flex-wrap: wrap;
+        max-width: 230px !important;
+    }
+
+    .confirm-content {
+        width: 50%;
+    }
+
+    .confirm-content h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* --- Mobile - Large --- */
+@media (max-width: 600px) {
+    .modal {
+        height: 80%;
+        width: 80%;
+    }
+
+    .modal-top {
+        height: 25%;
+    }
+
+    .modal-top .meta {
+        margin-top: 20px;
+        font-size: 15px;
+        max-width: 87px;
+    } 
+
+    .student-info {
+        max-width: 200px;
+    }
+
+    .student-info h2 {
+        font-size: 30px !important;
+        margin-top: 5px !important;
+        margin-left: 10px !important;
+    }
+
+    .student-info p {
+        font-size: 15px !important;
+        margin-left: 10px !important;
+    }
+
+    .notes-2 {
+        flex-wrap: wrap;
+    }
+    
+    .label {
+        margin-top: 0px !important;
+    }
+
+    .modal-footer {
+        height: 20%;
+    }
+
+    .admin-note {
+        font-size: 10px
+    }
+
+    .modal-body {
+        height: 55%;
+    }
+
+    .confirm-content {
+        width: 60%;
+    }
+
+    .confirm-content h2 {
+        font-size: 22px;
+    }
+}
+
+/* --- Mobile - Small --- */
+@media (max-width: 400px) {
+    .modal {
+        height: 2%;
+    }
+
+    .notes-2 {
+    }
 }
