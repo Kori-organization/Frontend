@@ -315,7 +315,10 @@ select {
     margin-top: 20px;
     margin-left: 10px;
     font-size: 36px;
-    color: #04323b
+    color: #04323b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Student email in modal */
@@ -697,6 +700,12 @@ select {
     }
 }
 
+@media (max-width: 1340px) {
+    .modal-rec {
+        overflow-y: auto;
+    }
+}
+
 /* --- Desktop - Mid-range --- */
 @media (max-width: 1200px) {
     .modal {
@@ -741,7 +750,7 @@ select {
 
     .student-info h2 {
         font-size: 34px !important;
-        margin-top: 3% !important;
+        margin-top: 5% !important;
         margin-left: 4% !important;
     }
 
@@ -768,6 +777,10 @@ select {
 
     .confirm-content h2 {
         font-size: 22px;
+    }
+
+    .modal-rec {
+        overflow-y: auto;
     }
 }
 
@@ -830,6 +843,14 @@ select {
     .confirm-content h2 {
         font-size: 22px;
     }
+
+    .modal-rec {
+        overflow-y: auto;
+    }
+
+    .field {
+        margin-left: 12% !important;
+    }
 }
 
 
@@ -891,6 +912,14 @@ select {
 
     .confirm-content h2 {
         font-size: 22px;
+    }
+
+    .modal-rec {
+        overflow-y: auto;
+    }
+
+    .field {
+        margin-left: 12% !important;
     }
 }
 

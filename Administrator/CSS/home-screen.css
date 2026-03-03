@@ -676,7 +676,7 @@ img {
 /* Base modal */
 .student-modal,
 .teacher-modal {
-    width: 760px;
+    width: 50%;
     background: #ffffff;
     border-radius: 40px;
     overflow: hidden;
@@ -854,7 +854,7 @@ img {
 /* CONFIRMATION MODAL */
 
 .confirm-modal {
-    width: 420px;
+    width: 30%;
     background: #ffffff;
     border-radius: 42px;
     padding: 40px 40px 36px;
@@ -1029,4 +1029,66 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+/* ============================================
+   MEDIA QUERIES — RESPONSIVE
+   ============================================ */
+
+/* --- Desktop - Large --- */
+@media (max-width: 1400px) {
+}
+
+/* --- Desktop - Mid-range --- */
+@media (max-width: 1200px) {
+    .form-row {
+        flex-wrap: wrap;
+    }
+
+    .confirm-modal {
+        width: 40%;
+    }
+}
+
+/* --- Tablet--- */
+@media (max-width: 860px) {
+    .modal {
+        height: 85%;
+    }
+
+    .student-form, .teacher-form {
+        max-height: 65%;;
+        overflow-y: auto;
+    }
+
+    .confirm-modal {
+        width: 45%;
+    }
+
+    .confirm-title {
+        font-size: 24px;
+    }
+}
+
+/* --- Mobile - Large --- */
+@media (max-width: 600px) {
+    .modal {
+        width: 70%;
+    }
+
+    .student-form, .teacher-form {
+        overflow-y: auto;
+    }
+
+    .confirm-modal {
+        width: 60%;
+    }
+
+    .confirm-title {
+        font-size: 22px;
+    }
+}
+
+/* --- Mobile - Small --- */
+@media (max-width: 400px) {
 }

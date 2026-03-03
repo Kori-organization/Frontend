@@ -294,7 +294,7 @@ select {
 }
 
 .confirm-card {
-    width: min(450px, 86vw);
+    width: 30%;
     background: #fff;
     border-radius: 34px;
     padding: 28px 28px 24px;
@@ -342,7 +342,6 @@ select {
 
 /* Shared button */
 .btn {
-    min-width: 140px;
     padding: 12px 22px;
     border-radius: 28px;
     font-weight: 700;
@@ -569,7 +568,7 @@ form {
 /* CONFIRMATION MODAL */
 
 .confirm-modal {
-    width: 420px;
+    width: 45%;
     background: #ffffff;
     border-radius: 42px;
     padding: 40px 40px 36px;
@@ -636,7 +635,7 @@ form {
 /* Edit student modal styles (to match screenshot) */
 .edit-student-card {
     width: min(920px, 96vw);
-    max-width: 920px;
+    max-width: 70%;
     background: #fff;
     border-radius: 28px;
     overflow: hidden;
@@ -833,4 +832,90 @@ select {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #e6b53b;
+}
+
+/* ============================================
+   MEDIA QUERIES — RESPONSIVE
+   ============================================ */
+
+/* --- Desktop - Large --- */
+@media (max-width: 1400px) {
+}
+
+/* --- Desktop - Mid-range --- */
+@media (max-width: 1200px) {
+}
+
+/* --- Tablet--- */
+@media (max-width: 860px) {
+    .row-2, .row-3 {
+        flex-wrap: wrap;
+    }
+
+    .edit-student-card {
+        max-height: 80%;
+    }
+
+    .edit-student-form {
+        overflow-y: auto;
+        margin: 0;
+        padding: 24px 38px;
+    }
+
+    .edit-student-header {
+        padding: 28px 32px;
+    }
+
+    .edit-student-actions {
+        padding: 18px 42px 28px;
+    }
+
+    .confirm-title {
+        font-size: 24px;
+    }
+
+    .confirm-card {
+        width: 50%;
+        padding: 40px 26px 36px;
+    }
+}
+
+/* --- Mobile - Large --- */
+@media (max-width: 600px) {
+    .row-2, .row-3 {
+        flex-wrap: wrap;
+    }
+
+    .edit-student-card {
+        width: 80%;
+    }
+
+    .edit-student-form {
+        max-height: 65%;
+        overflow-y: auto;
+        margin: 0;
+        padding: 24px 38px;
+    }
+
+    .edit-student-header {
+        padding: 26px 30px;
+    }
+
+    .confirm-modal {
+        width: 50%;
+        padding: 40px 26px 36px;
+    }
+
+    .confirm-title {
+        font-size: 24px;
+    }
+
+    .confirm-card {
+        width: 60%;
+        padding: 40px 26px 36px;
+    }
+}
+
+/* --- Mobile - Small --- */
+@media (max-width: 400px) {
 }
