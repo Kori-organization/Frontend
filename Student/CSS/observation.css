@@ -469,7 +469,7 @@ img {
    MEDIA QUERIES — RESPONSIVE
    ============================================ */
 
-/* --- Desktop - Large --- */
+/* --- Desktop Large --- */
 @media (max-width: 1400px) {
     .top-main {
         width: calc(100% - 200px);
@@ -509,7 +509,7 @@ img {
 
 }
 
-/* --- Desktop - Mid-range --- */
+/* --- Desktop -Medium --- */
 @media (max-width: 1200px) {
     .sidebar {
         width: 160px;
@@ -687,7 +687,6 @@ img {
     }
 
     .obs-header h1 {
-
         font-size: 26px;
         margin-top: 150px;
     }
@@ -711,7 +710,7 @@ img {
     }
 }
 
-/* --- Mobile - Large --- */
+/* --- Mobile Large --- */
 @media (max-width: 600px) {
     .obs-header {
         margin-top: 110px;
@@ -766,7 +765,7 @@ img {
     }
 }
 
-/* --- Mobile - Small --- */
+/* --- Mobile Small --- */
 @media (max-width: 400px) {
     .sidebar {
         height: 70px;
