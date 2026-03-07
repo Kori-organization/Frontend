@@ -499,11 +499,11 @@ img {
         margin-right: 0;
     }
 
-    .copy-btn{
+    .copy-btn {
         margin-top: 50px;
     }
 
-    .main {  
+    .main {
         height: 100%;
     }
 
@@ -515,9 +515,13 @@ img {
         width: 160px;
     }
 
+    .sidebar-menu h2 {
+        display: none;
+    }
+
     .main {
         margin-left: 160px;
-        padding-right: 20px;    
+        padding-right: 20px;
         height: 100%;
     }
 
@@ -556,11 +560,12 @@ img {
     .home-button {
         margin-right: 0;
     }
-    
+
 }
 
 /* --- Tablet--- */
 @media (max-width: 860px) {
+
     /* The menu becomes lower */
     .sidebar {
         top: auto;
@@ -586,6 +591,10 @@ img {
         justify-content: space-around;
     }
 
+    .sidebar-menu h2 {
+        display: none;
+    }
+
     .menu-item,
     .menu-item.active,
     .menu-item.active2,
@@ -604,7 +613,7 @@ img {
 
     .menu-item.active {
         background-color: var(--background);
-        border-radius: 100px 100px 0 0 ;
+        border-radius: 100px 100px 0 0;
         padding: 43px;
         margin-bottom: 0;
     }
@@ -717,6 +726,10 @@ img {
         margin-left: 16px;
     }
 
+    .sidebar-menu h2 {
+        display: none;
+    }
+
     .obs-header h1 {
         font-size: 22px;
     }
@@ -760,7 +773,7 @@ img {
         margin-bottom: -30px;
     }
 
-    .main {  
+    .main {
         height: 100%;
     }
 }
@@ -769,6 +782,10 @@ img {
 @media (max-width: 400px) {
     .sidebar {
         height: 70px;
+    }
+
+    .sidebar-menu h2 {
+        display: none;
     }
 
     .menu-item,

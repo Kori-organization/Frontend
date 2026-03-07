@@ -351,18 +351,23 @@ img {
   0% {
     transform: translateX(0);
   }
+
   20% {
     transform: translateX(-4px);
   }
+
   40% {
     transform: translateX(4px);
   }
+
   60% {
     transform: translateX(-4px);
   }
+
   80% {
     transform: translateX(4px);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -608,6 +613,7 @@ img {
 .legend-color.today {
   background-color: #c8f3da;
 }
+
 .legend-color.holiday {
   background-color: #a5ccff;
 }
@@ -651,15 +657,19 @@ img {
 .teacher.one {
   background: #53bdd94d;
 }
+
 .teacher.two {
   background: #f9b0c491;
 }
+
 .teacher.three {
   background: #f8dea1;
 }
+
 .teacher.four {
   background: #c1d25166;
 }
+
 .teacher.five {
   background: #0000002e;
 }
@@ -707,9 +717,11 @@ input[type="number"]::-webkit-outer-spin-button {
     left: 200px;
     margin-left: 0;
   }
+
   .color {
     width: calc(100% - 200px);
   }
+
   .main {
     height: auto;
     min-height: 100vh;
@@ -717,6 +729,7 @@ input[type="number"]::-webkit-outer-spin-button {
     overflow-x: auto;
     overflow-y: visible;
   }
+
   .grid {
     grid-template-columns: 1fr 320px;
   }
@@ -728,23 +741,29 @@ input[type="number"]::-webkit-outer-spin-button {
   .sidebar {
     width: 160px;
   }
+
   .main {
     margin-left: 160px;
   }
+
   .top-main {
     width: calc(100% - 160px);
     left: 160px;
   }
+
   .color {
     width: calc(100% - 160px);
   }
+
   .grid {
     grid-template-columns: 1fr 300px;
     gap: 20px;
   }
+
   .left-column {
     width: 100%;
   }
+
   .right-column {
     width: 100%;
     margin-left: 0;
@@ -756,30 +775,37 @@ input[type="number"]::-webkit-outer-spin-button {
   .sidebar {
     width: 160px;
   }
+
   .main {
     margin-left: 160px;
     padding-right: 20px;
   }
+
   .top-main {
     width: calc(100% - 160px);
     left: 160px;
     border-radius: 20px 0 0 0;
   }
+
   .color {
     width: calc(100% - 160px);
   }
+
   .grid {
     grid-template-columns: 1fr;
     gap: 25px;
   }
+
   .right-column {
     width: 100%;
     margin-top: 0;
   }
+
   .calendar-container {
     width: 100%;
     padding-right: 0;
   }
+
   .teachers-card,
   .welcome-card,
   .calculator-card {
@@ -804,6 +830,7 @@ input[type="number"]::-webkit-outer-spin-button {
     border-radius: 50px 50px 0 0;
     gap: 15px;
   }
+
   .sidebar-menu {
     flex: 1;
     flex-direction: row;
@@ -812,6 +839,11 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-top: 0;
     gap: 16px;
   }
+
+  .sidebar-menu h2 {
+    display: none;
+  }
+
   .menu-item,
   .menu-item.active,
   .menu-item.active2,
@@ -827,12 +859,14 @@ input[type="number"]::-webkit-outer-spin-button {
     transform-origin: center center;
     gap: 4px;
   }
+
   .menu-item.active {
     margin-bottom: 0;
     padding: 43px;
     background-color: var(--background);
     border-radius: 100px 100px 0 0;
   }
+
   .menu-item img,
   .menu-item.one img,
   .menu-item.two img,
@@ -841,6 +875,7 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 26px;
     height: 26px;
   }
+
   .menu-item h2,
   .menu-item.one h2,
   .menu-item.two h2,
@@ -849,12 +884,14 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
     font-size: 11px;
   }
+
   .profile {
     position: static;
     width: 60px;
     height: 60px;
     border-radius: 100px;
   }
+
   .profile img {
     width: 30px;
     height: 30px;
@@ -868,10 +905,12 @@ input[type="number"]::-webkit-outer-spin-button {
     background: var(--background);
     overflow-y: auto;
   }
+
   .app {
     display: block;
     padding: 0;
   }
+
   .sidebar {
     position: fixed;
     top: auto;
@@ -887,6 +926,7 @@ input[type="number"]::-webkit-outer-spin-button {
     border-radius: 50px 50px 0 0;
     gap: 0;
   }
+
   .sidebar-menu {
     flex: 1;
     flex-direction: row;
@@ -895,16 +935,23 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-top: 0;
     gap: 0;
   }
+
+  .sidebar-menu h2 {
+    display: none;
+  }
+
   .color,
   .color2 {
     display: none;
   }
+
   .main {
     width: 100%;
     margin: 0;
     padding: 20px 20px 110px 20px;
     border-radius: 0;
   }
+
   .top-main {
     position: relative;
     left: 0;
@@ -915,30 +962,36 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0 0 20px 0;
     padding: 0;
   }
+
   .logo-container {
     width: 90px;
     height: auto;
   }
+
   .home-button {
     width: auto;
     height: auto;
     margin: 0;
   }
+
   .home-button img {
     width: 28px;
     margin: 0;
   }
+
   .grid {
     display: flex;
     flex-direction: column;
     margin-top: 0;
     gap: 20px;
   }
+
   .left-column,
   .right-column {
     width: 100%;
     margin: 0;
   }
+
   .welcome-card {
     position: relative;
     flex-direction: row;
@@ -946,21 +999,26 @@ input[type="number"]::-webkit-outer-spin-button {
     padding: 25px 20px;
     overflow: hidden;
   }
+
   .welcome-card div {
     width: 65%;
     z-index: 2;
   }
+
   .welcome-card h1 {
     font-size: 24px;
   }
+
   .welcome-card p {
     font-size: 14px;
     line-height: 1.4;
   }
+
   .welcome-card h2 {
     font-size: 14px;
     margin-top: 10px;
   }
+
   .monster-container {
     position: absolute;
     right: -20px;
@@ -970,16 +1028,19 @@ input[type="number"]::-webkit-outer-spin-button {
     height: auto;
     margin: 0;
   }
+
   .monster-container img {
     display: block;
     width: 100%;
     height: auto;
   }
+
   .shortcuts-container {
     height: auto;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
   }
+
   .shortcut-card {
     display: flex;
     flex-direction: column;
@@ -988,18 +1049,22 @@ input[type="number"]::-webkit-outer-spin-button {
     padding: 15px 10px;
     font-size: 14px;
   }
+
   .shortcut-icon {
     width: 28px;
   }
+
   .calculator-card {
     height: auto;
     margin-bottom: 0;
     padding: 20px;
   }
+
   .calculator-title {
     margin: 0 0 15px 0;
     font-size: 16px;
   }
+
   .calculator-row {
     flex-direction: row;
     align-items: center;
@@ -1007,26 +1072,31 @@ input[type="number"]::-webkit-outer-spin-button {
     height: auto;
     gap: 8px;
   }
+
   .grade-box {
     width: 28%;
     height: auto;
     padding: 15px 10px;
   }
+
   .grade-box input {
     width: 100%;
     height: 35px;
     font-size: 18px;
   }
+
   .grade-box hr {
     width: 100%;
     margin: 5px 0 0 0;
   }
+
   .plus-box {
     width: auto;
     margin: 0;
     padding: 0;
     font-size: 24px;
   }
+
   .required-box {
     width: 35%;
     height: auto;
@@ -1034,53 +1104,65 @@ input[type="number"]::-webkit-outer-spin-button {
     padding: 15px 10px;
     font-size: 14px;
   }
+
   .result-label {
     margin-bottom: 8px;
     font-size: 11px;
   }
+
   .result-value {
     font-size: 22px;
   }
+
   .calendar-container {
     width: 100%;
     height: auto;
     margin-top: 15px;
     padding: 0;
   }
+
   .calendar-header {
     margin-bottom: 10px;
     font-size: 18px;
   }
+
   .calendar-grid {
     height: auto;
     margin-left: 0;
     gap: 4px;
   }
+
   .day {
     padding: 8px 4px;
     font-size: 14px;
   }
+
   .calendar-legend {
     justify-content: center;
     margin: 15px 0 0 0;
   }
+
   .teachers-card {
     height: auto;
   }
+
   .user-group-teacher {
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 15px;
     gap: 10px;
   }
+
   .user-group-teacher img {
     width: 24px;
     margin: 0;
   }
+
   .user-group-teacher h3 {
     margin: 0;
     font-size: 18px;
   }
+
   .teacher {
     padding: 12px;
     font-size: 13px;
@@ -1092,23 +1174,33 @@ input[type="number"]::-webkit-outer-spin-button {
   .welcome-card h1 {
     font-size: 24px;
   }
+
   .welcome-card p {
     font-size: 14px;
   }
+
   .shortcut-card {
     padding: 15px;
     font-size: 14px;
   }
+
+  .sidebar-menu h2 {
+    display: none;
+  }
+
   .grade-box input {
     height: 35px;
     font-size: 18px;
   }
+
   .result-value {
     font-size: 28px;
   }
+
   .calendar-header {
     font-size: 18px;
   }
+
   .teacher {
     font-size: 14px;
   }
@@ -1119,6 +1211,11 @@ input[type="number"]::-webkit-outer-spin-button {
   .sidebar {
     height: 70px;
   }
+
+  .sidebar-menu h2 {
+    display: none;
+  }
+
   .menu-item,
   .menu-item.active,
   .menu-item.active2,
@@ -1128,6 +1225,7 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 50px;
     height: 50px;
   }
+
   .menu-item img,
   .menu-item.one img,
   .menu-item.two img,
@@ -1136,6 +1234,7 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 22px;
     height: 22px;
   }
+
   .menu-item h2,
   .menu-item.one h2,
   .menu-item.two h2,
@@ -1143,10 +1242,12 @@ input[type="number"]::-webkit-outer-spin-button {
   .menu-item.active h2 {
     font-size: 10px;
   }
+
   .profile {
     width: 50px;
     height: 50px;
   }
+
   .profile img {
     width: 24px;
     height: 24px;
@@ -1158,9 +1259,15 @@ input[type="number"]::-webkit-outer-spin-button {
   .welcome-card h1 {
     font-size: 20px;
   }
+
+  .sidebar-menu h2 {
+    display: none;
+  }
+
   .welcome-card p {
     font-size: 13px;
   }
+
   .result-value {
     font-size: 22px;
   }
