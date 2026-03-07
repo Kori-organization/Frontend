@@ -391,35 +391,40 @@ img {
 
 .grade-card.pink {
     background-color: rgba(251, 216, 222, 1);
-    background-image: url("../../Assets/star-t1.svg"); /* Pink star image */
+    background-image: url("../../Assets/star-t1.svg");
+    /* Pink star image */
     background-size: 75%;
     background-position: right;
 }
 
 .grade-card.green {
     background-color: rgba(200, 211, 114, 1);
-    background-image: url("../../Assets/star-t2.svg"); /* Green star image */
+    background-image: url("../../Assets/star-t2.svg");
+    /* Green star image */
     background-size: 75%;
     background-position: right;
 }
 
 .grade-card.blue {
     background-color: rgba(174, 217, 224, 1);
-    background-image: url("../../Assets/star-t3.svg"); /* Blue star image */
+    background-image: url("../../Assets/star-t3.svg");
+    /* Blue star image */
     background-size: 75%;
     background-position: right;
 }
 
 .grade-card.yellow {
     background-color: rgba(248, 222, 161, 1);
-    background-image: url("../../Assets/star-t4.svg"); /* Yellow star image */
+    background-image: url("../../Assets/star-t4.svg");
+    /* Yellow star image */
     background-size: 75%;
     background-position: right;
 }
 
 .grade-card.gray {
     background-color: rgba(209, 209, 209, 1);
-    background-image: url("../../Assets/star-t5.svg"); /* Gray star image */
+    background-image: url("../../Assets/star-t5.svg");
+    /* Gray star image */
     background-size: 75%;
     background-position: right;
 }
@@ -441,6 +446,7 @@ img {
 ::-webkit-scrollbar-thumb:hover {
     background: #e6b53b;
 }
+
 /* ============================================
    MEDIA QUERIES — RESPONSIVE
    ============================================ */
@@ -555,6 +561,10 @@ img {
         width: auto;
         flex: 1;
         justify-content: space-around;
+    }
+
+    .sidebar-menu h2 {
+        display: none;
     }
 
     .menu-item,
@@ -678,6 +688,11 @@ img {
 
 /* --- Mobile Large --- */
 @media (max-width: 600px) {
+
+    .sidebar-menu h2 {
+        display: none;
+    }
+
     .cards-title {
         font-size: 20px;
         margin-top: 120px;
@@ -729,6 +744,10 @@ img {
 @media (max-width: 400px) {
     .sidebar {
         height: 70px;
+    }
+
+    .sidebar-menu h2 {
+        display: none;
     }
 
     .menu-item,

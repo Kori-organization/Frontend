@@ -455,35 +455,40 @@ img {
 
 .grade-card.pink {
     background-color: rgba(251, 216, 222, 1);
-    background-image: url("../../Assets/star-t1.svg"); /* Pink star image */
+    background-image: url("../../Assets/star-t1.svg");
+    /* Pink star image */
     background-size: 75%;
     background-position: right;
 }
 
 .grade-card.green {
     background-color: rgba(200, 211, 114, 1);
-    background-image: url("../../Assets/star-t2.svg"); /* Green star image */
+    background-image: url("../../Assets/star-t2.svg");
+    /* Green star image */
     background-size: 75%;
     background-position: right;
 }
 
 .grade-card.blue {
     background-color: rgba(174, 217, 224, 1);
-    background-image: url("../../Assets/star-t3.svg"); /* Blue star image */
+    background-image: url("../../Assets/star-t3.svg");
+    /* Blue star image */
     background-size: 75%;
     background-position: right;
 }
 
 .grade-card.yellow {
     background-color: rgba(248, 222, 161, 1);
-    background-image: url("../../Assets/star-t4.svg"); /* Yellow star image */
+    background-image: url("../../Assets/star-t4.svg");
+    /* Yellow star image */
     background-size: 75%;
     background-position: right;
 }
 
 .grade-card.gray {
     background-color: rgba(209, 209, 209, 1);
-    background-image: url("../../Assets/star-t5.svg"); /* Gray star image */
+    background-image: url("../../Assets/star-t5.svg");
+    /* Gray star image */
     background-size: 75%;
     background-position: right;
 }
@@ -511,6 +516,7 @@ img {
 ::-webkit-scrollbar-thumb:hover {
     background: #e6b53b;
 }
+
 /* =============================================
    MEDIA QUERIES – RESPONSIVE
    ============================================= */
@@ -529,7 +535,7 @@ img {
         height: auto;
         min-height: 100vh;
         padding-bottom: 60px;
-        overflow-x: auto; 
+        overflow-x: auto;
         overflow-y: visible;
     }
 
@@ -543,8 +549,8 @@ img {
 @media (max-width: 1200px) {
     .main {
         margin-left: 160px;
-        overflow-x: auto; 
-        overflow-y: visible; 
+        overflow-x: auto;
+        overflow-y: visible;
     }
 
     .cards-title {
@@ -684,6 +690,10 @@ img {
         justify-content: space-around;
     }
 
+    .sidebar-menu h2 {
+        display: none;
+    }
+
     .menu-item,
     .menu-item.active,
     .menu-item.active2,
@@ -743,7 +753,7 @@ img {
         border-radius: 0;
         margin-right: 0;
         padding-left: 16px;
-        padding-right: 16px;    
+        padding-right: 16px;
         padding-bottom: 90px;
         height: auto;
         min-height: 100vh;
@@ -835,6 +845,11 @@ img {
 
 /* --- Mobile --- */
 @media (max-width: 480px) {
+
+    .sidebar-menu h2 {
+        display: none;
+    }
+
     .cards-title {
         font-size: 20px;
         margin-left: 5px;
@@ -893,6 +908,11 @@ img {
 
 /* --- Mobilex --- */
 @media (max-width: 360px) {
+
+    .sidebar-menu h2 {
+        display: none;
+    }
+
     .cards-title {
         font-size: 18px;
     }
