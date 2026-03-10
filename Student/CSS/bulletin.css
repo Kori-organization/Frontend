@@ -532,6 +532,14 @@ img {
     background: #e6b53b;
 }
 
+#bulldescription{
+    margin-left: 25px;
+    margin-top: 40px;
+    font-size: 15px;
+    margin-bottom: -30px;
+    color: rgba(16, 44, 61, 0.5);
+}
+
 
 /* =============================================
    MEDIA QUERIES – RESPONSIVE
