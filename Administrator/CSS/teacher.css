@@ -362,6 +362,10 @@ select {
     font-size: 17px;
     font-weight: 630;
     color: #102C3D;
+    
+    white-space: nowrap;      
+    overflow: hidden;         
+    text-overflow: ellipsis;
 }
 
 /* Student email */
