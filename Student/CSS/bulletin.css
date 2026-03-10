@@ -331,7 +331,7 @@ img {
     font-weight: 600;
     z-index: 1;
     font-size: 21px;
-    margin-top: 10px;
+    margin-top: 30px;
     display: flex;
     gap: 15px;
 }
@@ -532,6 +532,13 @@ img {
     background: #e6b53b;
 }
 
+#bull-description{
+    margin-left: 25px;
+    margin-bottom: -20px;
+    margin-top: 30px;
+    font-size: 16px;
+    color: var(--muted-color);
+}
 
 /* =============================================
    MEDIA QUERIES – RESPONSIVE
